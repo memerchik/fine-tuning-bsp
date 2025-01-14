@@ -13,6 +13,7 @@ This repository contains tools and datasets for summarizing text using Google Ge
 This is the main directory containing the code of the final summarizer. 
 - **summarizer.py**: The main script file. 
 ```bash
+   cd llm-summarizer
    python3 summarizer.py -key="*put_your_api_key_here*" -article="test_article.txt"
 ```
 - **template.txt**: An example unformatted article that is used for validation of the output during initialization process.
