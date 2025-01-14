@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://journalofdigitalhistory.org/favicon.ico">
+        <title>Super-Vision: Tracing EPFL History Through 8,000 Doctoral Theses - Journal of Digital History</title>
+        
+<meta property="og:title" content="Super-Vision: Tracing EPFL History Through 8,000 Doctoral Theses" />
+<meta property="og:description" content="The fiftieth anniversary of EPFL (École Polytechnique Fédérale de Lausanne) offered the opportunity to retrace its history through the digital archives housed by the institute itself. Part of the exhibition Infinity Room 2, the Super-Vision project investigates the practice of academic advising by visualizing 8,000 doctoral theses in a work at the intersection of art, science, and technology.
+Inaugurated in September 2019 at EPFL Pavilions, Super-Vision presents a diachronic mapping that uses artificial intelligence to shed light on an institutional dataset that would be unobservable otherwise. To achieve such a goal, 8,000 doctoral theses are analysed with natural language processing and mapped with techniques of dimensionality reduction, combining language and time within in an interactive visualization accessible to the public.
+The project title has a twofold meaning: on the one hand, it refers to the educational practice that connects doctoral students to supervisors; on the other hand, it employs information design like a macroscope to grasp complex phenomena from a distant standpoint. The result offers EPFL employees and museum visitors an original perspective to look at the institute with different eyes." />
+<meta property="og:site_name" content="Journal of Digital History" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://raw.githubusercontent.com/jdh-observer/Yn8z7XNPKzy4/main/socialmediacover.png" />
+<meta property="og:url" content="https://journalofdigitalhistory.org/en/article/Yn8z7XNPKzy4" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Journal_DigHist" />
+<meta name="twitter:title" content="Super-Vision: Tracing EPFL History Through 8,000 Doctoral Theses" />
+<meta name="twitter:description" content="The fiftieth anniversary of EPFL (École Polytechnique Fédérale de Lausanne) offered the opportunity to retrace its history through the digital archives housed by the institute itself. Part of the exhibition Infinity Room 2, the Super-Vision project investigates the practice of academic advising by visualizing 8,000 doctoral theses in a work at the intersection of art, science, and technology.
+Inaugurated in September 2019 at EPFL Pavilions, Super-Vision presents a diachronic mapping that uses artificial intelligence to shed light on an institutional dataset that would be unobservable otherwise. To achieve such a goal, 8,000 doctoral theses are analysed with natural language processing and mapped with techniques of dimensionality reduction, combining language and time within in an interactive visualization accessible to the public.
+The project title has a twofold meaning: on the one hand, it refers to the educational practice that connects doctoral students to supervisors; on the other hand, it employs information design like a macroscope to grasp complex phenomena from a distant standpoint. The result offers EPFL employees and museum visitors an original perspective to look at the institute with different eyes." />
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jdh-observer/Yn8z7XNPKzy4/main/socialmediacover.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Fira+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+<style>
+  body{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 10pt;
+    line-height: 1.5em;
+  }
+  .code, code, pre{
+    font-family: 'Fira Code', monospace;
+  }
+  .abstract p:first-child:first-letter {
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+  }
+  a{
+    color: black;
+  }
+  .collaborators a{
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .contributors a > img {
+    /* ordic badge */
+    width: 4mm;
+    height: 4mm;
+  }
+  .desktop a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  p{
+    margin: 0;
+  }
+  .paragraph_num {
+    position: absolute;
+    left: 40px;
+    color: gray;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+@page {
+    size: A4;
+    margin: 1cm;
+  }
+  .position-relative{
+    position: relative;
+  }
+
+
+  @media print {
+
+    blockquote{
+      border-left: 1pt black solid;
+      padding-left: 5mm;
+      margin-left: 5mm;
+      margin-right: 5mm;
+    }
+
+    .title{
+      max-width: 75%;
+    }
+    .abstract{
+      font-size: 12pt;
+      line-height: 18pt;
+    }
+    .keywords{
+      font-size: 12pt;
+    }
+    .abstract p:first-child:first-letter {
+      float: left;
+      height: 36pt;
+      font-size: 36pt;
+      line-height: 36pt;
+      margin-right: 1mm;
+      font-family: 'Fira Code', monospace;
+      font-weight: bold;
+    }
+    .collaborators{
+      max-width: 50%;
+    }
+    .page-break {page-break-after: always;}
+    .dual-column{
+      column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+    }
+    h1{
+      font-size: 25pt;
+      line-height: 1.5em;
+    }
+    h2{
+      margin: 15mm 0 5mm;
+    }
+    h3{
+      margin: 10mm 0 5mm;
+    }
+    .mb5{
+      margin-bottom: 5mm;
+    }
+    .mb10{
+      margin-bottom: 10mm;
+    }
+    .mb15{
+      margin-bottom: 15mm;
+    }
+    .mb20{
+      margin-bottom: 20mm;
+    }
+    .mt5{
+      margin-top: 5mm;
+    }
+    .mt10{
+      margin-top: 10mm;
+    }
+    .mr10{
+      margin-right: 10mm;
+    }
+    .mt20{
+      margin-top: 20mm;
+    }
+    .mt25{
+      margin-top: 25mm;
+    }
+    .contributors{
+      display: flex;
+      max-width: 75%;
+    }
+    .contributor h3{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+   .flex-container {
+    display: flex;
+   }
+  .flex-child {
+      flex: 1;
+      border: 2px solid #5e2bff;
+      text-align:center;
+
+  }
+
+  .flex-child:first-child {
+      margin-right: 20px;
+  }
+  .read a{
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.625%;
+    text-align: center;
+    color: white;
+  }
+  .read a:link, a:visited, a:focus {
+    background: #5e2bff;
+  }
+  .email a{
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.625%;
+    text-align: center;
+    color: black;
+    border: 2px solid #5e2bff;
+
+  }
+  .email a:link, a:visited, a:focus {
+  }
+
+  
+  }
+  }
+</style>
+
+    </head>
+    <body>
+      
+
+<section class="sheet padding-20mm">
+  <article class="position-relative">
+    <div style="position: absolute; left:0mm; top:-20mm; display: flex">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="50">
+        <rect x="70" y="50" width="10" height="10" rx="5"/>
+        <path fill="black" d="M130,40H120V20H100V10H70V30H60V20H30V50H10V90H60V80H90V90h50V40ZM40,80H20V60H30V70H40V30H50V80ZM80,70H60V40H80V20H90V70Zm50-10V80H120V60H110V80H100V30h10V50h20Z"/>
+      </svg>
+      <div style="font-weight: bold; font-size:9pt; line-height:11pt; margin-left: 2mm; margin-top:.5mm">Journal of <br>Digital History</div>
+    </div>
+    <!-- img src="data:image/png;base64,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" style="width:20mm; position: absolute; right:0; top:-20mm" -->
+
+    <div class="title mt25 mb10">
+    
+      <h1>Super-Vision: Tracing EPFL History Through 8,000 Doctoral Theses</h1>
+
+    
+    </div>
+    <div class="contributors mb5">
+      
+        <div class="contributor mr10">
+          <h3>Sarah Kenderdine <a href="https://orcid.org/0000-0002-7190-9946"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="orcid" /></a></h3>
+<p>EPFL, Lausanne, Switzerland</p>
+
+        </div>
+      
+        <div class="contributor mr10">
+          <h3>Philippe Rivière <a href="None"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="orcid" /></a></h3>
+<p>Visionscarto, Mazangé, France</p>
+
+        </div>
+      
+        <div class="contributor mr10">
+          <h3>Dario Rodighiero <a href="https://orcid.org/0000-0002-1405-7062"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="orcid" /></a></h3>
+<p>University of Groningen, Groningen, Netherlands</p>
+
+        </div>
+      
+    </div>
+    
+    <div>
+      <p class="desktop" style="font-size:8pt; line-height:12pt">
+        <a href="https://doi.org/10.1515/JDH-2023-0004?locatt=label:JDHFULL">https://doi.org/10.1515/JDH-2023-0004?locatt=label:JDHFULL</a>
+      </p>
+      <p class="desktop" style="font-size:8pt; line-height:12pt">
+        
+        Published online the 3rd July 2024
+        
+      </p>
+    </div>
+    <p>
+      <div class="flex-container">
+        <div class="flex-child">
+          <br>
+          Experience the full interactive<br>multi-layered reading experience
+          <div class="read">
+            <a href="https://journalofdigitalhistory.org/en/article/Yn8z7XNPKzy4">&nbsp;-> Read here&nbsp;</a>
+          </div>
+          <br>
+        </div>
+        <div class="flex-child">
+          <br>
+          Send yourself a reminder<br>to read this article later
+          <div class="email">
+            <a  href="mailto:?subject=Read%20on%20JDH%20%22Super-Vision: Tracing EPFL History Through 8,000 Doctoral Theses%22&body=Hello!%0D%0AHere%20is%20your%20reminder%20as%20requested%0D%0A%0D%0ALink%3A%20https://journalofdigitalhistory.org/en/article/Yn8z7XNPKzy4">&nbsp;-> Send E-Mail&nbsp;</a>
+            <br>
+          </div>
+        </div>
+      </div>
+    </p>
+    <div class="keywords mb5 mt5">
+          <b>Keywords: </b>dimensionality reduction, information design, knowledge design, network visualization, natural language processing, timeline
+      </div>
+    <div class="abstract dual-column mb5">
+      
+        <p>The fiftieth anniversary of EPFL (<em>École Polytechnique Fédérale de Lausanne</em>) offered the opportunity to retrace its history through the digital archives housed by the institute itself. Part of the exhibition Infinity Room 2, the Super-Vision project investigates the practice of academic advising by visualizing 8,000 doctoral theses in a work at the intersection of art, science, and technology.</p>
+<p>Inaugurated in September 2019 at EPFL Pavilions, Super-Vision presents a diachronic mapping that uses artificial intelligence to shed light on an institutional dataset that would be unobservable otherwise. To achieve such a goal, 8,000 doctoral theses are analysed with natural language processing and mapped with techniques of dimensionality reduction, combining language and time within in an interactive visualization accessible to the public.</p>
+<p>The project title has a twofold meaning: on the one hand, it refers to the educational practice that connects doctoral students to supervisors; on the other hand, it employs information design like a macroscope to grasp complex phenomena from a distant standpoint. The result offers EPFL employees and museum visitors an original perspective to look at the institute with different eyes.</p>
+
+      
+    </div>
+    <div class="disclaimer">
+    
+    </div>
+  </article>
+</section>
+<section class="sheet padding-20mm">
+  <article>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">1</div>
+      <div><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="cc-by" /></a>
+© Dario Rodighiero - Sarah Kenderdine - Philippe Rivière. Published by De Gruyter in cooperation with the University of Luxembourg Centre for Contemporary and Digital History. This is an Open Access article distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License CC-BY</a></p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">2</div>
+      <div><h2>Introduction</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">3</div>
+      <div><p>The Swiss Federal Institute of Technology in Lausanne (<em>École Polytechnique Fédérale de Lausanne, or most commonly EPFL</em>) is a young university that celebrated its fiftieth anniversary in 2019 (<em>Leutenegeer, Konopka, Christinat 2021</em>). For this occasion, the EPFL campus hosted celebrations and events, including a special exhibition to chronicle its history via digital archives, organized by the director of the Laboratory of Experimental Museology Plus, Prof. Sarah Kenderdine. The Infinity Room 2 exhibition was inaugurated in September 2019 at the EPFL Pavilions, the wooden museum designed by the acclaimed architect Kengo Kuma.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">4</div>
+      <div><p>Like organizations transitioning towards digital technology, EPFL puts into operation different information systems collecting and storing some aspects of local culture and academic activity. Among them, one of the most known offers support to the Montreux Jazz Festival, a renowned music event preserving high-quality audiovisual material from the 60s (<em>Kenderdine, Mason, Hibberd 2021</em>). Despite the popularity of this example, it is essential to bear in mind that every single archive takes a unique perspective on the institution, which can be revealed through recent techniques of storytelling (<em>Krzywinski, Cairo 2013</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">5</div>
+      <div><p>This article investigates the art of storytelling for academic digital archives. Since the advent of information systems, the wide-ranging practice of researchers, teachers, and professors (<em>DeNeef, Goodwin 1995</em>) has been increasingly collected, stored, and shared for administrative purposes in a progressive process of datafication (<em>Van Dijck 2014</em>). As a part of the Infinity Room 2 exhibition, the Super-Vision project aims to shed light on the academic practice of academic advising, defined as these “situations in which an institutional representative gives insight or direction to a college student about an academic, social or personal matter” (<em>Gordon, Habley, Grites, Associates 2008</em>). Specifically, the project narrows down to a particular type of advising that concerns graduates who aspire to an academic career. On the occasion of the fifty anniversary, Super-Vision retraces EPFL’s footsteps by visualizing the records of doctoral theses to offer museum visitors an overview of the journey the institute made to take first place in the academic ranking of young universities (<em>Mediacom 2016</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">7</div>
+      <div><h2>Exhibiting Science in the Making</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">8</div>
+      <div><p>Before illustrating the design process, this section introduces the reader to the interdisciplinary context, which situates the Super-Vision project at the convergence among Experimental Museology, Science, and Technology Studies (STS) and Information Design, foregrounding the transition of museum space to digital and visual literacy (<em>Rodighiero, Wandl-Vogt, Carsenat, Döring, Elias, Fragner, Farkashazy 2022</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">9</div>
+      <div><p>The Infinity Room 2 exhibition was conceived at a time when cultural institutions are establishing cross-disciplinary collaborations under the acronym of GLAM, which stands for “galleries, libraries, archives, and museums” (<em>Australian Society of Archivists 2003</em>). Empowered by digital technology, this initiative increasingly invests time and energy in digitalization, preservation, and visualization of archives and collections (Cameron and Kenderdine 2007). In this context, Super-Vision takes shape as a work of experimental museology situated at the intersection between STS (<em>Sismondo 2010</em>) and the mapping of science (<em>Börner 2010</em>). These two apparently distant disciplines find common ground in understanding the making of science, referring to the ongoing and ever-evolving process of scientific discovery (<em>Shapin 1992</em>). While STS reinterprets museums like observatories from which visitors can understand the scientific output, science-mapping scholars use information design to extract organizational patterns from laboratories and scientific communities.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">10</div>
+      <div><p>With respect to the practice of supervision, it can be said that STS is interested in looking at doctoral theses as a sociotechnical object in the academic environment. On the other hand, the science-mapping perspective is more attracted by the techniques of mapping to reveal scientific organization. With a digital installation in the public setting of the campus, the Super-Vision project not only enhances the vision capacity of the broader public on the making of science (<em>Lynch 1988</em>) but also reveals the hidden organizational structure, reinforcing the imperative for public institutions to be open and accountable (<em>Cellard, Masure 2018</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">11</div>
+      <div><p>Such a convergence finds its origins in STS, which has always been interested in the many aspects of science from historical, cultural, and social perspectives. In 1986, Bruno Latour and Steve Woolgar published a groundbreaking book titled Laboratory Life (<em>Latour, Woolgar 1986</em>). This publication disclosed for the first time the hidden process of science-making by observing scientists in the offices of the Salk Institute for Biological Studies. This unusual perspective drastically changed the public perception of science, which was previously based on publications, conferences, and awards only. Latour and Woolgar looked at scientists in their working environment, like animals were studied in their natural habitat by biologists. As pointed out in the book’s preface by the institute’s founder Jonas Salk, although scientists felt uncomfortable being observed, the study provided valuable information to understand the scientific practice. The investigation of Latour and Woolgar introduced an innovative way to look at science, contributing to develop the concept of “science in the making,” which aims to disclose science through social and technological relationships (<em>Shapin 1992</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">12</div>
+      <div><p>A few years later, in 1999, when curators Barbara Vanderlinden and Hans Ulrich Obrist curated an exhibition at the Fotomuseum Antwerpen, probably no one expected such a fruitful collaboration between STS and museology (<em>Gorman 2020</em>). The Laboratorium exhibition prompted questions related to the perception of science, investigating “the gap between the specialized vocabulary of science, art, and the general interest of the audience” by using the museum gallery as a laboratory for experiments (<em>Obrist, Vanderlinden 2001</em>). In the exhibition, the process of science in the making was presented to a broader audience by bringing the scientific practice into museums for public consumption. At that time, Bruno Latour and Peter Galison were put in touch with Caroline Jones and Peter Weibel, generating a spark that led to four exhibitions organized at ZKM, the <em>Zentrum für Kunst und Medien</em> (<em>Latour, Weibel 2002<strong>Latour, Weibel 2005</strong>Latour, Weibel 2020**Latour, Leclercq 2016</em>) — as recently described by Giulia Bini (<em>Bini 2022</em>). This encounter between academics and curators represents a landmark in the collaboration between science and museums, giving fresh perspectives on how museums can establish a dialogue with visitors on scientific matters.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">13</div>
+      <div><p>Simultaneously, as mentioned in the book Museum Object Lessons for the Digital Age, “old museum collections and new technologies c[a]me together, tracing the translation and extension of collections […] into digital websites, imaging platforms and collection management systems'” (<em>Geismar 2018</em>). Cultural institutions have digitalized and published their collections online (<em>Rodighiero, Derry, Duhaime, Kruguer, Mueller, Pietsch, Schnapp, Steward, metaLAB 2022</em>)  and the exhibition space has been populated by digital devices (<em>Isaac 2008**Paul 2015</em>). Along with digital devices, data visualizations also entered exhibitions (<em>Manovich 2018</em>). As early as 2008, Paola Antonelli featured data visualizations in the exhibition Design and the Elastic Mind (<em>Antonelli 2008**Cogdell 2009</em>) and included some of them in the MoMA permanent collection (<em>Lupi, Posavec 2016**Crawford, Joler 2018</em>). Since then, cultural institutions have increasingly embraced data-driven objects as centerpieces in their exhibitions.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">15</div>
+      <div><h2>Data Investigation and Analysis</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">16</div>
+      <div><p>The initial idea was to design a visualization capable of representing the EPFL community through scientific literature, drawing on the experience of the Affinity Map project (<em>Rodighiero, Kaplan, Beaude 2018</em>). One of the most interesting outcomes of this project was to represent the scientific community in a more democratic way, preferring a more-equitable metric of linguistic similarity to a quantitative analysis that foregrounds the most cited scholars (<em>Rodighiero 2021</em>). This approach leads to network visualizations in which all individuals occupy the same space, aiming at a more balanced representation and a more proper image of the entire organization.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">17</div>
+      <div><p>The investigation started with Infoscience, the repository of EPFL research based on CERN’s open-source software Invenio (<em>Caffaro, Kaplun 2010</em>). Maintained by the library, the Infoscience repository collects, stores, and shares institutional scientific and gray literature, including around 8,000 doctoral theses. Whereas the Affinity Map project was exclusively relying on the analysis of article abstracts, the idea with Super-Vision was to advance the methodology by applying text analysis to full texts. However, to experiment this, it was necessary to use a homogeneous corpus of scientific literature that was identified into the doctoral theses. Unlike journal articles often affected by copyright restrictions (<em>Suber 2012</em>), doctoral theses feature the rare qualities of being publicly available and having consistency over time. The accessibility of both metadata and full texts in PDF format makes the corpus of doctoral theses an ideal solution for visualization. In addition, the opportunity to look at a scientific organization from an original dataset, situated between academic education and research career, represents a barely explored area of mapping that diverges from the current institutional perception.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">18</div>
+      <div><p>Technically speaking, the collection of doctoral theses enables a twofold navigation relating to textual information (<em>Meirelles 2013</em>) and temporal dimension (<em>Rosenberg, Grafton 2010</em>). On the one hand, body texts offer the opportunity to explore techniques of natural language processing (<em>Manning, Schütze 1999</em>) and dimensionality reduction (<em>Bingham, Mannila 2001**Schmidt 2018</em>). On the other hand, metadata enables the temporal analysis of publications through techniques of data visualization (<em>Friendly 2021</em>). Both data dimensions can provide interesting insights on institutional evolution by visually reproducing the EPFL trajectory.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">19</div>
+      <div><p>The entire data analysis and development was facilitated by Observable (<em>Bostock 2017</em>), a digital platform to treat and plot data by making use of real-time programming through an interface that recalls Jupyter Notebooks. Founded by Mike Bostock, who earned its reputation by working at the New York Times, such a platform makes advanced data visualization techniques accessible to a broad audience by using the d3.js library (<em>Bostock, Ogievetsky, Heer 2011</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">20</div>
+      <div><p>The first attempt at exploring the dataset is represented by the scatter plot below, which organizes doctoral theses in a timeline. Despite its simplicity, this visual tells us much information about the collection. At first glance, the horizontal axis organizes the publication by year, which increases as the time goes by: the more space between ticks, the higher the number of doctoral theses in the specific time window. On the vertical dimension, distribution is aleatory but necessary to untangle the dot overlapping. In terms of precision, it is interesting to observe the temporal classification: the full date is part of the metadata except for the dissertation defended before 1999, and for unclear reasons, a time window between 2008 and 2012. Diversely, colours reveal some characteristics to consider carefully: in grey are doctoral theses that are not associated with any faculty, probably because of the institute’s reorganization; in orange and grey are those doctoral theses without abstract, whose absence affects in part the text analysis; in green are doctoral theses with a complete metadata set.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">22</div>
+      <div><p>This initial overview proves the steady growth of doctoral theses but also reveals something unexpected: considering that EPFL was celebrating its fifth anniversary, how was it possible that a consistent number of publications could date back to the beginning of the twentieth century? After a brief investigation, we realized that EPFL was previously integrated into the University of Lausanne and only in 1969 was transformed into an independent institute, bringing with it a selection of doctoral theses. The detachment was due to a political choice to balance the linguistic predominance of ETH Zürich in favour of the French-speaking part of Switzerland (<em>Leutenegeer, Konopka, Christinat 2021</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">23</div>
+      <div><p>Although doctoral theses’ increasing frequency represented a valuable insight for museum visitors, there was a more complex research question to address in the project: what kind of organizational structure could be extracted from doctoral supervision? Embracing the idea that scientific communities should be represented by all individual members (<em>Rodighiero 2021</em>), it was decided to avoid any kind of quantitative analysis by focusing on doctoral students instead of their advisors. Representing a social network of both would have led the readers to identify the most central individuals, overshadowing everyone else. With the Super-Vision project, there was a general intention to give prominence to the individuality of the whole organization to present EPFL not as a hierarchical institute but as an extensive network of international scholars.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">24</div>
+      <div><p>The basic idea was revealing EPFL’s structure through a network of doctoral students arranged according to a metric of textual similarity. Titles, abstracts, and the first ten pages of 8,000 doctoral theses were analysed to extract the most used terms for each publication, using the spaCy library for Python (<em>Honnibal, Montani, Van Landeghem, Boyd 2024</em>). The number of pages was limited due to the computational load of machines at our disposal. Successively, the algorithm TF-IDF — which stands for <em>term frequency-inverse document frequency</em> — identified the most relevant words for each doctoral thesis with respect to the entire corpus (Salton et al., 1975). Such a step is helpful to get rid of the most common terms of the corpus, which are not relevant to developing a metric of similarity. The resulting dataset was then processed through an algorithm of <em>dimensionality reduction</em> to create the mapping. The UMAP algorithm (<em>McInnes, Healy, Melville 2018</em>) can be indeed used to reduce the highly complex lexical dimensionality into two dimensions, enabling the mapping on the Cartesian plane in what is commonly known as word embedding (<em>Berger, McDonough, Seversky 2017</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">25</div>
+      <div><p>The result of this process is visible in the figure below where the network structure is created by using Urquhart, an algorithm that draws connectivity between near nodes to avoid line overlapping (<em>Urquhart 1980</em>). The figure shows how doctoral theses/students are clearly grouped in specific areas, confirming the initial hypothesis that lexical information can reveal the overall organizational structure of the EPFL. A scattered structure, on the contrary, would have proved the presence of a non-uniform linguistic corpus, indicating a potential risk of inconsistency in data or methodology.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">26</div>
+      <div><p>Looking at the figure below, we can easily see where the faculties are positioned. Assuming a faculty numbering on two lines, respectively (A), (B), (C), (D), (E), we can infer some information about the general interdisciplinary structure by looking at this small multiple. The School of Architecture, Civil and Environmental Engineering (A) and the School of Computer and Communication Sciences (B) are characterized by a well-defined lexical structure, which confines them to specific regions of the map. The School of Basic Sciences (C) and the School of Engineering (D) spread horizontally, suggesting the use of a lexicon that overlaps other disciplines. The School of Life Sciences (E) proves to have a strong identity despite its young age, and the College of Management of Technology has not enough doctoral students to delineate a clear border.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">28</div>
+      <div><h2>Graphic and Interaction Design</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">29</div>
+      <div><p>While the data investigation was active, provisional results underwent a design process to give them a form to advance understanding through visual and interactive means (<em>Manovich 2008<strong>Rosnay 2014</strong>Willett, Aseniero, Carpendale, Dragicevic, Jansen, Oehlberg, Isenberg 2022</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">30</div>
+      <div><p>The Super-Vision project resulted from a participatory design (<em>Bannon, Bardzell, Bødker 2018</em>) that involved expertise from data science, information design, experimental museology, and academic research. Dario Rodighiero (MIT) oversaw the general concept and the data collection, Philippe Rivière (Visionscarto) the data analysis and visualization, Patrick Donaldson (EM+) the graphic design, and Sarah Kenderdine (EM+) the museum installation. It is worth noting that most of the development was carried out with collaborators from Switzerland, France, and the United States who could collaborate through Slack, Observable, and Dropbox. However, it is important to stress that a consistent part of the project budget was used to meet in person two months before the exhibition to take a look at the gallery space and adjust the graphic layout. Indeed, the calibration of colours, fonts, and shapes, and the testing of technical devices are operations that have to be  scrutinized by everyone in the exhibition location. Although the design process moved online smoothly, the opportunity to meet in person accelerated the finalization of the project.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">31</div>
+      <div><p>The idea of a timespan- and structure-based data visualization representing EPFL evolution inspired the general concept of the digital installation. As a result, the Super-Vision project was created as a compound of two distinct but complementary visualizations representing time and space respectively. As visible in the figure below, the screenshot shows how the centre of this compound visualization hosts a network visualization arranging doctoral theses according to their lexical similarity: the more two of theses are nearby in the Cartesian plane, the greater their similarity ((<em>Rodighiero, Wandl-Vogt, Carsenat 2022<strong>Rodighiero, Romele 2022</strong>Rodighiero 2021**Moon, Rodighiero 2020</em>)). The network visualization draws an image of 8,000 doctoral theses, which allows the viewer to observe a visual classification by faculty of the entire corpus of doctoral theses, enabling spatial exploration. Around this network, a line chart marks an outer circle that works as an enclosing frame, showing the increasing frequency of doctoral defences. The network visualization and the line chart offer two complementary perspectives of the same dataset, creating a novel compound that can be described as an intermediary object between a dashboard and a basic visualization. In the case to imitate the incomparable Charles Joseph Minard’s infographic presenting Napoleon’s defeat (<em>Rendgen 2018</em>), Super-Vision’s visualization guides the viewer through historical data through a multidimensional instrument to look into the institutional dimensionality of doctoral advising.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">33</div>
+      <div><p>An additional level of information is given by interactivity, which allows users to explore the dataset in detail. The figure above shows how the compound visualization is characterized by cyan graphic elements indicating selections. One user can navigate through time on a laptop by scrolling the trackpad, which moves the selection bar.  In response to this input, some graphic elements start bumping to bring out from the intertwined tissue of the doctoral theses defended in the selected period. From this central space, the user is invited to select one bouncing dot to get further information: on click, the interactive interface will show the title, candidate, directors, and faculty of the selected doctoral thesis, accompanied by a background effect showing the relative faculty’s extension. Only at this point the user is offered to explore the neighbourhood by navigating transversally similar works. This combination shows us how information and interaction design are intimately connected by their shared goal of understanding data, as recently discussed by Manuel Lima in a recent interview (<em>Rodighiero 2021</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">34</div>
+      <div><p>In the timeline, the selection bar progressively diminishes its length when going forward. This solution was necessary because the corpus’ density would not otherwise enable neat navigation in the most recent years. Despite this visual limitation that prevents overwhelming information, the user can still perceive the deluge of doctoral theses by scrolling forward the time bar. When the timeline is scrolled quickly, the animation accumulates hundreds of bouncing dots from the scrolled period. Such a feeling of being overwhelmed is usually avoided in information design because it generates unreadable, chaotic visuals. However, the same experience of surprise (<em>Rodighiero, Derry, Duhaime, Kruguer, Mueller, Pietsch, Schnapp, Steward, metaLAB 2022</em>) or sublime (<em>Manovich 2008</em>) can help the user to realize the vast number of elements in their wholeness, which are typically difficult to grasp.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">35</div>
+      <div><p>A copy of the interactive interface of Super-Vision can be used on the Visionscarto website at https://visionscarto.net/maps/super-vision/, while the code is openly accessible on https://observablehq.com/@fil/epfl-super-vision.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">37</div>
+      <div><h2>Physical Installation</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">38</div>
+      <div><p>Super-Vision was explicitly designed for Infinity Room 2, and some adopted solutions were offered by the exhibition space and the technical material at our disposal. For example, the choice of a circular projection was not only suggested by the form of the UMAP algorithm but also because of the availability of a round-shaped projection surface already employed in another exhibition. The surface measuring one meter and a half, previously used on the floor, this time was hung on the gallery’s wall to maintain the verticality of the textual information (see figure below).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">39</div>
+      <div><p>The projection surface also represented a constraint to space out the projector. The two-meter distance from the wall balances the spectator’s view, the projector’s resolution, and the luminosity contrast between the projection screen and gallery illumination. The installation was thus completed with a one-meter column capable of hosting the projector and a device to interact with the data visualization. The chosen device was a three-dimensional mouse that allowed the visitor to browse the doctoral theses on the Cartesian plane and move throughout the timeline by rotating the wheel in clockwise or counter-clockwise directions. The rotation characteristic was particularly relevant for the final choice because it recalls the visualization’s rounded shape, creating a cognitive correspondence between shape and functionality.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">40</div>
+      <div><p>The Super-Vision digital installation was positioned in a niche of the long hall of EPFL Pavilions during the exhibition, where the illumination was softer because of the video projection. The visitor was naturally invited to enter the dedicated space, finding immediately the controller placed on the column that implicitly suggested the preferred standpoint. In addition, an idle function that animated the data visualization by automatically advancing the timeline selector captured the audience’s curiosity by showcasing the system’s interactivity. Such an animation was frozen when the visitor took control of the mouse and reverted to idle mode after a short period of inactivity.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">42</div>
+      <div><h2>Conclusion</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">43</div>
+      <div><p>Digital archives are valuable information sources to retrace the most recent history of institutions. Leading scientists can use data analysis and visualization techniques to investigate historical records, obtaining unique perspectives that would be difficult to read otherwise.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">44</div>
+      <div><p>This article addresses the potential of collaboration, especially for experimental museology and, more extensively, for digital humanities. In a moment in which interdisciplinarity seems to be struggling to establish itself in academia, museums represent ideal experimental platforms for pioneering at the intersection of data, art, and science.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">45</div>
+      <div><p>Observing how data visualization runs across disciplines and professionals is engaging. Its transversality allows scholars to cover the distance between academia and the private sector, as computer science did in the last few decades. The subsequent developments must be followed closely, especially when focusing on public spaces where information can be addressed to a larger public than the academic one. Museums offer physical space for data visualization and blur the borders between art and science more freely than academia. As Hans Ulrich Obrist and Barbara Vanderlinden mentioned, museums can be considered scientific laboratories where scholars can experiment more freely by conveying critical thoughts to museum visitors.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">46</div>
+      <div><p>In particular, the most critical thought in the Super-Vision project raises concerns about the university’s fast-growing model. The data visualization clearly shows how there was roughly one doctoral defence per month during the 1960s, while EPFL today exceeds one thesis per day. To a keen eye, this stunning insight not only represents a statistical increase but also reveals more-hidden institutional regulations. Indeed, this university model prefers to invest money in doctoral students rather than intermediary research positions like researchers and senior researchers, which are disappearing from the organizational chart, obliging many scholars to move out of the institute or accept administrative employment. On the one hand, the increase in doctoral students represents a more significant opportunity to pursue doctoral studies, but on the other hand, it makes the academic career more difficult than before because of the higher number of potential candidates for professorships.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">47</div>
+      <div><p>The insights of Super-Vision let the museum visitor thoughtfully look at institutions from an innovative perspective while maintaining a critical eye on data and society. Digital archives already show the potential for future inquiries, and the field of contemporary history needs to be revised through digital means.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">48</div>
+      <div><h2>Acknowledgments</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">49</div>
+      <div><p>This article would not be possible without the financial help of the Swiss National Science Foundation, which funded grant number P400PS_194442, Recommendation System for Academic Mobility. Thanks to Patrick Donaldson and Giulia Bini, who supported the project from its early development. Thanks also to Maxene Graze and Linda Ardenghi, whose editing was invaluable to give the text the final form.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+  </article>
+  <h2 >Bibliography</h2>
+  
+    <div class="paragraph mb5">
+    Antonelli, P., editor. <i>Design and the Elastic Mind</i>. Edited by Paola Antonelli, The Museum of Modern Art.
+    </div>
+  
+    <div class="paragraph mb5">
+    Australian Society of Archivists, ., editor. <i>Glam: galleries, libraries, archives and museums : conference proceedings</i>. Edited by Australian Society of Archivists, Australian Society of Archivists.
+    </div>
+  
+    <div class="paragraph mb5">
+    Bannon, L., et al.. “Reimagining participatory design”. <i>Atlantic monthly</i>, vol. 26, no. 1, pp. 26–32, https://doi.org/10/ghm6c6.
+    </div>
+  
+    <div class="paragraph mb5">
+    Beaulieu, A.and S. Leonelli. <i>Data and Society: A Critical Introduction</i>. Preprint Edition, Sage Publications.
+    </div>
+  
+    <div class="paragraph mb5">
+    Berger, M., et al.. “Cite2vec: Citation-driven Document Exploration via Word Embeddings”. <i>IEEE Transactions on Visualization and Computer Graphics</i>, vol. 23, no. 1, pp. 691–700, https://doi.org/10.1109/TVCG.2016.2598667.
+    </div>
+  
+    <div class="paragraph mb5">
+    Bijker, W. E.and J. Law, editors. <i>Shaping Technology/building Society: Studies in Sociotechnical Change</i>. Edited by Wiebe E. Bijker and John Law, MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Bingham, E.and H. Mannila. “Random Projection in Dimensionality Reduction: Applications to Image and Text Data”. <i>Proceedings of the Seventh ACM SIGKDD International Conference on Knowledge Discovery and Data Mining</i>, ACM, pp. 245–50, https://doi.org/10.1145/502512.502546.
+    </div>
+  
+    <div class="paragraph mb5">
+    Bostock, M.. “A Better Way to Code”. <i>Medium</i>, https://medium.com/@mbostock/a-better-way-to-code-2b1d2876a3a0.
+    </div>
+  
+    <div class="paragraph mb5">
+    Bostock, M., et al.. “D3: Data-driven Documents”. <i>IEEE Transactions on Visualization and Computer Graphics</i>, vol. 17, no. 12, pp. 2301–09, https://doi.org/10/b7bhhf.
+    </div>
+  
+    <div class="paragraph mb5">
+    Börner, K.. <i>Atlas of knowledge: anyone can map</i>. MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Börner, K.. <i>Atlas of science: visualizing what we know</i>. MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Caffaro, J.and S. Kaplun. <i>Invenio: A Modern Digital Library for Grey Literature</i>. CERN-OPEN-2010-027, CERN, https://cds.cern.ch/record/1312678.
+    </div>
+  
+    <div class="paragraph mb5">
+    Cameron, F.and S. Kenderdine, editors. <i>Theorizing Digital Cultural Heritage: A Critical Discourse</i>. Edited by Fiona Cameron and Sarah Kenderdine, MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Cellard, L.and A. Masure. “Le design de la transparence: une rhétorique au cœur des interfaces numériques”. <i>Multitudes</i>, vol. 73, no. 4, p. 100, https://doi.org/10.3917/mult.073.0100.
+    </div>
+  
+    <div class="paragraph mb5">
+    Cogdell, C.. “Design and the Elastic Mind, Museum of Modern Art (spring 2008)”. <i>Design Issues</i>, vol. 25, no. 3, pp. 92–101, https://doi.org/10/cqct95.
+    </div>
+  
+    <div class="paragraph mb5">
+    Crawford, K.and V. Joler. <i>Anatomy of an AI System: The Amazon Echo as an Anatomical Map of Human Labor, Data and Planetary Resources</i>. SHARE Lab and AI Now Institute, https://anatomyof.ai.
+    </div>
+  
+    <div class="paragraph mb5">
+    DeNeef, A. L.and C. D. W. Goodwin, editors. <i>The Academic's Handbook</i>. Edited by A. Leigh DeNeef and Craufurd D. W. Goodwin, Second edition, Duke University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Friendly, M.. <i>A history of data visualization and graphic communication</i>. Harvard University Press, https://go.openathens.net/redirector/umoncton.ca?url=https%3A%2F%2Febookcentral.proquest.com%2Flib%2Fumoncton-ebooks%2Fdetail.action%3FdocID%3D6631224.
+    </div>
+  
+    <div class="paragraph mb5">
+    Geismar, H.. <i>Museum object lessons for the digital age</i>. UCL Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Gordon, V. N., et al., editors. <i>Academic Advising: A Comprehensive Handbook</i>. Edited by Virginia N Gordon et al., Second edition, Jossey-Bass.
+    </div>
+  
+    <div class="paragraph mb5">
+    Gorman, M. J.. <i>Idea Colliders: The Future of Science Museums</i>. MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Hertig, H.-P.. <i>Universities, Rankings, and the Dynamics of Global Higher Education: Perspectives from Asia, Europe, and North America</i>. Palgrave Macmillan.
+    </div>
+  
+    <div class="paragraph mb5">
+    Honnibal, M., et al.. <i>Spacy: Industrial-strength Natural Language Processing in Python</i>. https://github.com/explosion/spaCy.
+    </div>
+  
+    <div class="paragraph mb5">
+    <i>Leutenegeer Et Al. - 2021 - Perspective on EPFL Science, Architecture, People.pdf</i>. <i>Leutenegeer Et Al. - 2021 - Perspective on EPFL Science, Architecture, People.pdf</i>.
+    </div>
+  
+    <div class="paragraph mb5">
+    Isaac, G.. “Technology Becomes the Object”. <i>Journal of Material Culture</i>, vol. 13, no. 3, pp. 287–310, https://doi.org/10/btgw3r.
+    </div>
+  
+    <div class="paragraph mb5">
+    Kenderdine, S., et al.. “Computational Archives for Experimental Museology”. <i>Emerging Technologies and the Digital Transformation of Museums and Heritage Sites</i>, edited by Maria Shehade and Theopisti Stylianou-Lambert, Springer International Publishing, pp. 3–8, https://doi.org/10.1007/978-3-030-83647-4_1.
+    </div>
+  
+    <div class="paragraph mb5">
+    Krzywinski, M.and A. Cairo. “Storytelling”. <i>Nature Methods</i>, vol. 10, no. 8, pp. 687–87, https://doi.org/10.1038/nmeth.2571.
+    </div>
+  
+    <div class="paragraph mb5">
+    Latour, B.and C. Leclercq, editors. <i>Reset Modernity!</i>. Edited by Bruno Latour and Christophe Leclercq, ZKM, Center for Art and Media ; MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Latour, B.and P. Weibel, editors. <i>Critical Zones: Observatories for Earthly Politics</i>. Edited by Bruno Latour and Peter Weibel, MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Latour, B.and P. Weibel, editors. <i>Iconoclash</i>. Edited by Bruno Latour and Peter Weibel, ZKM, Centre for Art and Media ; MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Latour, B.and P. Weibel, editors. <i>Making Things Public: Atmospheres of Democracy</i>. Edited by Bruno Latour and Peter Weibel, MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Latour, B.and S. Woolgar. <i>Laboratory Life: The Construction of Scientific Facts</i>. Princeton University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Leutenegeer, C., et al.. <i>Perspective on EPFL: Science, Architecture, People</i>. University Of Chicago Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Lupi, G.and S. Posavec. <i>Dear Data</i>. Princeton Architectural Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Lynch, M.. “The Externalized Retina: Selection and Mathematization in the Visual Documentation of Objects in the Life Sciences”. <i>Human Studies</i>, vol. 11, no. 2/3, pp. 201–34, https://doi.org/10.1007/BF00177304. JSTOR.
+    </div>
+  
+    <div class="paragraph mb5">
+    Manning, C. D.and H. Schütze. <i>Foundations of Statistical Natural Language Processing</i>. MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Manovich, L.. “Artistic Visualization”. <i>A Companion to Digital Art</i>, edited by Christine Paul, Wiley Blackwell.
+    </div>
+  
+    <div class="paragraph mb5">
+    Manovich, L.. “Data Visualization as New Abstraction and Anti-sublime”. <i>Small Tech: The Culture of Digital Tools</i>, edited by Byron Hawk et al., University of Minnesota Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    McInnes, L., et al.. “UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction”. <i>Arxiv.org</i>, vol. stat.ML, https://arxiv.org/pdf/1802.03426.pdf.
+    </div>
+  
+    <div class="paragraph mb5">
+    Mediacom, .. “EPFL Keeps the Lead of “THE Young Universities Ranking””. <i>EPFL Website</i>, https://actu.epfl.ch/news/epfl-keeps-the-lead-of-the-young-universities-rank/.
+    </div>
+  
+    <div class="paragraph mb5">
+    Meirelles, I.. <i>Design for Information: An Introduction to the Histories, Theories, and Best Practices Behind Effective Information Visualizations</i>. Rockport.
+    </div>
+  
+    <div class="paragraph mb5">
+    Moon, C. Y. E.and D. Rodighiero. “Mapping as a Contemporary Instrument for Orientation in Conferences”. <i>Proceedings of the IX Annual Conference of the Association for Humanities and Digital Culture (AIUCD). The Inevitable Turning Point: Challenges and Perspectives for Humanistic Informatics</i>, edited by rlo Passarotti et al., Associazione per l'Informatica Umanistica e la Cultura Digitale, https://doi.org/10.5281/zenodo.3611340.
+    </div>
+  
+    <div class="paragraph mb5">
+    Obrist, H. U.and B. Vanderlinden. <i>Laboratorium</i>. Dumont.
+    </div>
+  
+    <div class="paragraph mb5">
+    Paul, C.. <i>Digital Art</i>. Third edition, Thames & Hudson.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rendgen, S.. <i>The minard system: the complete statistical graphics of charles-joseph minard</i>. Princeton Architectural Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rodighiero, D.and A. Romele. “Reading Network Diagrams by Using Contour Lines and Word Clouds”. <i>Proceeding of Graphs and Networks in the Humanities</i>, https://doi.org/10.31235/osf.io/3g7bt.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rodighiero, D.. “Ars memorativa as the genesis of information design: a conversation with manuel lima”. <i>Nightingale</i>, https://nightingaledvs.com/ars-memorativa-as-the-genesis-of-information-design-a-conversation-with-manuel-lima/.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rodighiero, D., et al.. “A Visual Translation of the Pandemic”. <i>Leonardo</i>, vol. 55, no. 3, pp. 297–303, https://doi.org/10.1162/leon_a_02203.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rodighiero, D., et al.. “Immersive Architectures for Visual Data Literacy”. <i>Information Design Journal</i>, vol. 27, no. 3, pp. 295–308, https://doi.org/10.1075/idj.22016.rod.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rodighiero, D., et al.. “Making visible the invisible work of scientists during the COVID-19 pandemic”. <i>Visual culture studies</i>, edited by Tarcisio Lancioni and Federica Villa, vol. 2, 2021, pp. 143–65, https://doi.org/10.5281/zenodo.5115621.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rodighiero, D., et al.. “Mapping affinities in academic organizations”. <i>Frontiers in research metrics and analytics</i>, vol. 3, no. 4, https://doi.org/10.3389/frma.2018.00004.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rodighiero, D., et al.. “Surprise Machines: Revealing Harvard Art Museums’ Image Collection”. <i>Information Design Journal</i>, vol. 27, no. 1, pp. 21–34, https://doi.org/10.1075/idj.22013.rod.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rodighiero, D.. <i>Mapping affinities: democratizing data visualization</i>. Open-access English edition, Métis Presses, https://nrs.harvard.edu/URN-3:HUL.INSTREPOS:37368046.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rosenberg, D.and A. Grafton. <i>Cartographies of Time</i>. Princeton Architectural Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rosnay, J. de .. <i>Le macroscope: vers une vision globale</i>. Éd. Points.
+    </div>
+  
+    <div class="paragraph mb5">
+    Salton, G., et al.. “A Vector Space Model for Automatic Indexing”. <i>Communications of the ACM</i>, vol. 18, no. 11, pp. 613–20, https://doi.org/10/fw8vv8.
+    </div>
+  
+    <div class="paragraph mb5">
+    Schmidt, B.. “Stable Random Projection: Lightweight, General-purpose Dimensionality Reduction for Digitized Libraries”. <i>Journal of Cultural Analytics</i>, https://doi.org/10.22148/16.025.
+    </div>
+  
+    <div class="paragraph mb5">
+    Shapin, S.. “Why the Public Ought to Understand Science-in-the-making”. <i>Public Understanding of Science</i>, vol. 1, no. 1, pp. 27–30, https://doi.org/10.1088/0963-6625/1/1/006.
+    </div>
+  
+    <div class="paragraph mb5">
+    Sismondo, S.. <i>An introduction to science and technology studies</i>. Second edition, Wiley-Blackwell.
+    </div>
+  
+    <div class="paragraph mb5">
+    Suber, P.. <i>Open Access</i>. MIT Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Urquhart, R. B.. “Algorithms for Computation of Relative Neighbourhood Graph”. <i>Electronics Letters</i>, vol. 16, no. 14, p. 556, https://doi.org/10.1049/el:19800386.
+    </div>
+  
+    <div class="paragraph mb5">
+    Van Dijck, J.. “Datafication, Dataism and Dataveillance: Big Data Between Scientific Paradigm and Ideology”. <i>Surveillance & Society</i>, vol. 12, no. 2, pp. 197–208, https://doi.org/10/gd84d9.
+    </div>
+  
+    <div class="paragraph mb5">
+    Willett, W., et al.. “Perception! Immersion! Empowerment! Superpowers as Inspiration for Visualization”. <i>IEEE Transactions on Visualization and Computer Graphics</i>, vol. 28, no. 1, pp. 22–32, https://doi.org/10.1109/TVCG.2021.3114844.
+    </div>
+  
+</section>
+
+
+    </body>
+</html>

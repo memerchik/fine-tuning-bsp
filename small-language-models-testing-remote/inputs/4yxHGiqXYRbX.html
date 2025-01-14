@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://journalofdigitalhistory.org/favicon.ico">
+        <title>Topic-specific corpus building: A step towards a representative newspaper corpus on the topic of return migration using text mining methods - Journal of Digital History</title>
+        
+<meta property="og:title" content="Topic-specific corpus building: A step towards a representative newspaper corpus on the topic of return migration using text mining methods" />
+<meta property="og:description" content="Humanities researchers often encounter the problem that their specialized corpora, created by keyword searches, either contain documents that are irrelevant for their research questions because the search queries were too broad, or they miss relevant documents because the search requests were too narrow. The reason for this lies in the complexity of language, which is characterized by ambiguity and concepts that are difficult, if not impossible, to trace by computational methods and thus keyword searches alone. This paper shows how text mining methods can support the building of a topic-specific corpus. Using the example of  return migration issues, the aim is, on the one hand, to build a corpus that is as representative as possible and, on the other hand, to overcome the bias that comes with complex keyword searches that are influenced by the researcher&#x27;s prior knowledge. The paper begins with a discussion of the motivations for and the challenges of building research driven corpora, leads through the steps that were taken to obtain a satisfactory corpus that can be analysed further  and  gives an outlook on how the created corpus was used to conduct a qualitative, discourse-driven analysis on return migration from the Americas to Europe between 1850 and 1950." />
+<meta property="og:site_name" content="Journal of Digital History" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://raw.githubusercontent.com/jdh-observer/jdh001-4yxHGiqXYRbX/main/socialmediacover.png" />
+<meta property="og:url" content="https://journalofdigitalhistory.org/en/article/4yxHGiqXYRbX" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Journal_DigHist" />
+<meta name="twitter:title" content="Topic-specific corpus building: A step towards a representative newspaper corpus on the topic of return migration using text mining methods" />
+<meta name="twitter:description" content="Humanities researchers often encounter the problem that their specialized corpora, created by keyword searches, either contain documents that are irrelevant for their research questions because the search queries were too broad, or they miss relevant documents because the search requests were too narrow. The reason for this lies in the complexity of language, which is characterized by ambiguity and concepts that are difficult, if not impossible, to trace by computational methods and thus keyword searches alone. This paper shows how text mining methods can support the building of a topic-specific corpus. Using the example of  return migration issues, the aim is, on the one hand, to build a corpus that is as representative as possible and, on the other hand, to overcome the bias that comes with complex keyword searches that are influenced by the researcher&#x27;s prior knowledge. The paper begins with a discussion of the motivations for and the challenges of building research driven corpora, leads through the steps that were taken to obtain a satisfactory corpus that can be analysed further  and  gives an outlook on how the created corpus was used to conduct a qualitative, discourse-driven analysis on return migration from the Americas to Europe between 1850 and 1950." />
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jdh-observer/jdh001-4yxHGiqXYRbX/main/socialmediacover.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Fira+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+<style>
+  body{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 10pt;
+    line-height: 1.5em;
+  }
+  .code, code, pre{
+    font-family: 'Fira Code', monospace;
+  }
+  .abstract p:first-child:first-letter {
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+  }
+  a{
+    color: black;
+  }
+  .collaborators a{
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .contributors a > img {
+    /* ordic badge */
+    width: 4mm;
+    height: 4mm;
+  }
+  .desktop a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  p{
+    margin: 0;
+  }
+  .paragraph_num {
+    position: absolute;
+    left: 40px;
+    color: gray;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+@page {
+    size: A4;
+    margin: 1cm;
+  }
+  .position-relative{
+    position: relative;
+  }
+
+
+  @media print {
+
+    blockquote{
+      border-left: 1pt black solid;
+      padding-left: 5mm;
+      margin-left: 5mm;
+      margin-right: 5mm;
+    }
+
+    .title{
+      max-width: 75%;
+    }
+    .abstract{
+      font-size: 12pt;
+      line-height: 18pt;
+    }
+    .keywords{
+      font-size: 12pt;
+    }
+    .abstract p:first-child:first-letter {
+      float: left;
+      height: 36pt;
+      font-size: 36pt;
+      line-height: 36pt;
+      margin-right: 1mm;
+      font-family: 'Fira Code', monospace;
+      font-weight: bold;
+    }
+    .collaborators{
+      max-width: 50%;
+    }
+    .page-break {page-break-after: always;}
+    .dual-column{
+      column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+    }
+    h1{
+      font-size: 25pt;
+      line-height: 1.5em;
+    }
+    h2{
+      margin: 15mm 0 5mm;
+    }
+    h3{
+      margin: 10mm 0 5mm;
+    }
+    .mb5{
+      margin-bottom: 5mm;
+    }
+    .mb10{
+      margin-bottom: 10mm;
+    }
+    .mb15{
+      margin-bottom: 15mm;
+    }
+    .mb20{
+      margin-bottom: 20mm;
+    }
+    .mt5{
+      margin-top: 5mm;
+    }
+    .mt10{
+      margin-top: 10mm;
+    }
+    .mr10{
+      margin-right: 10mm;
+    }
+    .mt20{
+      margin-top: 20mm;
+    }
+    .mt25{
+      margin-top: 25mm;
+    }
+    .contributors{
+      display: flex;
+      max-width: 75%;
+    }
+    .contributor h3{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+   .flex-container {
+    display: flex;
+   }
+  .flex-child {
+      flex: 1;
+      border: 2px solid #5e2bff;
+      text-align:center;
+
+  }
+
+  .flex-child:first-child {
+      margin-right: 20px;
+  }
+  .read a{
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.625%;
+    text-align: center;
+    color: white;
+  }
+  .read a:link, a:visited, a:focus {
+    background: #5e2bff;
+  }
+  .email a{
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.625%;
+    text-align: center;
+    color: black;
+    border: 2px solid #5e2bff;
+
+  }
+  .email a:link, a:visited, a:focus {
+  }
+
+  
+  }
+  }
+</style>
+
+    </head>
+    <body>
+      
+
+<section class="sheet padding-20mm">
+  <article class="position-relative">
+    <div style="position: absolute; left:0mm; top:-20mm; display: flex">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="50">
+        <rect x="70" y="50" width="10" height="10" rx="5"/>
+        <path fill="black" d="M130,40H120V20H100V10H70V30H60V20H30V50H10V90H60V80H90V90h50V40ZM40,80H20V60H30V70H40V30H50V80ZM80,70H60V40H80V20H90V70Zm50-10V80H120V60H110V80H100V30h10V50h20Z"/>
+      </svg>
+      <div style="font-weight: bold; font-size:9pt; line-height:11pt; margin-left: 2mm; margin-top:.5mm">Journal of <br>Digital History</div>
+    </div>
+    <!-- img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAa4AAAGuCAIAAABHl3XNAAAIHElEQVR4nO3dMY7kuhVA0dvGRN6K978Ub+WncjpBQ/gwh5+P1efkpWJL1RcM9MCv53kC+Nn+dXoBAOdJIYAUAkghQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCFD9Or2A73399d/TS/jDnn//5//+7L67sW9V71de+YtOXfndyt1YufKNVu7GPnaFAFIIIIUASSFAUgiQFAIkhQBJIUBSCNDYaZN3M99WPzUVsDJ9sTIjMXOeZN/deLdvzSvfe8qNEzJ2hQBSCCCFAEkhQFIIkBQCJIUASSFAUgjQpdMm72aeBPJuZc37Jhn2fe+pE0hOzbGcmgm58X/hFLtCACkEkEKApBAgKQRICgGSQoCkECApBOgjp01+mhtP1Zg59bFvQmbmLAq/sysEkEIAKQRICgGSQoCkECApBEgKAZJCgEybXGHmFMSN52bsO1PFPMnt7AoBpBBACgGSQoCkECApBEgKAZJCgKQQoI+cNvm8N/v3TTK8X/nGCYrPm5BZMXNVM9kVAkghgBQCJIUASSFAUgiQFAIkhQBJIUCXTpvsmxmY6dSpGvu+99Rn39245p/2v7CPXSGAFAJIIUBSCJAUAiSFAEkhQFIIkBQCVF/P85xeA8emEU6dfbFvcuNGTiCZwK4QQAoBpBAgKQRICgGSQoCkECApBEgKARp7tsnnTSO8r3nm6RYrV175e03I/KnP7vN5EzJ2hQBSCCCFAEkhQFIIkBQCJIUASSFAUgjQ2GmTfdMI+yYoVqz8RTe+93/jNNGNEzIzZ2Bm/mLtCgGkEEAKAZJCgKQQICkESAoBkkKApBCg+nqe5/QavrFvouDUHMu+00tmzma8+7y7ceP33jiXtY9dIYAUAkghQFIIkBQCJIUASSFAUgiQFAJ06bTJzDf73+17d//zplxO3ecb/bRZo33sCgGkEEAKAZJCgKQQICkESAoBkkKApBCg+nV6Ad/b9z76jRMjP+3KK2ZOMsx8CjO/9xS7QgApBJBCgKQQICkESAoBkkKApBAgKQRo7LTJu5lvuu97O3/ljJGVVc08YWbFzHNgVq78zikxf59dIYAUAkghQFIIkBQCJIUASSFAUgiQFAJUX8/znF7DN06d2LBi5lkfM2cGzHX8qe9dMfMpnGJXCCCFAFIIkBQCJIUASSFAUgiQFAIkhQCNnTZ5t+/MjVOffTdzVStmTiPMnGN5d+r5znyCK+wKAaQQQAoBkkKApBAgKQRICgGSQoCkEKBLp03ezXyzf+Ysyr4r37iqdzPXfOOJOjMnVewKAaQQQAoBkkKApBAgKQRICgGSQoCkEKD6dXoB/7Qb393f59TkxoqVZ7TyF82cn5l55RvZFQJIIYAUAiSFAEkhQFIIkBQCJIUASSFAY6dNZs45vJv57r6TQP7+Z9+d+k2u/EX77tWN/6Hv7AoBpBBACgGSQoCkECApBEgKAZJCgKQQoLHTJqdmJE59dt9UwKn3/mfOG+ybRVlx6gnOnAg6xa4QQAoBpBAgKQRICgGSQoCkECApBEgKARo7bbLPqTfsV8ycRth3N96vvG/OYeZcxykzJ3P2sSsEkEIAKQRICgGSQoCkECApBEgKAZJCgOrreZ7Ta/jGqXfZ900yfN7pJTOf0buZ8zP7rvzO2Sa/sysEkEIAKQRICgGSQoCkECApBEgKAZJCgC4922TmXMfKu/szTy95d+O8wb7vnfm7WnHj811hVwgghQBSCJAUAiSFAEkhQFIIkBQCJIUAXXq2yY3vss882+TG+3zqbrw7NRE0cxLp3czflV0hgBQCSCFAUgiQFAIkhQBJIUBSCJAUAnTp2SYrTp0UsWLfLMqNJ3LMvBvv9t2NfRMyp+Z2TrErBJBCACkESAoBkkKApBAgKQRICgGSQoDGnm3y09x4fsVPm0bYN4sy81yUmafx7GNXCCCFAFIIkBQCJIUASSFAUgiQFAIkhQCNPdvkxmmEdzeeI/F5p5e8e7/yqd/kjZMbM1f1zq4QQAoBpBAgKQRICgGSQoCkECApBEgKARo7bfJu5rvsK9MIpyY3TllZ1anJnJmzNyv2/WJn/ure2RUCSCGAFAIkhQBJIUBSCJAUAiSFAEkhQJdOm7y78b3/le89dSLHjRMF7/adqTLz1JR3+6Z6Zv5y7AoBpBBACgGSQoCkECApBEgKAZJCgKQQoI+cNuF3+2YG9k1fvNt35VNnfeybzdg3xzJzQmaFXSGAFAJIIUBSCJAUAiSFAEkhQFIIkBQCZNrkCjfOdZyaoDh1PsmKmU9w5co3sisEkEIAKQRICgGSQoCkECApBEgKAZJCgD5y2uTG9+D3rfnUyRgzn8LnzaK8O3Vay43sCgGkEEAKAZJCgKQQICkESAoBkkKApBCg+nqe5/QavrHv3f1TTs05zJyvmPkXvfu8s01WfN4sil0hgBQCSCFAUgiQFAIkhQBJIUBSCJAUAjR22gTgn2RXCCCFAFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFANX/AJK0OiyCqrjSAAAAAElFTkSuQmCC" style="width:20mm; position: absolute; right:0; top:-20mm" -->
+
+    <div class="title mt25 mb10">
+    
+      <h1>Topic-specific corpus building: A step towards a representative newspaper corpus on the topic of return migration using text mining methods</h1>
+
+    
+    </div>
+    <div class="contributors mb5">
+      
+        <div class="contributor mr10">
+          <h3>Sarah Oberbichler <a href="https://orcid.org/0000-0002-1031-2759"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="orcid" /></a></h3>
+<p>Universität Innsbruck, Mainz, Germany</p>
+
+        </div>
+      
+        <div class="contributor mr10">
+          <h3>Eva Pfanzelter <a href="https://orcid.org/0000-0002-5033-7344"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="orcid" /></a></h3>
+<p>Universität Innsbruck, Mainz, Germany</p>
+
+        </div>
+      
+    </div>
+    
+    <div>
+      <p class="desktop" style="font-size:8pt; line-height:12pt">
+        <a href="https://doi.org/10.1515/JDH-2021-1003?locatt=label:JDHFULL">https://doi.org/10.1515/JDH-2021-1003?locatt=label:JDHFULL</a>
+      </p>
+      <p class="desktop" style="font-size:8pt; line-height:12pt">
+        
+        Published online the 18th October 2021
+        
+      </p>
+    </div>
+    <p>
+      <div class="flex-container">
+        <div class="flex-child">
+          <br>
+          Experience the full interactive<br>multi-layered reading experience
+          <div class="read">
+            <a href="https://journalofdigitalhistory.org/en/article/4yxHGiqXYRbX">&nbsp;-> Read here&nbsp;</a>
+          </div>
+          <br>
+        </div>
+        <div class="flex-child">
+          <br>
+          Send yourself a reminder<br>to read this article later
+          <div class="email">
+            <a  href="mailto:?subject=Read%20on%20JDH%20%22Topic-specific corpus building: A step towards a representative newspaper corpus on the topic of return migration using text mining methods%22&body=Hello!%0D%0AHere%20is%20your%20reminder%20as%20requested%0D%0A%0D%0ALink%3A%20https://journalofdigitalhistory.org/en/article/4yxHGiqXYRbX">&nbsp;-> Send E-Mail&nbsp;</a>
+            <br>
+          </div>
+        </div>
+      </div>
+    </p>
+    <div class="keywords mb5 mt5">
+          <b>Keywords: </b>Corpus Building, Return Migration, Historical Newspapers, Text Mining, Word Sense Disambiguation, Similiarity
+      </div>
+    <div class="abstract dual-column mb5">
+      
+        <p>Humanities researchers often encounter the problem that their specialized corpora, created by keyword searches, either contain documents that are irrelevant for their research questions because the search queries were too broad, or they miss relevant documents because the search requests were too narrow. The reason for this lies in the complexity of language, which is characterized by ambiguity and concepts that are difficult, if not impossible, to trace by computational methods and thus keyword searches alone. This paper shows how text mining methods can support the building of a topic-specific corpus. Using the example of  return migration issues, the aim is, on the one hand, to build a corpus that is as representative as possible and, on the other hand, to overcome the bias that comes with complex keyword searches that are influenced by the researcher's prior knowledge. The paper begins with a discussion of the motivations for and the challenges of building research driven corpora, leads through the steps that were taken to obtain a satisfactory corpus that can be analysed further  and  gives an outlook on how the created corpus was used to conduct a qualitative, discourse-driven analysis on return migration from the Americas to Europe between 1850 and 1950.</p>
+
+      
+    </div>
+    <div class="disclaimer">
+    
+      <p>This  work has  been  supported  by  the  European  Union  Horizon  2020  research  and innovation programme under grant 770299 (NewsEye).</p>
+
+    
+    </div>
+  </article>
+</section>
+<section class="sheet padding-20mm">
+  <article>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">1</div>
+      <div><p><a href="https://creativecommons.org/licenses/by/4.0/"><img src="https://licensebuttons.net/l/by/4.0/88x31.png" alt="cc-by" /></a>
+© Sarah Oberbichler - Eva Pfanzelter. Published by De Gruyter in cooperation with the University of Luxembourg Centre for Contemporary and Digital History. This is an Open Access article distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License CC-BY</a></p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">3</div>
+      <div><h2>Introduction</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">4</div>
+      <div><p>Migration studies as an interdisciplinary field have become popular not only because of the increased movement of people across the world for various reasons but also because globalization has fostered and facilitated the movement of humans, goods, technology, and information. Despite its inherent transnational nature, national, but especially regional approaches, have proven to be fruitful for the study of historical developments of migration where archival material is scarce, and sources often are lacking. Return migration - which can generally be defined as 'cross-border migration to the country of origin' (<em>Currle 2006</em>), is still an all too frequently neglected topic within migration studies and migration history. At the same time, repatriation has always been part of every migration movement also in recent times. Since remigration studies are, in a sense, somewhat hidden within migration discourses and research, we encounter even more challenging issues concerning primary sources to analyse. Therefore, historians often turn to (digitized) historical newspapers. The use of these, however, comes in tandem with complex challenges and a necessary update on source criticism, which has gotten much attention and is discussed within the emerging field of digital hermeneutics (<em>Fickers 2019</em>, <em>Föhr 2017</em>, <em>Koolen, van Gorp, van Ossenbruggen 2019</em>, <em>Pfanzelter 2010</em>). Other parts of the historical method, like a detailed critical assessment of adequate corpus creation in the heuristic research step, have so far not been written about enough. The challenges within the heuristic research step, however, are no less. For example, ambiguous keywords can complicate the search and lead to results that are not relevant for the research question. Also, specific topics, discourses or ideas are difficult to track down by keyword searches alone.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">5</div>
+      <div><p>The motivation of this paper is to present and describe a digital workflow that goes from building and refining a newspaper corpus using text mining methods to the qualitative analysis of the final results. In particular, the paper shows how a corpus created with ambiguous search queries was successfully classified into relevant and irrelevant articles, i.e., disambiguated by applying digital methods, and how the final corpus was used for a further qualitative, discourse-driven analysis of return migration from the Americas to Europe between 1850 and 1950. In doing so, our overall goal is to underline the necessity to give more thought and research to support digital methods that lie between qualitative analysis of small information units and quantitative approaches to big data – we call it the meso level. The search for complex patterns in masses of information rather than gaps in the historical record (<em>Haber 2012</em>) has led to a hybridity of classical and digital methods in historical research (<em>Fickers 2020</em>). The aim of the mesoanalysis proposed here is to sort text extracted from a large corpus of data and, e.g., sort it according to topics, content or actors using automated methods thus creating a research driven corpus for further analysis, such as discourse analysis. Discourse analysis has always also relied on a thorough reading of relevant text corpora. With ever-increasing large digital datasets, automated corpus-specific approaches (such as the calculation of multi-words units) support qualitative interpretative steps like the ones needed for discourse analysis (<em>Bubenhofer 2008</em>, <em>Steyer, Lauer 2007</em>). All in all, we present a corpus building method that supports humanities research, which means that the focus lies on solving a specific problem and not on a comparison or evaluation of different approaches or methods. Still, the methodology presented in this paper can be adapted for research projects that deal with similar corpus building issues.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">6</div>
+      <div><p>Like our project on return migration, historical research is often driven by event- or topic-specific research questions. We started with questions on how Austrian newspapers reported on return migration to Europe between 1850 and 1950, what kind of discourses can be found and how they developed over time. This means that although using big data and quantitative methods to find patterns that overlap with these research questions can be rewarding, especially for discourse related issues it oftentimes is still necessary to find and extract those parts in the massive data dumps that are relevant for the topic in question. For this reason, corpus building is an essential aspect of working with large amounts of digital sources. However, creating good corpora often requires time-consuming and complex search processes. In order to find articles on the topic of return migration, it is first necessary to find keywords that actually return articles on the topic. Then, it must be checked (by close reading) whether the keyword search omits important articles. If this is so, more and also broader search terms have to be included, which in turn can lead to articles being found that are not relevant to the research question posed. For example, the German term 'Rückwanderer' (returnee) returns only relevant articles but not all relevant articles available. The German term for return migration ('Rückwanderung'), on the other hand, has different meanings in different contexts and returns too many irrelevant texts. This is very daunting because it makes it necessary to weigh up between a collection that misses relevant articles, and one which contains noise (i.e. irrelevant texts) (<em>Chowdhury 2010</em>, <em>Gabrielatos 2007</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">7</div>
+      <div><p>In order to qualify for further analysis, neither noise nor missing articles should prevail. Historical corpus-driven/corpus-based studies (quantitative, but also qualitative) rely both on the quality and the representativeness of the selected collection. Here, a distinction is made between external and internal criteria for corpus design and composition (<em>Corpas Pastor, Seghiri Domínguez 2010</em>). An important external criterion is the quality of the sources. This refers, on the one hand, to the reliability of the available sources and, on the other, to the quality of the data (e.g., if retro-digitized sources are being used, document layout analysis and optical character recognition, OCR). A second important external criterion is the representativeness of sources. In the case of, e.g., digitized newspapers, this includes questions like whether the used digitized newspapers are representative for the research in question if important newspapers or newspaper issues are missing or if the data of digitized issues is accessible, readable, and contains enough metadata for proper contextualization. An important internal criterion that affects the representativeness of topic-specific corpora is the number of documents in a collection (<em>Corpas Pastor, Seghiri Domínguez 2010</em>). Source criticism as well as methods to improve search strategies therefore are important to assure the quality of a topic-specific corpus as well as it's completeness (not too many relevant documents are left out) and purity (not too many irrelevant documents are included). Although the creation of a 'pure corpus' per se will remain an unattainable goal for many reasons and there can be no such thing as a generically representative corpus (<em>Raineri, Debras 2019</em>), for this paper we consider representativeness as a combination of adequacy, sufficiency, and objectivity: Can the chosen corpus fulfill the purposes for which it is intended for and can the research questions be answered without serious biases? Building a corpus that is as representative as possible, however, puts researchers in a difficult situation. Processes of manual filtering are often very time-consuming. For the topic of return migration, it would have meant to manually split tens of thousands of newspaper articles into relevant or not relevant news items. Therefore, we were looking into text mining methods to automate some of our selection processes.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">8</div>
+      <div><p>We chose a semi-supervised similarity-based word sense disambiguation (WSD) approach using Latent Dirichlet allocation (LDA), a probabilistic model that calculates the probability distribution over terms (<em>Blei 2012</em>), and the Jensen-Shannon (JS) distance (the square of the Jensen-Shannon divergence), which measures the similarity between texts (<em>Lin 1991</em>), was applied to reach this goal. The ability to deal with complex, large-scale collections with different themes and without a clear boundary between relevant and non-relevant texts has made it our preferred method.
+Both approaches, the training of the LDA algorithm as well as the similarity measurements are unsupervised and build on the whole context of a document. LDA topics can capture the polysemous or ambiguous use of words, but they do not carry the explicit notion of the correct context that is necessary for WSD (<em>Boyd-Graber, Blei, Zhu 2007</em>). Therefore, a training/feedback corpus with information (labels) on the ‘correct’ or ‘incorrect’ context (relevant or irrelevant for the research question) was created manually for document comparison and clustering. The document labels do not play a role in training the LDA algorithm and finding the most similar set of documents in the feedback corpus, however, they allow the calculation of the overall relevance of the retrieved most similar set of documents based on the numeric labels. This calculation is used to support the final classification into relevant and non-relevant documents, as explained step by step in the hermeneutics layers of this paper.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">9</div>
+      <div><h2>Return migration in historical newspapers</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">10</div>
+      <div><p>News coverage on return migration is manifold: Reports on remigration and repatriation give insights into special events (<a href="#figure-1">figure 1</a> depicts an alleged scene of unemployed returnees from America on a train station), letters from returnees printed in newspapers allow for glimpses into the thoughts of returnees, appeals inform about support efforts, and small advertisements provide an overview of what was sold or searched for in connection with return migration (<a href="#figure-2">figure 2</a> shows an add of a returnee who is desirous to find a 'nice educated woman over 40'). Just as immigration, return migration has always also been a question of social negotiation. Defining discourses as a ‘group of statements that belong to a single system of formation’ (<em>Foucault 1969</em>) we find several characteristic discourses on return migration especially in reports, letters, and appeals, which include (implicit) arguments to support, promote, regulate, or prohibit the return of people to their country to origin. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">13</div>
+      <div><h3>The motivation for corpus building</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">14</div>
+      <div><p>Newspapers are the 'predominant social field' for the creation of information, beliefs or arguments, which are necessary 'for establishing and sustaining economic, social and political systems and orders' (<em>Fairclough 2013</em>). While historical return migration movements have been little researched in scholarly contexts, newspapers indicate that return migration has certainly been an important topic within historical migration processes – also in recent times. Examples include the return to Europe from overseas in the 19th and 20th century, the return of war veterans and the repatriation of war refugees during and after the First World War, or the return and repatriation of prisoners of war, refugees, exiles, concentration camp survivors, etc. during and after the Second World War. The main motivation for the paper here, therefore, was to produce empirical material for further qualitative and qualitative analysis on the topic of return migration. The questions behind this approach are as follows: What discourses accompanied the newspaper reporting on return migration? Were return migrants welcomed or perceived as a burden and threat when returning back to their country of origin?</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">15</div>
+      <div><p>In academic literature, migration was often described as a one-way process, beginning with the 'uprooting' of people at the point of origin and ending with 'assimilation' into their adopted culture and country. (<em>Steidl 2017</em>) phrased this as follows: 'Although temporary and circular migration patterns are of a special importance for European people in modern times, they were neglected by migration research for decades'. Still, recent research indicates that many people left their home countries with the notion of returning home at a certain point not so far in the future. This is also true for those who left their home voluntarily to resettle in other countries. Migration is therefore neither a linear process, nor is a model that goes in both directions appropriately. In many cases, emigrants returned only temporarily and left their country of origin again after a while or they moved from one country to the next and returned to different places.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">16</div>
+      <div><p>Historical research on return migration considers such patterns of, and motivations for, return migration (<em>Wyman 2001</em>), examines historical, political, sociological, and economic backgrounds (<em>Harper 2012</em>, <em>Olivier 2013</em>, <em>Poznan 2017</em>), or deals with autobiographical questions (<em>Prager, Straub 2017</em>). The complexity and heterogeneity of sources about return migration, however, complicate a structured analysis of the topic of return migration. The historical constellations are so diverse that generalizations are difficult to make and thus inherently faulty. What adds to the difficulties is the lack of empirical material. The compilation of a representative corpus of historical newspaper articles, as proposed here, is therefore still an essential factor if the topic of remigration is to be accessible for research.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">17</div>
+      <div><h3>The challenges when working with digital newspaper sources</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">18</div>
+      <div><p>Researching migration issues with digital newspaper interfaces usually begins with unstructured keyword searches and it oftentimes is serendipity that leads to good results (<em>Oberbichler, Pfanzelter 2021</em>). Keyword searches, however, often return a significant number of irrelevant results or exclude too many relevant results. A common reason for this is to be found in the complex nature of language. Synonymy and polysemy complicate keyword searches, but not alone. Word inflections, and concepts that do not equate to single words also play a significant role.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">19</div>
+      <div><p>Return migration as defined before and the ideas associated with it are difficult to trace by keyword searches because of the following reasons:</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">20</div>
+      <div><ol>
+<li>Ideas and discourses are hard to find using single keywords alone: There are only a few terms that lead to exclusively relevant articles on return migration, such as 'Rückkehrer', 'Heimkehrer' or 'Rückwanderer' (all German terms for <em>returnee</em>). However, they only cover a small amount of the whole spectrum of return migration news coverage. Return migration in the German language is often also expressed by verbal constructions such as 'kehrten in die Heimat zurück' (<em>returned home</em>) or phrases such as 'Rückkehr der Emigranten' (<em>return of the emigrants</em>).</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">21</div>
+      <div><ol start="2">
+<li>Inflected words complicate phrase searches or the combination of search terms: Phrase searches in a distance of k words are another way to improve the representativeness of a corpus. Here it would be combinations such as 'heimkehrende Auswanderer' (<em>returning emigrants</em>) or the combination of keywords that occur together in a defined word distance such as 'Rückkehr ... Auswanderer' (<em>return ... migrants</em>). However, these combinations involve several challenges; firstly, it is difficult to find all kinds of different combinations that would represent the topic in an adequate way. Secondly, it would be very time-consuming to consider all possible word flexions. Finally, even if it were possible to cover the topic of return migration in its entirety, many of the word combinations like 'Heimat zurückkehren' (returning home) would lead to results that are not relevant for the research project (e.g., when someone returned home from a walk).</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">22</div>
+      <div><ol start="3">
+<li>Words have different meanings in different contexts (ambiguity): Expanding the search to more ambiguous words such as 'Heimkehr' (<em>returning home</em>) or 'Rückkehr' (<em>returning back</em>)  helps to find more relevant articles but often leads to a considerable amount of irrelevant search results as well. The process of identifying the actual meanings of words can be considered as one of the most challenging problems in NLP (<em>Navigli 2009</em>). The following texts show examples of relevant and non-relevant articles on the topic of return migration found by using ambiguous search terms. The first newspaper clipping (<a href="#table-1">table 1</a>) of the Austrian newspaper <em>Innsbrucker Nachrichten</em> from May 1913 contains the search term 'Rückwanderung' and reports about the return of Slavic workers from America. This article is relevant for the present research project and will therefore be labelled as relevant:</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">23</div>
+      <div><p>| Original Text | Translation
+| --- | --- |
+| Der Balkankrteg. Rückwanderung in die Balkanstaaten. Aus Bregenz schreibt man uns vom 7. d. M.. Seit einigen Tagen kann man auf den Bodenseeschiffen und Eisenbahnzügen viele sla wische Arbeiter beobachten, die aus Amerika in ihre Heimat, in die Balkanstaaten, zurückkehren. Nach Aussage eines Auswandereragenten haben diese Staaten, welchen der Krieg viele Männer entrissen hat, eine große Aktion eingeleitet, um die in Amerika ansässigen Landeskinder zur Heimkehr zu bewegen. Auch von den in den Rheinischen Arbei'sgebieten beschäftigten Slawen kehren viele zurück. Der Heimatnaat gewährt ihnen im Wege der eigenen Konsulate weitestgehende Unterstützungen an Geld und Mitteln zur Gründung eines eigenen Herdes. Die Schiffe bringen viele solcher Rückwanderer über Konstanz und Württemberg hieher. | The Balkan War. Return migration to the Balkan states. We receive a letter from Bregenz on the 7th of this month. For some days now one has been able to observe on the Lake Constance ships and railway trains many Slav workers returning from America to their homeland, the Balkan states. According to an emigrant agent, these states, from which the war has taken many men, have initiated a great campaign to persuade the children of the country resident in America to return home. Many of the Slavs employed in the Rhenish labour areas are also returning. The Homeland Council, through its own consulates, grants them the greatest possible support in the form of money and means to establish their own herds. The ships bring many such returnees here via Constance and Württemberg. |</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">24</div>
+      <div><p>The second article (<a href="#table-2">table 2</a>) of the <em>Neue Freie Presse</em>, written in March 1935, contains the word 'Rückwanderung' as well, but reports on the return of foreign assets from England as well as on the return of money from the United States. This article was labelled as not useful for the research question on human return migration. All these challenges make it necessary to consider more advanced and complex techniques for the compilation of the corpus.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">25</div>
+      <div><p>| Original Text | Translation
+| --- | --- |
+| London. von Auslandgeldern aus Londoner Dienst der „Neuen Freien Presse“. London, 4. März. „Times“ schreibt über die Sterlingverkäufe auf den ausländischen Märkten: Das neue Abgleiten des Pfundkurses, das nun auf die etwa 1Oprozentige Abwertung des Jahres 1934 folgt, ist hauptsächlich eine Folge der Rückwanderung der ansländischen Fonds, die in den Jahren 1932 bis 1933 in sehr hohen Beträgen nach London gesandt worden waren. Die Umkehrung dieser Bewegung hat verschiedene Ursachen. Zum Beispiel hat die Fixierung der Relation zwischen Gold= und Dollarpreis im vorigen Jahr eine beträchtliche Rückwanderung amerikansschen Geldes nach den Vereinigten Staaten mit sich gebracht. Ein weiterer Faktor, der zur Abschwächung des Pfundes beitrug, ist die niedrige Zinsrate in London im Verhältnis zu jeuer der Goldblockländer. | London. of foreign money from London service of the 'Neue Freie Presse'. London, March 4. 'Times' writes on sterling sales in foreign markets: The new slide in the rate of the pound, which now follows the depreciation of about 1O per cent. in 1934, is chiefly a consequence of the return of domestic funds which had been sent to London in very large sums in 1932 to 1933. The reversal of this movement has several causes. For example, the fixing of the relation between the price of gold and the price of the dollar last year brought about a considerable return of American money to the United States. Another factor contributing to the weakening of the pound is the low interest rate in London relative to that of any of the gold bloc countries. |</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">26</div>
+      <div><h3>Methods to improve the representativeness of specialized corpora</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">27</div>
+      <div><p>There are a number of methods to improve the representativeness of specialized corpora. Search techniques such as Boolean queries from the area of information retrieval, for example, can be a great help to refine searches and to find relevant information. However, for the creation of topic-specific corpora, the search for texts containing specific information (e.g., a combination of words) can include biases (<em>Chowdhury 2010</em>). </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">28</div>
+      <div><p>Another method that draws on techniques used in information retrieval is the relative query term relevance (RQTR) method. RQTR is an approach to formulate a complex query for a topic-specific corpus by calculating the degree of precision and recall of a query. This means that the RQTR method is based on the combination of keywords (candidate term and core query term (CQT)) calculating the relevance of the candidate term (e.g., the relevance of the term Hamas for the topic on refugees). The score is calculated by first dividing the number of texts returned by the candidate term and CQT by the number of texts returned by the candidate term (which gives the QTR score) and second by comparing the QTR score to a score acting as threshold for inclusion: the baseline (B), which is the QTR of the lowest scoring CQT: ${RQTR} =\Bigg[\frac{(QTR-B)*100}{B}\Bigg]$. If a candidate term has a clear positive RQTR score, it can be used to add more relevant texts to a corpus. If the score is negative, it would add too much noise to the chosen dataset (<em>Gabrielatos 2007</em>). This approach can also be adapted to reduce the issue of polysemous query terms, as <em>Malone 2020</em> suggests. In this paper the RQTR method was used to find good keywords which were combined with a polysemous search term to reduce the number of irrelevant articles. This technique, again, is both time-consuming and influenced by the researcher’s choice of candidate terms.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">29</div>
+      <div><p>This is why machine learning approaches were looked into: WSD from the field of natural language processing includes methods that are meant to automatically disambiguate polysemous search terms. WSD can be described as a 'task of associating the correct meaning with a word in a given context' (<em>Pasini, Navigli 2020</em>). WSD techniques can be knowledge-based (e.g., based on dictionaries), supervised (uses machine-learning technique from manually annotated data), or unsupervised. Unsupervised WSD methods assume that similar meanings occur in similar contexts (<em>Ranjan Pal, Saha 2015</em>, <em>Navigli 2009</em>) and they learn from unlabelled text. We found that WSD can overcome some of the above-mentioned challenges. It derives the actual meanings of ambiguous words and their underlying concepts from its contexts, rather than from simply matching character strings like keyword search technologies (<em>Föhr 2017</em>). WSD uses both topic modelling and the Jensen-Shannon divergence (JSD). Topic modelling as a method for successful WSD has been described, for example, by <em>Boyd-Graber, Blei, Zhu 2007</em>. They proposed to use 'words that share the same hidden topic across many documents' for disambiguation rather than sentence-level or document-level approaches. Similarity measures for WSD are discussed in several papers e.g., <em>Dagan, Lee, Pereira 1997</em>, <em>Patwardhan, Banerjee, Pedersen 2003</em>. <em>Karov, Edelman 1998</em>, for example, discussed a method to find similar contexts (assuming words to be similar if they appear in similar sentences) by computing similarity between the original context of a word and similar sentences in a feedback set. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">30</div>
+      <div><p>The combination of LDA and JSD to group similar articles, documents, or groups of documents that we also apply here has been described in several computer science research papers Fothergill (<em>Fothergill, Cook, Baldwin 2016</em>, <em>Lu, Henchion, Namee 2019</em>, <em>Niekler, Jähnichen 2012</em>). </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">31</div>
+      <div><h2>Creating a newspaper corpus on historical return migration movements using text mining methods</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">32</div>
+      <div><h3>Collecting and manually annotating relevant and non-relevant articles for the topic on return migration</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">33</div>
+      <div><p>In order to use machine learning to support the building of a representative corpus on return migration, the process starts with the creation of a manually annotated training (and feedback) and testing collection that contains relevant as well as non-relevant articles for the topic on return migration. The training/feedback and testing corpus was created with the beta version of the <a href="https://platform.newseye.eu">NewsEye Platform</a> (<em>Jean-Caurant, Doucet 2020</em>). This platform allows us to create and manage datasets, to add annotations as well as to export them. In total, 208 newspaper clippings (<a href="#figure-3">figure 3</a>) were collected, marked as relevant or non-relevant (which can be done within the NewsEye platform), and exported, using the following search terms: 'Rückkehr' (<em>returning back</em>), 'Heimkehr' (<em>returning home</em>), 'heimgekehrt' (<em>(people who) returned home</em>), 'Rückwanderer' (<em>returnees</em>), 'Rückwanderung' (<em>return migration</em>), 'Heimkehrer' (<em>returnees</em>), 'heimkehrend' (<em>(people who) are returning</em>). Four Austrian newspapers, provided by the <a href="https://www.onb.ac.at/">Autrian National Library (ONB)</a> in the context of the NewsEye project, were used for the manually created corpus: The <em>Neue Freie Presse</em>, the <em>Arbeiter-Zeitung</em>, the <em>Illustrierte Kronen Zeitung</em> and the <em>Innsbrucker Nachrichten</em>. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">34</div>
+      <div><h4>Step 1: Preparing a manually created collection</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">35</div>
+      <div><p>At this step, articles that were found with the chosen search keywords were annotated. Through close reading, articles were selected, added to a collection and manually annotated as either relevant or non-relevant. Therefore, articles that reported, for example, on the return of emigrants to America were marked as relevant. Others that reported, for example, on people returning from mountain climbing were marked as irrelevant.</p>
+<p>Thanks to layout segmentation and manual article separation, which divides OCRed (optical character recognized) text into news-units in the <em>NewsEye</em> platform, it was possible to find and extract newspaper clippings on return movements. <a href="#table-3">Table 3</a> shows two articles from the manually created collections and the relevancy labels connected with those articles. And as can be seen in <a href="#figure-3">figure 3</a>, a total number of 125 articles were manually annotated as relevant (by assigning the number 3) and 82 articles were annotated as irrelevant (by assigning the number 0). While creating and annotating the dataset, value was placed on the representativity of the collection (in covering all possible topics, discourses, mtime frames, article lengths and genres). In addition, newspaper clippings where return migration was only a minor subject were included as well.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">38</div>
+      <div><p>Special attention was paid to ensure that the collection was representative for the topic and the data of high quality. For representativeness, full newspaper articles from different eras between 1850 and 1950 were considered (also articles where return migration was only a subordinate topic), making sure the most important aspects of return migration movements were included. The high quality of optical character recognition (OCR) of the newspaper issues in the platform made sure that no bigger distortions caused by OCR errors had to be dealt with. Within the NewsEye project, a dataset of some 1.5 million pages from the participating national libraries of Austria, France, and Finland was re-OCRed which led to impressive improvements in OCR quality when compared to the original datasets, producing output with character error rates below 1 percent (<em>Oberbichler, Pfanzelter, Hechl, Marjanen 2020</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">39</div>
+      <div><h3>Pre-processing and splitting collection before applying text mining methods</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">40</div>
+      <div><p>Before text mining methods could be applied, the collection was cleaned, pre-processed and divided into a training and feedback/testing corpus. Pre-processing is important because punctuation or special characters are usually not needed for further analysis. The same is true for words like <em>and</em>, <em>or</em>, <em>the</em> and similar, which cannot be considered important context. This is why in the next step we removed those parts of the articles that are not text and kept only those words that are considered important content for the topic on return migration.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">41</div>
+      <div><h5>Step 2a: Cleaning, tokenizing and stemming the text</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">42</div>
+      <div><p>Using the NLTK (Natural Language Toolkit) package, we cleaned (discarding punctuation, put all words into lower case) and tokenized the text (breaking text into individual linguistic units). We further removed stop words and stemmed the words (reducing inflected words to their root words). A further pre-processing step that could have been applied is lemmatization (converting words to their lemma form/lexeme). Some studies have shown that lemmatization can improve the interpretability of LDA models (<em>Martin, Johnson 2015</em>, <em>Spies 2017</em>), while others conclude that lemmatization can lead to the loss of some relevant morphological information (<em>Navarro-Colorado 2018</em>) or (together with stemmers) have no real effect on the model coherence at all (<em>Schofield, Mimno 2016</em>). In our case, lemmatization (we used the German language model of the spaCy package) did not have a clear advantage over stemming. Therefore, we chose to use a German language stemmer because it requires less processing (no part-of-speech tagging needed). What we did, however, is to extend the list of German stop words provided by the NLTK package. A longer list of German stop words was retrieved from https://countwordsfree.com/stopwords/german and added to the existing file.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">43</div>
+      <div><p>It turned out to be important to pay attention to the order in which the single steps are applied. Pre-processing starts with the initial cleaning, continues with the removal of stop-words and ends with the stemming of the remaining words. <a href="#table-4">Table 4</a> shows what the same articles from <a href="#table-1">table 1</a> look like after pre-processing.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">45</div>
+      <div><p>We further decided to divide the collection into a training/feedback and a testing corpus. This provided a set of documents (training corpus) to train the algorithm and a set of documents (testing corpus) to test the efficiency of the chosen methods. It was important that both training and testing/feedback corpus contained similar amounts of articles relevant or non-relevant for the topic on remigration.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">46</div>
+      <div><h5>Step 2b: Splitting the collection into a training and a testing corpus</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">47</div>
+      <div><p>To split the collection into a training and a tesing corpus, the <em>numpy.random.rand()</em> function was used to create an array with a specific shape and fill it with random values. This made it possible to get a good mix of relevant and non-relevant articles in each of the corpora <a href="#figure-4">figure 4</a>. As this function is based on randomness and the division of the corpora can vary with each call, a random seed was set to create reproducible calls. Consequently, all random numbers generated after setting the seed are the same on each machine.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">50</div>
+      <div><h3>Classify a corpus into relevant and irrelevant articles</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">51</div>
+      <div><p>In order to be able to separate relevant from irrelevant documents, LDA was used to group words and similar expressions that best characterize relevant or irrelevant documents and to provide every article with information on its topic distribution. The JS distance, on the other hand, was used to measure the similarity between the topic distribution of documents. The combination of LDA and JSD had clear advantages over text classifiers because we obtained good results for a highly complex collection; the newspaper clippings on return migration (and also those not relevant for our research question) contain a wide variety of different themes and genres. In addition, there is no clear boundary between news articles considered as relevant or irrelevant (except for the human reader who knows what to look for). For example, the collection contains relevant and non-relevant articles on war-related topics. There are advertisements, appeals, etc. in both relevant and non-relevant articles. Also, stories on people returning home (e.g., emigrants returning vs. people returning from a journey, etc.) are part of both, relevant and non-relevant articles. LDA in combination with JSD allowed us to deal with this complexity by narrowing down the data input for the final classification of an unseen article to the 10 most similar articles. This means that only the most similar articles were considered as a basis for the classification for an unseen article.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">52</div>
+      <div><h4>Training the LDA model</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">53</div>
+      <div><p>As mentioned, the manually created collection on return migration contains a broad variety of newspapers clippings with different themes and genres. In order to be able to grasp the content of the articles and to bring words together that form topics to a human reader, topic modelling was used.</p>
+<p>Topic models are based on the premise that a relatively small set of latent or concealed topics underlies natural language texts, where a word may belong to several topics. Topic models use the so-called bag-of-words assumption within a document or, in other words, they group statistically significant words within a specified corpus. As described by <em>Blei, Ng, Jordan 2003</em> documents can be ‘represented as random mixtures over latent topics, where each topic is characterized by a distribution over words’. Topic modelling is used for various needs: understanding given topics in a corpus (<em>Zosa, Hengchen, Marjanen, Pivovarova, Tolonen 2020</em>), capturing discourse dynamics (<em>Marjanen, Zosa, Hengchen, Pivovarova, Tolonen 2020</em>), getting a better insight into the type or genre of documents in a corpus (<em>Oberbichler 2021</em>), capturing the evolution of topics and trends within multilingual collections (<em>Zosa, Granroth-Wilding 2019</em>), or comparing different corpora (<em>Lu, Henchion, Namee 2019</em>).</p>
+<p>Each of these application areas needs different parameters. While methods to automatically determine the topic number can be helpful in some cases (<em>Zhao, Chen, Perkins, Liu, Ge, Ding, Zou 2015</em>, <em>O’Callaghan, Greene, Carthy, Cunningham 2015</em>), close reading a considerable amount of documents remains most reliable. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">54</div>
+      <div><p>While several statistical algorithms for topic modelling exist, LDA was chosen for our analysis because it has shown a good ability to cluster documents (<em>Lu, Henchion, Namee 2019</em>). We used it to group semantically related words Blei, Ng, Jordan 2003  the context of relevant and non-relevant newspaper items (<em>Blei, Ng, Jordan 2003</em>) in order to be able to uncover the 'hidden topics'. When using LDA, it needs to be highlighted that the model results are not deterministic. Results are always affected by both the choice of parameters and the built-in stochastic process.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">55</div>
+      <div><p><em>Maier, Waldherr, Miltner, Wiedemann, Niekler, Keinert, Pfetsch, Heyer, Reber, Häussler, Schmid-Petri, Adam 2018</em> made the following suggestions to increase reliability, interpretability, and validity of LDA models: </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">56</div>
+      <div><ol>
+<li>Cleaning and pre-processing steps need to be used reasonably as well as in a correct order. A good knowledge of the corpus and text interpretation of results helps to decide on which steps work well. </li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">57</div>
+      <div><ol start="2">
+<li>The selection of LDA parameters is crucial. The number of topics depends on the corpus and on the research project.</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">58</div>
+      <div><ol start="3">
+<li>Results from topic models are the beginning, not the end of an analysis. Interpreting the results of topic modelling as stable themes needs to be viewed critically. So, while methods to automatically determine the topic number can be helpful in some cases  (<em>Zhao, Chen, Perkins, Liu, Ge, Ding, Zou 2015</em>), close reading a considerable amount of documents remains the most reliable method to determine what works best. Despite these considerations, topic modelling does a great job in clustering, which is why it is well suited for corpus building approaches. </li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">59</div>
+      <div><p>We used the training corpus to apply LDA, following the suggestions of Maier et al. As it turned out, for the topic on return migration it was helpful to train a high number of topics. After applying a two-phase evaluation (first checking the results from the testing corpus and then the results from the whole collection) to obtain the best results, 250 was chosen as the number of topics to work with. We believe the reason lies in the complexity of our newspaper collection. The  following word cloud (<a href="#figure-5">figure 5</a>) shows the top 20 words of topic number 136. It reflects the <em>help</em> ('untersutzt') for returning <em>refugees</em> ('flucthling') to <em>Austria</em> ('oesterreich'). This topic is clearly connected to return migration. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">60</div>
+      <div><h5>Step 3a: Applying the Latent Dirichlet allocation (LDA) function</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">61</div>
+      <div><p>We used the Python library <em>Gensim</em> to train our topic models. Gensim is a library for topic modelling, document indexing and similarity retrieval with large corpora. All algorithms are memory and language-independent as well as unsupervised, which means no human input is necessary. When using this library, the parameter settings should be individually adapted to the research question when implementing the algorithms. First, we used the calculation of correct or incorrect classification results based on the manually annotated testing/feedback corpus to examine how well the trained model worked. Our goal was to train a model that obtained more than 80 percent correct results. The second phase included a process of close reading of the automatically created results (obtained from 38,630 newspaper clippings). In order to avoid that topics represent both relevant and non-relevant articles, we further chose a low alpha value (each document is represented by a small number of topics). Low beta, on the other hand, means that each topic is only represented by a small number of words.The function <em>random_state</em> serves as a seed in order to make it possible to reproduce the training process.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">64</div>
+      <div><p>After training the model and having a look at the topics, it was necessary to check how well those topics were separated between relevant and non-relevant articles. Not all topics have the same dominance in the training corpus. To understand which topic is most prominent in a document, topics with the highest contribution for a document were identified (step 3b). As can be seen in <a href="#table-6">table 6</a>, the topic of <a href="#figure-5">figure 5</a> clearly represents the article in which it is most dominant. This article - published in 1937 in the Austrian newspaper <em>Neue Freie Presse</em> - talks about the aid for refugees returning from Spain to Austria. As a result of the Spanish Civil War (1936 to 1939), many Austrians lost their livelihoods in Spain and returned home. There they were offered help by the 'Winterhilfswerk'.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">65</div>
+      <div><h5>Step 3b: Finding the dominant topic for each article</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">66</div>
+      <div><p>After training the LDA algorithm, each of the documents in the training/feedback corpus was represented in one or more topics but not all topics have the same dominance. In order to see which topic is most prominent in a document, following function can be used: </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">68</div>
+      <div><p>As can be seen in <a href="#table-5">table 5</a>, the topic contribution of the most dominant topics is very high (between 0.97 and 0.99). This means that each document is mainly represented by one topic. For example, topic number 136 represents document number 40.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">70</div>
+      <div><p>The text of article 40, which is most represented by topic number 136: </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">72</div>
+      <div><p>Since it is not always easy to see how dominant topics are distributed among relevant and irrelevant documents, a visualization was used to give a clearer picture. The parameters of LDA were chosen so that a document was mainly represented by one topic. As can be seen in <a href="#figure-6">figure 6</a>, topic number 136 is positioned in the bottom right quadrant and only connected to articles labelled as relevant.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">73</div>
+      <div><h5>Step 3c: Visualizing the relationship of dominant topics and relevance labels</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">74</div>
+      <div><p>In order to see how well the dominant topics are distributed among relevant (3) and non-relevant (0) articles, a network visualization was plotted using the Python packages <em>NetworkX</em>. NetworkX is mainly used for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks. This visualization helps to see how effective the model was trained. For the network, the most dominant topic as well as the relevancy label for each newspaper clipping are brought in connection with each other. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">76</div>
+      <div><h4>Finding similar articles using the Jensen-Shannon (JS) distance</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">77</div>
+      <div><p>In the next step, Jensen-Shannon distance (JS) was used to measure the similarity between the topic distribution of the documents from the training corpus and those from the test corpus. It is assumed that articles in the collection on return migration that have similar content can be detected as such. For example, articles about donations for refugees or homecoming war prisoners, etc., quite often use similar wordings. Articles on donations are represented in a small part of the reporting on return migration. The high number of trained topics, however, assures that smaller thematic units are represented as well. The goal of the next step using JS distance is, to take unseen articles and to find similar articles in the training corpus.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">78</div>
+      <div><h4>Step 4: Applying the JS distance</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">79</div>
+      <div><p>The JS distance measures, which documents are statistically 'closer' (and therefore more alike) by comparing the divergence of their topic distributions. The smaller the distance, the more similar two articles are (<em>Lin 1991</em>): The distance of vector ${P}=(P_1,P_2,...,P_k)$ to ${Q}=(Q_1,Q_2,...,Q_k)$ is computet as Equation: ${JSD}(P \parallel Q) = \displaystyle \frac{1}{2}D(P \parallel M)+\frac{1}{2}D(Q \parallel M)$, where ${M} = \frac{1}{2}(P+Q)$ and D is the Kullback-Leibler divergence ${D}(P \parallel Q) = \sum \limits_{i}P(i)log \Bigg(\frac{P(i)}{Q(i)}\Bigg)$. The square root of the JS divergence is the JS distance. Just like LDA, JS distance also depends on decisions of the researcher, though far less so. For example, it needs to be decided how many of the most similar texts within the training/feedback set are retrieved and used for feedback on the relevancy.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">81</div>
+      <div><p>Using the JS distance, the topic distribution of each new article (from the testing corpus) was compared to the topic distribution of each article in the feedback/training corpus. In doing so, the 10 most similar articles from the training corpus were retrieved. <a href="#figure-7">Figure 7</a> demonstrates the original of one unseen article from the testing corpus. This article is about the return of Russian emigrants from America and their problems to enter Germany to continue their journey to Russia. It was published in the newspaper <em>Illustrierte Kronen Zeitung</em> in 1911. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">83</div>
+      <div><p><a href="#table-7">Table 7</a> shows the 10 most similar articles for this article (on Russian returnees) that were found in the feedback/training corpus. As can be seen, most of the similar articles have been originally annotated as relevant (= 3). This means that our model worked well and similar articles were successfully found. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">85</div>
+      <div><h4>Classification in relevant and irrelevant articles</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">86</div>
+      <div><p>Finally, every article from the testing corpus goes through a loop where it is compared to the articles in the training/testing corpus and finally assigned to one of the categories (relevant or non-relevant). If 60 percent of the most similar articles were originally labelled as relevant, the new article was classified as relevant, too. Otherwise, it was marked as irrelevant. In this case, the unseen article from <a href="#figure-7">figure 7</a> was classified as relevant (first column, third row) because more than 60 percent of the most similar articles (<a href="#table-7">table 7</a>) were originally annotated as relevant (= 3).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">88</div>
+      <div><p>This solution was simple and successful. Since the documents in the testing corpus carry the labels on relevancy, too, a simple evaluation (correct results divided by the number of documents in the testing corpus) is possible. As an overall result, almost 85 per cent of the articles from the testing corpus were classified correctly. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">90</div>
+      <div><p>These results were seen as good enough for further processing. The last step involves the whole unlabelled corpus that needs to be disambiguated.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">91</div>
+      <div><h3>Using the model for the entire corpus  (38,630 newspaper clippings)</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">92</div>
+      <div><p>After the classification into relevant and irrelevant articles, it was necessary to find out if the method works for the entire corpus. This involved reading a considerable amount of classified articles.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">93</div>
+      <div><h4>Step 5: Classification of the entire corpus</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">94</div>
+      <div><p>For copyright reasons, the data of the entire collection cannot be published here. However, the classification process of the entire corpus repeated the steps explained above. The entire collection (instead of the testing corpus) was compared with the pre-labelled documents in the training/feedback corpus and further classified into relevant and irrelevant articles. The collection was again created with keyword searches by using the same queries as for the training/feedback corpus from the newspapers <em>Neue Freie Presse</em>, <em>Arbeiter-Zeitung</em>, <em>Illustrierte Kronen Zeitung</em> and <em>Innsbrucker Nachrichten</em> and exported from the NewsEye platform. It consisted of 38,630 newspaper clippings with a minimum length of 30 tokens. This collection was completely new, which means that none of the clippings were manually annotated as relevant or irrelevant. A calculation of the percentage of correctly selected newspaper clippings was therefore not possible.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">95</div>
+      <div><p>Another approach to validate the overall quality of the classification, was to create word clouds. As can be seen in <a href="#figure-8">figure 8</a> and <a href="#figure-9">9</a>, the two bi-gram word clouds (clouds of sequences of two adjacent items from a token sequence) effectively reflect different contents. While bi-grams within the corpus of articles classified as relevant <a href="#figure-8">figure 8</a> are clearly associated with return migration topics, the opposite is true for the bi-grams within the corpus of articles classified as irrelevant (figure 9). Frequent bi-grams such as 'heimkehrend krieger' (<em>returning warriors</em>), 'rückkehr auskunft' (<em>homecoming information</em>), 'verboten rückkehr' (<em>forbidden return</em>), 'fürsorg heimkehrend' (<em>caring returning</em>), 'roten kreuz' (<em>red cross</em>) and many more have an obvious link to the topic of return migration. Other frequent bi-grams such as 'gest(ern) abend' (<em>yesterday evening</em>), 'rückkehr kaiser' (<em>return emperor</em>), 'sr majestät' (<em>his majesty</em>) or 'kaiser franz' (<em>emperor franz</em>) in <a href="#figure-9">figure 9</a>, on the other hand, do not address news coverage on return migration but discuss the return of emperor Franz etc.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">96</div>
+      <div><h4>Step 6: Creating bi-gram word clouds</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">97</div>
+      <div><p>In this instance, we used bi-gram word clouds for specific reasons. <em>N</em>-grams are contiguous sequences of n items from a given text. This means that words are not considered as individual units, but in relation to each other (e.g, returnig home). Since languages are seldom representable by single words, for humanities scholars, n-grams can be helpful to get an overview of their collection, to find discourse markers, or to evaluate the quality of a model. The <em>NLTK package</em> was used to build the bi-grams: nltk.bigrams() returns an iterator (a generator specifically) of bi-grams, with <em>ngram-range=()</em> was used to set the value of <em>n</em> (<em>n</em>-gram of size 1 is a unigram; size 2 is a bigram, size 3 is a trigram). In order to visualize the results in word clouds, the frequency of the bigrams was calculated. To create good <em>n</em>-grams, the corpus was first pre-processed (see as explained in step 'Cleaning, tokenizing and stemming the text'). For the word cloud visualisation, the <em>NLTK package</em> was used as well.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">100</div>
+      <div><p>Since we were satisfied with the results, we would continue our work with a critical reflection on the obtained material.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">101</div>
+      <div><h3>Source and interface criticism</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">102</div>
+      <div><p>The second step in the historical method would involve a thorough source and interface criticism for the digital dataset created for further processing. Although this is not within the scope of the paper, some critical remarks should still be made here: For the return migration case study, it was not possible to carry out these steps on a collection that would have covered enough newspaper issues or all relevant time periods to answer many research questions on the topic on return migration. The NewsEye platform only contains a small selection of digitised Austrian newspapers provided by the <a href="https://www.onb.ac.at/">Autrian National Library (ONB)</a>. To meet the demands for external representativeness (which means that the used digitized newspapers are representative for discourses on return migration in the Austrian press) it would be necessary to apply the method to all newspapers - those digitally available and, in all fairness, also those not digitally available. Even though the ONB hosts many of the newspapers for the needed time periods in a digital form, missing article separation, noisy OCR, missing download functions, and sometimes unclear copyright issues make it impossible to apply the method to a larger newspaper-corpus from the ONB interface for further processing.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">103</div>
+      <div><p>Currently, a number of digital newspaper projects such as <a href="https://www.newseye.eu/">NewsEye</a> (<em>Doucet, Gasteiner, Granroth-Wilding, Kaiser, Kaukonen, Labahn, Moreux, Muehlberger, Pfanzelter, Therenty, Toivonen, Tolonen 2020</em>), <a href="https://viraltexts.org/">ViralTexts</a>, <a href="https://oceanicexchanges.org/">Oceanic Exchanges</a>, <a href="https://impresso-project.ch/app/">impresso</a>, or <a href="https://livingwithmachines.ac.uk/team-2/">Living with Machines</a> are working on methods and interfaces to improve access and research with historical newspapers, but it will still take a while until newly developed tools will be implemented in (national) historical newspaper archives containing millions of digitized newspaper pages. Until then research with digital newspaper corpora will remain biased by the selections available through the interfaces, the quality of the digitized newspapers and access-options to entire collections.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">104</div>
+      <div><h3>After the corpus building is before interpretation</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">105</div>
+      <div><p>For historians, the process of corpus building ends when a corpus allows for qualitative evaluations. At this point the third step of the historical method - interpretation - is at the heart of the research method. A thorough interpretation of the results would go far beyond the scope of this paper but we would like to give some outlook to the next steps researchers could undertake. On the one hand, the analysis could include quantitative methods concerning the whole corpus (or the metadata). On the other hand, fine-grained textual examination, annotations, and individual interpretations are at the heart of qualitative analysis (<em>Hasko 2012</em>). In-depth investigations of specific, suitable text corpora concern the meso level making use both of quantitative and of qualitative corpus analysis approaches. In order to obtain adequate, research driven corpora within the mass of Big Newspaper Data, as we have seen, both AI solutions and human effort are needed. In the following paragraphs we show some qualitative analysis we were able to perform based on quantitative outputs from a sub-corpus on return migration from the Americas 1850-1950, obtained using the previously mentioned methods. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">106</div>
+      <div><h4>Step 7: Creating a sub-corpus on return migration form the Americas 1850-1950</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">107</div>
+      <div><p>The sub-corpus on return migration from the Americas was created with a complex keyword search, using queries such as 'Rückwanderer' (<em>returnee</em>) or 'Amerikamüde' (<em>america weary</em>) or combined terms in a specific word distance such as 'Rückkehr/Heimkehr/Rückwanderung ...Amerika/NewYork/Brasilien/Argentinien/Kanada' (<em>return/return home/return migration… America/New York/Brazil/Argentina/Canada</em>) etc. While in the first step all relevant articles were collected, in a second step the focus was on context-rich articles (containing discourses). Content-poor articles (articles with no discourse, e.g., statistical reports on people that returned from the Americas) were not included in the final collection because they do not contribute anything significant regarding questions on how return migration was written about in the press. All in all, a collection of about 350 newspaper clippings for return migration from America between 1850 and 1850 was created.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">108</div>
+      <div><p>Since, as described, it was not possible to create a representative corpus for the entire range of return migration issues for further classification, the focus was placed on creating a sub-corpus for return migration from America between 1850 and 1950. A collection of 350 articles was created for further qualitative analysis (step 11).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">109</div>
+      <div><p>The following chapter shows what kind of discourses we found in the collection and how they developed over time. The chapter is intended to provide an insight into the discourses in historical newspapers on return migration, it does not represent a discourse analysis in its entirety since that would take the historical, political, and social context including sources other than newspapers to re-construct the complexity of a discourse into account.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">110</div>
+      <div><h4>Mesoanalysis of the Austrian Media Discourse on returnees from America between 1850 and 1950</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">111</div>
+      <div><p>People who emigrated to Austria by their own choice and later decided to come back to their homelands between 1850 and 1950 had different reasons for their decisions to return: success, failure, homesickness, rejection in the new country, changes in the economic or socio-political conditions in their native countries, or perhaps family members asked them to return. One of the first stories on return migration from America to Austria can be found in Ferdinand Kürnberger's novel 'Der Amerika-Müde' (<em>The America-Tired</em>) (<em>Kürnberger 1985</em>). This book made reference to the American experience of the Austrian writer Nikolaus Lenau, who left for America in 1832 with the aim to emigrate. However, only eight days after his arrival in Baltimore Lenau wrote: 'Brothers, these Americans are petty minded people who turn the heavens’ stomachs. Dead to all things intellectual, as dead as a doornail' (<em>Waine 2007</em>). Due to private problems (the discontinuation of his  medical studies and a failed love story) he returned to Europe as early as 1833. Homesick and disappointed by his impressions and his experiences in Baltimore, Pennsylvania, Ohio, and the Niagara Falls, Lenau came back to Austria. Neither had he found the land of freedom, nor had he been able to obtain economic security (<em>Deutsche Biographie 2021</em>). </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">112</div>
+      <div><p>Each returning migrant had his or her own return story, a story that did not only concern the returnee him- or herself. Return migration always also had an impact on the country of origin and its people. Every (mass) return migration movement was therefore accompanied with public discourses and arguments to support, promote, regulate or prohibit the return of people to their country of origin. (Critical) discourse analysis helps to understand how social interaction constitutes such discourses and arguments and how they change over time. Historical-semantic discourse analysis thus can open up semantic aspects and elements of knowledge that could escape a purely word-oriented history of meaning (<em>Busse 2008</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">113</div>
+      <div><h4>Step 8: Identifying discourses and creating annotations</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">114</div>
+      <div><p>Corpus annotations are often created manually by reading and tagging documents or parts of documents. Discourses are contextualized phenomena and therefore not observable on the surface or by automatic retrieval (<em>Hasko 2012</em>). They therefore need to be identified by human readers and manual annotations need to be done by human encoders. Discourse analysis is a method where categories of similar meanings often emerge through the inductive analytic process (<em>Mogashoa 2014</em>), which means that categories are formed, changed and extended during the process of reading. The final catalogue consisted of the following categories: </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">115</div>
+      <div><ul>
+<li>return was enhanced (R=enhanced)</li>
+<li>return was restricted (R=restricted)</li>
+<li>return migration was useless for Austria (R=useless)</li>
+<li>motive of delusion and disappointment (Delusion)</li>
+<li>return migration was a benefit for Austria (R=benefit)</li>
+<li>return migration was a danger for Austria (R=danger)</li>
+<li>Austria was overburdened (A=overburdened)</li>
+<li>Austria supported return migration (A=support). </li>
+</ul>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">116</div>
+      <div><p>While there are a number of computer-assisted qualitative corpus analysis software programs that support manual annotations (e.g., <a href="https://atlasti.com/">Atlas.ti</a>, <a href="https://www.qsrinternational.com/nvivo-qualitative-data-analysis-software/home/">NVivo</a>, <a href="https://recogito.pelagios.org/">Recogito</a>, <a href="https://catma.de/">Catma</a>, etc.), annotation still takes a lot of time and such programs can be too sophisticated if only assigning tags to a smaller manageable corpus is needed. Therefore, in our case, a simple spreadsheet, was used to annotate the sub-corpus. The first column contained the original text, the second column the occurring discourse categories, the third the date of the newspaper clipping and the fourth the title of the newspaper issue.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">117</div>
+      <div><p>Within the news coverage on return migration from the Americas, eight main discourses were identified by reading through every article and manually annotating them (step 8). We take a closer look at four of those discourses: </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">118</div>
+      <div><ol>
+<li><strong>Return migration was enhanced (R=enhanced)</strong>: In times of mass emigration, the Austro-Hungarian Empire (1867 to 1918) had repeatedly promoted the return of Austrians and put the issue on the political agenda (<em>Poznan 2017</em>). The discourse on enhancement took place mainly in the periods before and at the beginning of the two world wars (1914 to 1918; 1939 to 1945) (see <a href="#figure-10">figure 10</a>), when return was deliberately promoted to strengthen the army, but also for nationalistic reasons. The <em>Arbeiter-Zeitung</em> from 1914, for example, reported on transportation at no cost for those who were willing to return to Austria: 'A mass influx of 'reservists' [...] leave no doubt that war has broken out in Europe. [...] In New York alone, thousands of victims of the [economic] crisis [...] are now crowding into the anterooms of the consulates involved, in order to declare their intention of 'rushing to the flags', with free transport and ten heller a day pay - as far as Austrian-Hungarian reservists are concerned.'</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">119</div>
+      <div><h4>Step 9: Quantification of annotations</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">120</div>
+      <div><p>Although qualitative analysis is often delimited from quantitative analysis, the mixing of quantitative and qualitative approaches is uncontestable (<em>Hasko 2012</em>, <em>O’Halloran, Tan, Pham, Bateman, Vande Moere 2018</em>). Annotations resulting from qualitative analysis, for example, can allow for quantification and further visualization of results. For such a mixed method approach, the tags here were brought together with the years in which they occur. This made it possible to visualize the evolution of the identified discourses. For the visualization, the Python library <em>Pygal</em> was used to create an interactive data visualization.  </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">122</div>
+      <div><ol start="2">
+<li><strong>Return migration is a benefit vs. return migration is a danger for Austria (R=benefit; R=danger)</strong>: Returnees could help or hurt the government of the country of origin, both economically and politically. A returnee could be someone who failed in the country to which they migrated or someone who brought back skills and capital to invest in the economy of the home country. The argument of danger was mainly used during the 'panic' of 1907  (financial crisis in America resulting in bankruptcy of banks and companies as well as mass remigration of European emigrants). In 1907, the newspaper <em>Mährisches Tagblatt</em> stated: 'The homeland has reluctantly let its sons go, now people are worried because they are returning home'. The main fears were economic consequences of mass return. As early as 1908, however, the discourse on the benefit of returnees dominated, especially because workers were desperately needed. Here, the argument that returnees bring large amounts of cash back to Austria was often used to support return migration.</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">123</div>
+      <div><ol start="3">
+<li><strong>The argument of uselessness (R=useless)</strong>: At the same time (1908), the argument of uselessness was quite prominent as well. This argument was based on the realization that the repatriates were of no use to the labour market because they had brought a large sum of savings with them to Austria-Hungary and wanted to return to America when the crisis was over.  For example, the newspaper Die <em>Neue Zeitung</em> wrote 1908:  'On the side of the industrial giants, hopes were pinned on getting a whole army of workers who would be willing to do any kind of work. Instead, the 'poor' repatriates [...] exchanged considerable sums of money into Austrian money and the established employment agencies remained empty'.</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">124</div>
+      <div><ol start="4">
+<li><strong>Motive of delusion and disappointment (Delusion)</strong>: Motives of deception and disappointment consistently played an important role in the media portrayal of returnees from America. Negative experiences of return migrations were often used to avoid further emigration flows. The <em>Neues Wiener Journal</em>, for example, reported 1927: 'But the number of returnees is also increasing, and cases are becoming more regular where fleeing one's homeland has proven to be not a last chance, but a deceptive hope [...]'.  </li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">125</div>
+      <div><p>Discourses determine ways of thinking that are present in specific contexts and at specific times. They regulate how something is talked about and how something is not or may not be talked about. Also, discourses are filters for how something can be said and thus also for ways of thinking and acting. Finally, the significance of discourses is closely linked to the concept of power: power structures discourses and power legitimates itself through discourses (Shaper-Rinke, 2006). Analysing discourses in return migration news coverage, therefore, also reveals such power structures: Who was part of constructing reality, what guided the discourses on return migration and what was legitimised through discourse? </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">126</div>
+      <div><h2>Conclusion</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">127</div>
+      <div><p>Even though tailored to a specific research question, the corpus building process presented in this paper is adaptable for other research projects that deal with similar issues and that navigate the meso level working with Big Data and applying mixed methods. The procedure depends on manual annotations and a good knowledge of the corpus under investigation, and therefore may not be very interesting for those looking for more universal, unsupervised solutions. For historians, corpus building often takes up a substantial part of their time. Creating and annotating a sample corpus of about 200 articles is undoubtedly a relatively small effort, considering that it can take up to months to create good quality corpora. Therefore, an important consideration when using machine learning to support corpus building is to improve representativeness of topic-specific corpora without spending too much time to clean and organize adequate datasets. While it is - at least at this point - not yet possible for machines to understand discourses or arguments, automated methods can support scholars from the humanities to create the datasets they need to continue investigating their research questions with their usuals, close reading and text interpretative methods.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">128</div>
+      <div><p>Improved methods for corpus compilation therefore support research that bridges digital and traditional historiography. In academic writing, the creation of specialized newspaper corpora with the help of digital methods currently receives little attention. One important reason for this lies in the still existing shortcomings of digitized historical newspapers and interfaces used to access those collections. E.g., only recently, article separation aroused the interest of researchers in the area of artificial intelligence as well as for digital libraries. However, many of the automated methods are still under development and not yet good enough to be applied to entire digital newspaper collections. Other issues are copyrights, which can make it difficult for researchers to export larger datasets from digital libraries, which is necessary if text mining methods should be applied, and concern the 'digital dark decades', the decades between roughly 1950 and 1990 where digitization is uninteresting for libraries and archives (e.g., due to the many copyright restrictions).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">129</div>
+      <div><p>While none of the methods presented in this paper are new or groundbreaking (most of them have been used for decades), the way they have been applied here sets this paper apart from other similar research. Topic-specific corpus building and WSD have hardly been brought into relation with each other so far, and LDA in combination with JS distance also plays a subordinate role in WSD approaches. Finally, the use of manually created labels to support classification into relevant as well as irrelevant articles in the form of feedback differentiates this paper from other papers on LDA and JS distance. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">130</div>
+      <div><p>One of the challenges to use machine learning methods for corpus building still lies in the necessity for researchers from the humanities to have a  basic understanding of programming languages. They need to be able to adapt code for use with their own corpora. Also, knowledge on debugging techniques are necessary to use text mining methods such as those presented in this paper. This gap persists and interdisciplinary cooperation therefore often remains at the heart of successful application of computational methods, as becomes evident in this paper. At the same time interfaces that facilitate the use of text mining methods, like <a href="https://voyant-tools.org/">Voyant Tools</a>, <a href="https://orangedatamining.com/">Orange Data Mining Suite</a> and coding environments like <a href="https://jupyter.org/">Jupyter notebooks</a> or executable environments for notebooks such as <a href="https://mybinder.org/">MyBinder</a> are becoming user friendlier all the time thus giving a glimpse into future use of digital methods also for historians and alike.  </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+  </article>
+  <h2 >Bibliography</h2>
+  
+    <div class="paragraph mb5">
+    Blei, D. M., et al.. “Latent Dirichlet Allocation”. <i>The Journal of Machine Learning Research</i>, vol. 3, pp. 993–1022.
+    </div>
+  
+    <div class="paragraph mb5">
+    Blei, D. M.. “Probabilistic Topic Models”. <i>Communications of the ACM</i>, vol. 55, no. 4, pp. 77–84, https://doi.org/10.1145/2133806.2133826.
+    </div>
+  
+    <div class="paragraph mb5">
+    Boyd-Graber, J., et al.. “A Topic Model for Word Sense Disambiguation”. <i>Proceedings of the 2007 Joint Conference on Empirical Methods in Natural Language Processing and Computational Natural Language Learning (emnlp-conll)</i>, Association for Computational Linguistics, pp. 1024–33, https://www.aclweb.org/anthology/D07-1109.
+    </div>
+  
+    <div class="paragraph mb5">
+    Bubenhofer, N.. “Methods of Discourse Linguistics”. <i>Diskurse Berechnen? Wege Zu Einer Korpuslinguistischen Diskursanalyse</i>, edited by Ingo H. Warnke and Jürgen Spitzmüller, vol. 31, Walter de Gruyter, pp. 407–34, https://www.degruyter.com/document/doi/10.1515/9783110209372.6.407/html.
+    </div>
+  
+    <div class="paragraph mb5">
+    Busse, D.. “Begriffsgeschichte – Diskursgeschichte – Linguistische Epistemologie. Bemerkungen Zu Den Theoretischen Und Methodischen Grundlagen Einer Historischen Semantik in Philosophischem Interesse Anlässlich Einer Philosophie Der ‚person‘”. <i>Diskurse Der Personalität</i>, edited by Nikolaj Plotnikov and Alexander Haardt, Wilhelm Fink Verlag, pp. 115–42, https://www.fink.de/view/book/edcoll/9783846744321/B9783846744321-s009.xml.
+    </div>
+  
+    <div class="paragraph mb5">
+    Chowdhury, G. G.. <i>Introduction to Modern Information Retrieval</i>. Facet Publishing.
+    </div>
+  
+    <div class="paragraph mb5">
+    Connor, R., et al.. “Evaluation of Jensen-shannon Distance over Sparse Data”. <i>Similarity Search and Applications</i>, edited by Nieves Brisaboa et al., vol. 8199, Springer Berlin Heidelberg, pp. 163–68, http://link.springer.com/10.1007/978-3-642-41062-8_16.
+    </div>
+  
+    <div class="paragraph mb5">
+    Corpas Pastor, G.and M. Seghiri Domínguez. “Size Matters: A Quantitative Approach to Corpus Representativeness”. <i>Lengua, Traducción, Recepción En Honor De Julio César Santoyo. León: Universidad De León Área De Publicaciones</i>, edited by Rosa Rabadán et al., Publicaciones Universidad de León, pp. 111–45, https://wlv.openrepository.com/handle/2436/622560.
+    </div>
+  
+    <div class="paragraph mb5">
+    Currle, E.. “Theorieansätze zur erklärung von rückkehr und remigration”. <i>Sozialwissenschaftlicher fachinformationsdienst</i>, no. 2, pp. 7–3.
+    </div>
+  
+    <div class="paragraph mb5">
+    Dagan, I., et al.. “Similarity-based Methods for Word Sense Disambiguation”. <i>Proceedings of the Eighth Conference on European Chapter of the Association for Computational Linguistics</i>, Association for Computational Linguistics, pp. 56–63, https://doi.org/10.3115/979617.979625.
+    </div>
+  
+    <div class="paragraph mb5">
+    Dagan, I., et al.. “Similarity-based Models of Word Cooccurrence Probabilities”. <i>Machine Learning</i>, vol. 34, no. 1, pp. 43–69, https://doi.org/10.1023/A:1007537716579.
+    </div>
+  
+    <div class="paragraph mb5">
+    Doucet, A., et al.. “Newseye: A Digital Investigator for Historical Newspapers”. <i>Book of Abstracts</i>, https://zenodo.org/record/3895269.
+    </div>
+  
+    <div class="paragraph mb5">
+    Fairclough, N.. <i>Critical discourse analysis: the critical study of language</i>. Second Editon, Routledge, http://dx.doi.org/10.4324/9781315834368.
+    </div>
+  
+    <div class="paragraph mb5">
+    Föhr, P.. <i>Historische quellenkritik im digitalen zeitalter</i>. University_of_Basel, http://edoc.unibas.ch/diss/DissB_12621.
+    </div>
+  
+    <div class="paragraph mb5">
+    Fickers, A.. “Digital Hermeneutics in History: Theory and Practice”. <i>C2DH | Luxembourg Centre for Contemporary and Digital History</i>, https://www.c2dh.uni.lu/thinkering/digital-hermeneutics-history-theory-and-practice.
+    </div>
+  
+    <div class="paragraph mb5">
+    Fickers, A.. “Update für die hermeneutik. geschichtswissenschaft auf dem weg zur digitalen forensik?”. <i>Zeithistorische forschungen/studies in contemporary history</i>, vol. 17, no. 1, pp. 157–68, https://doi.org/10.14765/ZZF.DOK-1765.
+    </div>
+  
+    <div class="paragraph mb5">
+    Fothergill, R., et al.. “Evaluating a Topic Modelling Approach to Measuring Corpus Similarity”. <i>Proceedings of the Tenth International Conference on Language Resources and Evaluation (LREC'16)</i>, European Language Resources Association (ELRA), pp. 273–79, https://www.aclweb.org/anthology/L16-1042.
+    </div>
+  
+    <div class="paragraph mb5">
+    Foucault, M.. <i>The Archaeology of Knowledge</i>. Routledge.
+    </div>
+  
+    <div class="paragraph mb5">
+    Gabrielatos, C.. “Selecting Query Terms to Build a Specialised Corpus from a Restricted-access Database.”. <i>ICAME Journal</i>, vol. 31, pp. 5–4, https://eprints.lancs.ac.uk/id/eprint/528/.
+    </div>
+  
+    <div class="paragraph mb5">
+    Griffiths, T. L.and M. Steyvers. “Finding Scientific Topics”. <i>Proceedings of the National Academy of Sciences</i>, vol. 101, no. Supplement 1, pp. 5228–35, https://doi.org/10.1073/pnas.0307752101.
+    </div>
+  
+    <div class="paragraph mb5">
+    Haber, P.. “Zeitgeschichte und digital humanitieszeitgeschichte und digital humanities”. <i>Docupedia-zeitgeschichte</i>, https://doi.org/10.14765/ZZF.DOK.2.269.V1.
+    </div>
+  
+    <div class="paragraph mb5">
+    Harper, M., editor. <i>Emigrant homecomings: the return movement of emigrants, 1600-2000</i>. Edited by Marjory Harper, Manchester University Press;.
+    </div>
+  
+    <div class="paragraph mb5">
+    Hasko, V.. “Qualitative Corpus Analysis”. <i>The Encyclopedia of Applied Linguistics</i>, edited by Carol A. Chapelle, Blackwell Publishing Ltd, p. wbeal0974, http://doi.wiley.com/10.1002/9781405198431.wbeal0974.
+    </div>
+  
+    <div class="paragraph mb5">
+    Jean-Caurant, A.and A. Doucet. “Accessing and Investigating Large Collections of Historical Newspapers with the Newseye Platform”. <i>Proceedings of the ACM/IEEE Joint Conference on Digital Libraries in 2020</i>, Association for Computing Machinery, pp. 531–32, https://doi.org/10.1145/3383583.3398627.
+    </div>
+  
+    <div class="paragraph mb5">
+    Karov, Y.and S. Edelman. “Similarity-based Word Sense Disambiguation”. <i>Computational Linguistics</i>, vol. 24, pp. 41–59.
+    </div>
+  
+    <div class="paragraph mb5">
+    Koolen, M., et al.. “Toward a Model for Digital Tool Criticism: Reflection as Integrative Practice”. <i>Digital Scholarship in the Humanities</i>, vol. 34, no. 2, pp. 368–85, https://doi.org/10.1093/llc/fqy048.
+    </div>
+  
+    <div class="paragraph mb5">
+    Kürnberger, F.. <i>Der Amerikamüde</i>. Böhlau.
+    </div>
+  
+    <div class="paragraph mb5">
+    “Lenau, nikolaus - deutsche biographie”. “Lenau, nikolaus - deutsche biographie”. <i>Deutsche biographie</i>, https://www.deutsche-biographie.de/sfz50193.html.
+    </div>
+  
+    <div class="paragraph mb5">
+    Leyh, P.. <i>Johann gustav droysen: historik. bd. 1: rekonstruktion der ersten vollständigen fassung der vorlesungen (1857). grundriß der historik in der ersten handschriftlichen (1857/58) und in der letzten gedruckten fassung (1882)</i>.
+    </div>
+  
+    <div class="paragraph mb5">
+    Lin, J.. “Divergence Measures Based on the Shannon Entropy”. <i>IEEE Transactions on Information Theory</i>, vol. 37, no. 1, pp. 145–51, https://doi.org/10.1109/18.61115.
+    </div>
+  
+    <div class="paragraph mb5">
+    Lu, J., et al.. “A Topic-based Approach to Multiple Corpus Comparison”. <i>Proceedings for the 27th AIAI Irish Conference on Artificial Intelligence and Cognitive Science</i>, CEUR-WS.org, pp. 64–75.
+    </div>
+  
+    <div class="paragraph mb5">
+    Maier, D., et al.. “Applying LDA Topic Modeling in Communication Research: Toward a Valid and Reliable Methodology”. <i>Communication Methods and Measures</i>, vol. 12, no. 2-3, pp. 93–118, https://doi.org/10.1080/19312458.2018.1430754.
+    </div>
+  
+    <div class="paragraph mb5">
+    Malone, D.. <i>Developing a Complex Query to Build a Specialised Corpus: Reducing the Issue of Polysemous Query Terms.</i>. Unpublished, https://doi.org/10.13140/RG.2.2.31214.43846.
+    </div>
+  
+    <div class="paragraph mb5">
+    Marjanen, J., et al.. “Topic Modelling Discourse Dynamics in Historical Newspapers”. <i>Arxiv:2011.10428 [cs]</i>, http://arxiv.org/abs/2011.10428.
+    </div>
+  
+    <div class="paragraph mb5">
+    Martin, F.and M. Johnson. “More Efficient Topic Modelling Through a Noun Only Approach”. <i>Proceedings of the Australasian Language Technology Association Workshop 2015</i>, pp. 111–15, https://aclanthology.org/U15-1013.
+    </div>
+  
+    <div class="paragraph mb5">
+    Mogashoa, T.. <i>Understanding Critical Discourse Analysis in Qualitative Research</i>. /paper/Understanding-Critical-Discourse-Analysis-in-Mogashoa/9f63601020213bdeb08053613d19d476d2009292.
+    </div>
+  
+    <div class="paragraph mb5">
+    Navarro-Colorado, B.. “On Poetic Topic Modeling: Extracting Themes and Motifs from a Corpus of Spanish Poetry”. <i>Frontiers in Digital Humanities</i>, vol. 5, p. 15, https://doi.org/10.3389/fdigh.2018.00015.
+    </div>
+  
+    <div class="paragraph mb5">
+    Navigli, R.. “Word Sense Disambiguation: A Survey”. <i>ACM Computing Surveys</i>, vol. 41, no. 2, pp. 1–9, https://doi.org/10.1145/1459352.1459355.
+    </div>
+  
+    <div class="paragraph mb5">
+    Niekler, A.and P. Jähnichen. “Matching Results of Latent Dirichlet Allocation for Text”. <i>Proceedings of ICCM 2012, 11th International Conference on Cognitive Modeling</i>, Universitätsverlag der TU Berlin, pp. 317–22.
+    </div>
+  
+    <div class="paragraph mb5">
+    Oberbichler, S.and E. Pfanzelter. “Tracing Discourses in Digital Newspaper Collections: A Contribution to Digital Hermeneutics While Investigating ’return Migration’ in Historical Press Coverage”. <i>Digitised Newspapers – A New Eldorado for Historians? Tools, Methodology, Epistemology, and the Changing Practices of Writing History in the Context of Historical Newspapers Mass Digitization</i>, De Gruyter.
+    </div>
+  
+    <div class="paragraph mb5">
+    Oberbichler, S., et al.. “Doing Historical Research with Digital Newspapers - Perspectives of DH Scholars”. <i>Europeanatech Insight</i>, vol. 16: Newspapers, https://pro.europeana.eu/page/issue-11-generous-interfaces.
+    </div>
+  
+    <div class="paragraph mb5">
+    Oberbichler, S.. <i>Text Classification of Newspaper Clippings</i>. https://github.com/soberbichler/Text_classification_of_newspaper_clippings.
+    </div>
+  
+    <div class="paragraph mb5">
+    O’Callaghan, D., et al.. “An Analysis of the Coherence of Descriptors in Topic Modeling”. <i>Expert Systems with Applications</i>, vol. 42, no. 13, pp. 5645–57, https://doi.org/10.1016/j.eswa.2015.02.055.
+    </div>
+  
+    <div class="paragraph mb5">
+    O’Halloran, K. L., et al.. “A Digital Mixed Methods Research Design: Integrating Multimodal Analysis with Data Mining and Information Visualization for Big Data Analytics”. <i>Journal of Mixed Methods Research</i>, vol. 12, no. 1, pp. 11–30, https://doi.org/10.1177/1558689816651015.
+    </div>
+  
+    <div class="paragraph mb5">
+    Olivier, C.. “Brain gain oder brain clash? implizites transnationales wissen im kontext von rückkehr-migration”. <i>Transnationales wissen und soziale arbeit</i>, edited by Désirée Bender et al., Beltz Juventa, pp. 181–205.
+    </div>
+  
+    <div class="paragraph mb5">
+    Pal, A. R.and D. Saha. “Word Sense Disambiguation: A Survey”. <i>Arxiv:1508.01346 [cs]</i>, https://doi.org/10.5121/ijctcm.2015.5301.
+    </div>
+  
+    <div class="paragraph mb5">
+    Pasini, T.and R. Navigli. “Train-o-matic: Supervised Word Sense Disambiguation with No (manual) Effort”. <i>Artificial Intelligence</i>, vol. 279, p. 103215, https://doi.org/10.1016/j.artint.2019.103215.
+    </div>
+  
+    <div class="paragraph mb5">
+    Patwardhan, S., et al.. “Using Measures of Semantic Relatedness for Word Sense Disambiguation”. <i>Computational Linguistics and Intelligent Text Processing</i>, edited by Alexander Gelbukh, vol. 2588, Springer, pp. 241–57, http://link.springer.com/10.1007/3-540-36456-0_24.
+    </div>
+  
+    <div class="paragraph mb5">
+    Pfanzelter, E.. “Die historische quellenkritik und das digitale”. <i>Zeitschrift für das archivwesen der wirtschaft</i>, vol. 48, no. 1, pp. 5–9.
+    </div>
+  
+    <div class="paragraph mb5">
+    Pfanzelter, E.. “Von Der Quellenkritik Zum Kritischen Umgang Mit Digitalen Ressourcen”. <i>Digitale Arbeitstechniken Für Geistes- Und Kulturwissenschaften</i>, edited by Martin Gasteiner and Peter Haber, pp. 39–50.
+    </div>
+  
+    <div class="paragraph mb5">
+    Poznan, K. E.. “Return migration to austria-hungary from the united states in homeland economic and ethnic politics and international diplomacy”. <i>The hungarian historical review</i>, vol. 6, no. 3, pp. 647–67.
+    </div>
+  
+    <div class="paragraph mb5">
+    Prager, K.and W. Straub, editors. <i>Bilderbuch-heimkehr? remigration im kontext</i>. Edited by Katharina Prager and Wolfgang Straub, Arco Verlag.
+    </div>
+  
+    <div class="paragraph mb5">
+    Raineri, S.and C. Debras. “Corpora and Representativeness: Where to Go from Now?”. <i>Cognitextes. Revue De L’association Française De Linguistique Cognitive</i>, vol. 19, no. Volume 19, http://journals.openedition.org/cognitextes/1311.
+    </div>
+  
+    <div class="paragraph mb5">
+    Ranjan Pal, A.and D. Saha. “Word Sense Disambiguation: A Survey”. <i>International Journal of Control Theory and Computer Modeling</i>, vol. 5, no. 3, pp. 1–6, https://doi.org/10.5121/ijctcm.2015.5301.
+    </div>
+  
+    <div class="paragraph mb5">
+    Schofield, A.and D. Mimno. “Comparing Apples to Apple: The Effects of Stemmers on Topic Models”. <i>Transactions of the Association for Computational Linguistics</i>, vol. 4, pp. 287–300, https://doi.org/10.1162/tacl_a_00099.
+    </div>
+  
+    <div class="paragraph mb5">
+    Spies, M.. “Topic Modelling with Morphologically Analyzed Vocabularies”. <i>Scientific Publications of the State University of Novi Pazar Series A: Applied Mathematics, Informatics and Mechanics</i>, vol. 9, no. 1, pp. 1–8, https://doi.org/10.5937/SPSUNP1701001S.
+    </div>
+  
+    <div class="paragraph mb5">
+    Steidl, A.. “Migration patterns in the late habsburg empire”. <i>Migration in austria</i>, edited by Dirk Rupnow and Günter Bischof, vol. Contemproary Austrian Studies, University of New Orleans Press, pp. 69–88.
+    </div>
+  
+    <div class="paragraph mb5">
+    Steyer, K.and M. Lauer. “„corpus-driven“: Linguistische Interpretation Von Kookkurrenzbeziehungen”. <i>Sprach-perspektiven: Germanistische Linguistik Und Das Institut Für Deutsche Sprache</i>, edited by Heidrun Kämper and Ludwig M. Eichinger, G. Narr, pp. 493–509.
+    </div>
+  
+    <div class="paragraph mb5">
+    Waine, A. E.. <i>Changing Cultural Tastes: Writers and the Popular in Modern Germany</i>. Berghahn Books.
+    </div>
+  
+    <div class="paragraph mb5">
+    Wyman, M.. <i>Round-trip to america: the immigrants return to europe, 1880-1930</i>. Cornell University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Wyman, M.. “Return migration ‐ old story, new story”. <i>Immigrants & minorities</i>, vol. 20, no. 1, pp. 1–8, https://doi.org/10.1080/02619288.2001.9975006.
+    </div>
+  
+    <div class="paragraph mb5">
+    Zhao, W., et al.. “A Heuristic Approach to Determine an Appropriate Number of Topics in Topic Modeling”. <i>BMC Bioinformatics</i>, vol. 16, no. Suppl 13, p. S8, https://doi.org/10.1186/1471-2105-16-S13-S8.
+    </div>
+  
+    <div class="paragraph mb5">
+    Zosa, E.and M. Granroth-Wilding. “Multilingual Dynamic Topic Model”. <i>Proceedings of the International Conference on Recent Advances in Natural Language Processing (RANLP 2019)</i>, INCOMA Ltd., pp. 1388–96, https://doi.org/10.26615/978-954-452-056-4_159.
+    </div>
+  
+    <div class="paragraph mb5">
+    Zosa, E., et al.. “Disappearing discourses: avoiding anachronisms and teleology with data-driven methods in studying digital newspaper collections”. <i>Digital humanities in the nordic countries DHN 2020</i>, Riga, https://researchportal.helsinki.fi/en/publications/disappearing-discourses-avoiding-anachronisms-and-teleology-with-.
+    </div>
+  
+</section>
+
+
+    </body>
+</html>

@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://journalofdigitalhistory.org/favicon.ico">
+        <title>The Nameless Crowds: Using Quantitative Data and Digital Tools to Study the Ancient Vocabulary of the Crowd in Tacitus - Journal of Digital History</title>
+        
+<meta property="og:title" content="The Nameless Crowds: Using Quantitative Data and Digital Tools to Study the Ancient Vocabulary of the Crowd in Tacitus" />
+<meta property="og:description" content="Combining quantitative and qualitative information, this paper investigates from a lexicological and socio-historical perspective the vocabulary of the crowd in Tacitus, a Roman historian of the 1st-2nd century AD. Unlike most Latin authors, Tacitus uses predominantly the word vulgus in comparison to turba, multitudo and the other nouns referring to urban and military crowds. The singularity of the Tacitean vulgus is not only quantitative, but also qualitative, especially when it comes to its semantic nuances and combinatorial profile. Focusing one after the other in a contrastive way on the phenomenological, sociological and ethological dimensions of the crowds depicted by Tacitus, we show that, while turba and multitudo refer to strongly spatialized crowds, whose social composition does not seem to be a strong defining factor, usually without any own opinion or political autonomy, vulgus refers in Tacitus to a “popular” crowd, defined by its ability to vocalize its own feelings and opinion and to engage in dialogue, or even conflict, with the ruling elites. The vulgus thus seems to become, in Tacitus’ narrative, a new political actor of the imperial regime. Contrary to the institutional populus, the vulgus as political actor does not express its opinion through the ordinary political institutions that were traditionally controlled by the Roman aristocracy (the comitia for instance), but proceeds to do so through vocalizations in non-institutional (albeit deeply political) contexts." />
+<meta property="og:site_name" content="Journal of Digital History" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://raw.githubusercontent.com/jdh-observer/jdh001-JJszM3GwAYDs/main/socialmediacover.png" />
+<meta property="og:url" content="https://journalofdigitalhistory.org/en/article/JJszM3GwAYDs" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Journal_DigHist" />
+<meta name="twitter:title" content="The Nameless Crowds: Using Quantitative Data and Digital Tools to Study the Ancient Vocabulary of the Crowd in Tacitus" />
+<meta name="twitter:description" content="Combining quantitative and qualitative information, this paper investigates from a lexicological and socio-historical perspective the vocabulary of the crowd in Tacitus, a Roman historian of the 1st-2nd century AD. Unlike most Latin authors, Tacitus uses predominantly the word vulgus in comparison to turba, multitudo and the other nouns referring to urban and military crowds. The singularity of the Tacitean vulgus is not only quantitative, but also qualitative, especially when it comes to its semantic nuances and combinatorial profile. Focusing one after the other in a contrastive way on the phenomenological, sociological and ethological dimensions of the crowds depicted by Tacitus, we show that, while turba and multitudo refer to strongly spatialized crowds, whose social composition does not seem to be a strong defining factor, usually without any own opinion or political autonomy, vulgus refers in Tacitus to a “popular” crowd, defined by its ability to vocalize its own feelings and opinion and to engage in dialogue, or even conflict, with the ruling elites. The vulgus thus seems to become, in Tacitus’ narrative, a new political actor of the imperial regime. Contrary to the institutional populus, the vulgus as political actor does not express its opinion through the ordinary political institutions that were traditionally controlled by the Roman aristocracy (the comitia for instance), but proceeds to do so through vocalizations in non-institutional (albeit deeply political) contexts." />
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jdh-observer/jdh001-JJszM3GwAYDs/main/socialmediacover.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Fira+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+<style>
+  body{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 10pt;
+    line-height: 1.5em;
+  }
+  .code, code, pre{
+    font-family: 'Fira Code', monospace;
+  }
+  .abstract p:first-child:first-letter {
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+  }
+  a{
+    color: black;
+  }
+  .collaborators a{
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .contributors a > img {
+    /* ordic badge */
+    width: 4mm;
+    height: 4mm;
+  }
+  .desktop a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  p{
+    margin: 0;
+  }
+  .paragraph_num {
+    position: absolute;
+    left: 40px;
+    color: gray;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+@page {
+    size: A4;
+    margin: 1cm;
+  }
+  .position-relative{
+    position: relative;
+  }
+
+
+  @media print {
+
+    blockquote{
+      border-left: 1pt black solid;
+      padding-left: 5mm;
+      margin-left: 5mm;
+      margin-right: 5mm;
+    }
+
+    .title{
+      max-width: 75%;
+    }
+    .abstract{
+      font-size: 12pt;
+      line-height: 18pt;
+    }
+    .keywords{
+      font-size: 12pt;
+    }
+    .abstract p:first-child:first-letter {
+      float: left;
+      height: 36pt;
+      font-size: 36pt;
+      line-height: 36pt;
+      margin-right: 1mm;
+      font-family: 'Fira Code', monospace;
+      font-weight: bold;
+    }
+    .collaborators{
+      max-width: 50%;
+    }
+    .page-break {page-break-after: always;}
+    .dual-column{
+      column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+    }
+    h1{
+      font-size: 25pt;
+      line-height: 1.5em;
+    }
+    h2{
+      margin: 15mm 0 5mm;
+    }
+    h3{
+      margin: 10mm 0 5mm;
+    }
+    .mb5{
+      margin-bottom: 5mm;
+    }
+    .mb10{
+      margin-bottom: 10mm;
+    }
+    .mb15{
+      margin-bottom: 15mm;
+    }
+    .mb20{
+      margin-bottom: 20mm;
+    }
+    .mt5{
+      margin-top: 5mm;
+    }
+    .mt10{
+      margin-top: 10mm;
+    }
+    .mr10{
+      margin-right: 10mm;
+    }
+    .mt20{
+      margin-top: 20mm;
+    }
+    .mt25{
+      margin-top: 25mm;
+    }
+    .contributors{
+      display: flex;
+      max-width: 75%;
+    }
+    .contributor h3{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+   .flex-container {
+    display: flex;
+   }
+  .flex-child {
+      flex: 1;
+      border: 2px solid #5e2bff;
+      text-align:center;
+
+  }
+
+  .flex-child:first-child {
+      margin-right: 20px;
+  }
+  .read a{
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.625%;
+    text-align: center;
+    color: white;
+  }
+  .read a:link, a:visited, a:focus {
+    background: #5e2bff;
+  }
+  .email a{
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.625%;
+    text-align: center;
+    color: black;
+    border: 2px solid #5e2bff;
+
+  }
+  .email a:link, a:visited, a:focus {
+  }
+
+  
+  }
+  }
+</style>
+
+    </head>
+    <body>
+      
+
+<section class="sheet padding-20mm">
+  <article class="position-relative">
+    <div style="position: absolute; left:0mm; top:-20mm; display: flex">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="50">
+        <rect x="70" y="50" width="10" height="10" rx="5"/>
+        <path fill="black" d="M130,40H120V20H100V10H70V30H60V20H30V50H10V90H60V80H90V90h50V40ZM40,80H20V60H30V70H40V30H50V80ZM80,70H60V40H80V20H90V70Zm50-10V80H120V60H110V80H100V30h10V50h20Z"/>
+      </svg>
+      <div style="font-weight: bold; font-size:9pt; line-height:11pt; margin-left: 2mm; margin-top:.5mm">Journal of <br>Digital History</div>
+    </div>
+    <!-- img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAa4AAAGuCAIAAABHl3XNAAAH8UlEQVR4nO3dMY4jtxpG0duGI2/F+1+Kt/LSeqmDQcEAh+BP6Zx8pGpN9wUDfeDP8zwBfLc/Tj8AwHlSCCCFAFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAiSFAEkhQFIIkBQCJIUASSFAUgiQFAIkhQBJIUBSCJAUAlR/nn6AX/v53z+nH+E3e/76e9Mrr3xWK0/1/r7vr7zyb9/d+GmsvPKN9v0trHAqBJBCACkESAoBkkKApBAgKQRICgGSQoDq53me08/wC/u+u7/PzGeeub7YZ2Xlcup9Ty1z9rnxmZ0KAaQQQAoBkkKApBAgKQRICgGSQoCkEKCxd5usOLUoWHHjGuHGZ/62TciNfwunOBUCSCGAFAIkhQBJIUBSCJAUAiSFAEkhQB+5NuHf9q0gTv3bd/vucll55ZlbFP7NqRBACgGkECApBEgKAZJCgKQQICkESAoBsjb5ACsbiX23eazY977fdrcJ/51TIYAUAkghQFIIkBQCJIUASSFAUgiQFAL0kWuTz/tm/8qS4dQWZZ+V9z21kDll5lPN5FQIIIUAUgiQFAIkhQBJIUBSCJAUAiSFAF26Ntm3GZjp1K0aM28C+baf9923/S3s41QIIIUAUgiQFAIkhQBJIUBSCJAUAiSFAI1dm7iT4b+buc240cpy49tuTfk8ToUAUggghQBJIUBSCJAUAiSFAEkhQFIIUP08z3P6GX5h3z0Sp+zbDMy8N2Pf+868ReTUvSinfN4GxqkQQAoBpBAgKQRICgGSQoCkECApBEgKAbr0bpNT390/tRh5d+P3/k/9D+77nPetXFbc+Eme4lQIIIUAUgiQFAIkhQBJIUBSCJAUAiSFAI2922TFzHskZt6qccrM+0lWzPy9+rxd1j5OhQBSCCCFAEkhQFIIkBQCJIUASSFAUgjQ2LXJzG/J37j6uHHlMnNPMtPM37p3M7coToUAUggghQBJIUBSCJAUAiSFAEkhQFII0KVrk1NO3cjxbua9GfteeeZW4d2pz2rFzDXRPk6FAFIIIIUASSFAUgiQFAIkhQBJIUBSCNDYtcmKfVuFmXeb3Pi+p/YGM383Vl753cxbYqxNAIaSQgApBJBCgKQQICkESAoBkkKApBCgsWuTU3eb3LgKeDfzlph3p3Ysn7freDdzXXOKUyGAFAJIIUBSCJAUAiSFAEkhQFIIkBQCNHZt8u7G+zr2LRlm7kluvL1k5o7l3cybbW7kVAgghQBSCJAUAiSFAEkhQFIIkBQCJIUAXbo2WXFq9XHjFmXmyuXGxciNvzkrbrz5xKkQQAoBpBAgKQRICgGSQoCkECApBEgKAao/Tz/A73fqm+4zv0P/buZyY9++YuV9b1z13LhUOcWpEEAKAaQQICkESAoBkkKApBAgKQRICgG69G6Tmd+Sn3n3xbtTq48VM3/eU+sLW5TfxakQQAoBpBAgKQRICgGSQoCkECApBEgKARp7t8mpb7rvu/ti3/vONPOZZ+5nTv3v37iP2sepEEAKAaQQICkESAoBkkKApBAgKQRICgEauzbZtwq48TaPfd/dP/U5v9u32zll5lO9m/m3sI9TIYAUAkghQFIIkBQCJIUASSFAUgiQFAJUP8/znH6GXzj1XfZTty7M3Gbsu79i5lZh5if57tQyx90mAB9ICgGkEEAKAZJCgKQQICkESAoBkkKAxt5t8m7ft9Vv3AysOLUnuXHV823LnBv/f1c4FQJIIYAUAiSFAEkhQFIIkBQCJIUASSFAl65NVuz7lvzMDcypV973vqdu5Fgxc32x79O4cYviVAgghQBSCJAUAiSFAEkhQFIIkBQCJIUAfeHa5N3MvcHM9cXMLcqKU+uLFfv+9/etmGZyKgSQQgApBEgKAZJCgKQQICkESAoBkkKA6ud5ntPPwNftOk7dbfLu1L7ixs955k5phVMhgBQCSCFAUgiQFAIkhQBJIUBSCJAUAjT2bpMb70Z4t3KPxI2fxqlnnrlkWHHjcmPmU71zKgSQQgApBEgKAZJCgKQQICkESAoBkkKAxq5N3s38LvvKvmLmPRIzbxH5vBtITr3vqd/YmZwKAaQQQAoBkkKApBAgKQRICgGSQoCkEKBL1ybvZm4k9jm1RZn5aeyzbxE08+6afauemb85ToUAUggghQBJIUBSCJAUAiSFAEkhQFII0EeuTb7NvhsqVpza/Mx838+7nWbmQmaFUyGAFAJIIUBSCJAUAiSFAEkhQFIIkBQCZG1yhW9bMpz6id7N/HlnvvKNnAoBpBBACgGSQoCkECApBEgKAZJCgKQQoI9cm9z4Pfh9z3zjnmTFqWXOzM9q3703N/6VvXMqBJBCACkESAoBkkKApBAgKQRICgGSQoAuXZvs+2b/KTM3EjNvTbnxJpCZP9GKz9uiOBUCSCGAFAIkhQBJIUBSCJAUAiSFAEkhQPXzPM/pZwA4zKkQQAoBpBAgKQRICgGSQoCkECApBEgKAZJCgKQQICkESAoBkkKApBAgKQRICgGSQoCkECApBEgKAZJCgKQQICkESAoBkkKApBAgKQRICgGSQoCkECApBEgKAZJCgKQQICkESAoBkkKApBAgKQRICgGSQoCkECApBEgKAZJCgKQQICkESAoBqv8DB2UkhNPl0TkAAAAASUVORK5CYII=" style="width:20mm; position: absolute; right:0; top:-20mm" -->
+
+    <div class="title mt25 mb10">
+    
+      <h1>The Nameless Crowds: Using Quantitative Data and Digital Tools to Study the Ancient Vocabulary of the Crowd in Tacitus</h1>
+
+    
+    </div>
+    <div class="contributors mb5">
+      
+        <div class="contributor mr10">
+          <h3>Louis Autin <a href="https://orcid.org/0000-0002-1716-1236"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="orcid" /></a></h3>
+<p>Sorbonne-Université, UFR de latin ; EA 4081 "Rome et ses Renaissances", Paris, France</p>
+
+        </div>
+      
+    </div>
+    
+    <div>
+      <p class="desktop" style="font-size:8pt; line-height:12pt">
+        <a href="https://doi.org/10.1515/JDH-2021-1000?locatt=label:JDHFULL">https://doi.org/10.1515/JDH-2021-1000?locatt=label:JDHFULL</a>
+      </p>
+      <p class="desktop" style="font-size:8pt; line-height:12pt">
+        
+        Published online the 18th October 2021
+        
+      </p>
+    </div>
+    <p>
+      <div class="flex-container">
+        <div class="flex-child">
+          <br>
+          Experience the full interactive<br>multi-layered reading experience
+          <div class="read">
+            <a href="https://journalofdigitalhistory.org/en/article/JJszM3GwAYDs">&nbsp;-> Read here&nbsp;</a>
+          </div>
+          <br>
+        </div>
+        <div class="flex-child">
+          <br>
+          Send yourself a reminder<br>to read this article later
+          <div class="email">
+            <a  href="mailto:?subject=Read%20on%20JDH%20%22The Nameless Crowds: Using Quantitative Data and Digital Tools to Study the Ancient Vocabulary of the Crowd in Tacitus%22&body=Hello!%0D%0AHere%20is%20your%20reminder%20as%20requested%0D%0A%0D%0ALink%3A%20https://journalofdigitalhistory.org/en/article/JJszM3GwAYDs">&nbsp;-> Send E-Mail&nbsp;</a>
+            <br>
+          </div>
+        </div>
+      </div>
+    </p>
+    <div class="keywords mb5 mt5">
+          <b>Keywords: </b>Crowds, Tacitus, Lexicology, Phraseology, Political History, Principate
+      </div>
+    <div class="abstract dual-column mb5">
+      
+        <p>Combining quantitative and qualitative information, this paper investigates from a lexicological and socio-historical perspective the vocabulary of the crowd in Tacitus, a Roman historian of the 1st-2nd century AD. Unlike most Latin authors, Tacitus uses predominantly the word <em>vulgus</em> in comparison to <em>turba</em>, <em>multitudo</em> and the other nouns referring to urban and military crowds. The singularity of the Tacitean <em>vulgus</em> is not only quantitative, but also qualitative, especially when it comes to its semantic nuances and combinatorial profile. Focusing one after the other in a contrastive way on the phenomenological, sociological and ethological dimensions of the crowds depicted by Tacitus, we show that, while <em>turba</em> and <em>multitudo</em> refer to strongly spatialized crowds, whose social composition does not seem to be a strong defining factor, usually without any own opinion or political autonomy, <em>vulgus</em> refers in Tacitus to a “popular” crowd, defined by its ability to vocalize its own feelings and opinion and to engage in dialogue, or even conflict, with the ruling elites. The <em>vulgus</em> thus seems to become, in Tacitus’ narrative, a new political actor of the imperial regime. Contrary to the institutional <em>populus</em>, the <em>vulgus</em> as political actor does not express its opinion through the ordinary political institutions that were traditionally controlled by the Roman aristocracy (the <em>comitia</em> for instance), but proceeds to do so through vocalizations in non-institutional (albeit deeply political) contexts.</p>
+
+      
+    </div>
+    <div class="disclaimer">
+    
+    </div>
+  </article>
+</section>
+<section class="sheet padding-20mm">
+  <article>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">7</div>
+      <div><p><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="cc-by-nc-nd" /></a>
+© Louis Autin. Published by De Gruyter in cooperation with the University of Luxembourg Centre for Contemporary and Digital History. This is an Open Access article distributed under the terms of the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution License CC-BY-NC-ND</a></p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">9</div>
+      <div><blockquote>
+<p>Πληθὺν δ᾽ οὐκ ἂν ἐγὼ μυθήσομαι οὐδ᾽ ὀνομήνω, / οὐδ᾽ εἴ μοι δέκα μὲν γλῶσσαι, δέκα δὲ στόματ᾽ εἶεν, / φωνὴ δ᾽ ἄρρηκτος, χάλκεον δέ μοι ἦτορ ἐνείη. (Homer, <em>Iliad</em>, 2.488-490)</p>
+</blockquote>
+<blockquote>
+<p>« But the multitude I could not tell or name, not even if ten tongues were mine and ten mouths and a voice unwearying, and the heart within me were of bronze. » (Homer. <em>Iliad</em>, Volume I: Books 1-12, translated by A. T. Murray, Loeb Classical Library, 1924)</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">10</div>
+      <div><h2>Introduction</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">11</div>
+      <div><h3>Crowds in Classics and Ancient History</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">12</div>
+      <div><p>Crowd behaviour in the Antiquity have received little scholarly attention, even though ancient authors (prose writers as well as poets) very regularly mention mass phenomena. The major works of the last fifty years on the Roman <em>plebs</em>, which we owe to <em>Yavetz 1969</em>, <em>Millar 1998</em> or <em>Courrier 2014</em>, focus on the political culture of the sub-equestrian segments of Roman society, without centrally examining crowd movements. Few historical studies address head-on the question of the definition of crowds in ancient societies: see some brief assessments in (<em>Gilbert 1976</em> pp. 7-16, <em>Laser 1997</em> pp. 17-18, or more recently <em>Laignoux 2011</em>, and on the side of literary studies, the panoramas of <em>Karpyuk 2000</em> or <em>Baier 2010</em> and Engel’s still useful monograph on collective psychology in Tacitus <em>Engel 1972</em>. Some insights can be found in studies on close related themes, like R. Ash’s monograph on the behaviour of the legions in Tacitus’ <em>Histories</em> <em>Ash 1999</em>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">13</div>
+      <div><p>This scarcity can be explained by the little scientific value given to the concept of crowd in historical studies: the notion seems to be irremediably linked to the psychological, not to say &quot;psychopathological&quot;, approach that characterized its emergence in the scientific field at the end of the 19th century. The famous studies of Le Bon and Tarde, whose ideological positioning as much as results are unanimously rejected today (cf. <em>Thiec, Tréanton 1983</em>), have cast doubt on the operability of the notions of &quot;crowd&quot; or &quot;mass&quot;, which hardly find any echo today elsewhere than in the field of social psychology (see <em>Reicher 2001</em>). Moreover, scholars working on ancient societies now generally resort to the tools of the history from below, which leave aside the question of group psychology to focus on the social life of actors and the (economic, social, political) motives of collective action: among several examples, see the recent collective publication of the research group <a href="http://gsppa.fflch.usp.br/en/presentation," title="Link to the project presentation on the University of São Paulo website">“The Subaltern and the Popular in Antiquity”</a> with the forthcoming <em>Courrier, Oliveira 2021</em>, and, on our topic, but on a later period, the recent thorough analysis of <em>Magalhães de Oliveira 2020</em>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">14</div>
+      <div><p>This relative lack of interest is often accompanied by a distrust of the vocabulary of ancient authors. The well-known aristocratic bias of our sources often leads to the rejection of any in-depth study of the vocabulary relating to crowds, and in the first place the various denominations they receive in the texts. Since Z. Yavetz, an eminent specialist in the Roman <em>plebs</em>, it is considered that the lexical variations that authors use to designate crowds are essentially explained by the concern for <em>variatio</em> or by the moral colour they seek to give to a collective demonstration. To quote three passages of Yavetz's study (<em>Yavetz 1969</em>, p. 142, p. 147 &amp; p. 149 ) :</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">15</div>
+      <div><blockquote>
+<p>The ancients were apparently not precise in their use of these terms, and as far as the present writer is aware no method has yet been suggested whereby each and every term may be defined according to legal or sociological principles.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">16</div>
+      <div><blockquote>
+<p>It has been stated above that the term <em>vulgus</em> is expressive of an outstandingly derogatory attitude. The <em>vulgus</em> implies the ordinary public that is aggressive, fickle, superstitious, destitute of everything spiritual and material. It is consequently easy to mislead them and incite them to rebellion. When the ancients use the expression <em>vulgus</em>, they not only convey a fact but also an attitude.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">17</div>
+      <div><blockquote>
+<p>It seems that most of the above-mentioned expressions are used indiscriminately. It should
+not, however, be forgotten that when one says that <em>vulgus</em>, ὄχλος, ὅμιλος, or <em>turba</em> have a derogatory significance, it means that for the ancients, and especially Tacitus, the criterion is not legal or social, but moral (his own moral criterion, naturally).</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">18</div>
+      <div><p>Such a definitive judgement, which affirms the interchangeable nature of the vocabulary pertaining to crowds and masses, has been widely accepted by later historical studies (in <em>Virlouvet 1985</em> pp. 54-63 or <em>Courrier 2014</em> pp. 489-497, for example), and even radicalized by some, like J. P. Toner, who states categorically (<em>Toner 2009</em> p. 4): “Discussions about the exact meanings of Latin terms such as <em>populus</em>, <em>plebs</em>, <em>turba</em>, <em>multitudo</em> or <em>vulgus</em> are in danger of missing the point. It is hardly surprising that the elite failed to express themselves more clearly when talking about the non-elite because, to put it crudely, they didn’t give a damn about them.” The same tendency can be seen in <em>Kröss 2017</em> pp. 24-68, a more thorough study of the term <em>plebs</em> in the literary texts, whose conclusions yet maintain the idea that the word used by ancient authors to refer to the urban masses does not really have one clear and definite received meaning.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">19</div>
+      <div><p>However, rare lexicological studies have shown how inspiring and interesting a comprehensive analysis of the vocabulary of the crowd could prove to be in order to understand the evolution of mental representations on this topic. These studies usually focus on shorter corpora (one author), like Seneca <em>Arena 2007</em> or Suetonius <em>Mouchová 1991</em>. Regarding Tacitus, R. F. Newbold’s study on the Tacitean <em>vulgus</em> <em>Newbold 1976</em>, which rightly emphasizes the importance of lexicological analysis, proves yet disappointing: apart from its brevity, the occurrences are not detailed, which does not allow any data control and, more generally, denies any close reading. This is all the more problematic as the author’s heuristic categories are not self-evident: for example, why and how the distinction is made (p. 86) between the <em>vulgus</em> referring to the whole population of Rome, to the lower classes only, to those same classes not constituted as “a crowd or a mob”, or to “public opinion anywhere” (an undefined concept, while far from self-evident, cf. <em>Rosillo-López 2017</em>), remains unclear. Moreover, as we will try to demonstrate here, a study of the <em>vulgus</em> in Tacitus cannot do without a confrontation with other denominations of the crowd (<em>turba</em>, <em>multitudo</em>), nor a comparison, at least qualitative, with more institutional designations of the civic body such as <em>populus</em> and <em>plebs</em>. This is what I propose to do here, by summarizing and enriching through digital tools the reflections presented in the first part of my doctoral thesis (<em>Autin 2019</em> pp. 17-117).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">20</div>
+      <div><h3>Method and issues addressed</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">21</div>
+      <div><p>In this scientific context, philologists can provide a new impetus by attempting to uncover the thought patterns of ancient authors, without, however, pronouncing on their own historical value. Indeed, if the notion of crowd no longer seems to have scientific relevance, the frequency with which crowd phenomena appear in ancient literature shows their centrality in ancient representations of collective action. What I propose to do in this paper is to shed light on “Tacitus’ sociology” rather than on the “sociology of the crowds” itself, to paraphrase V. Hunter’s words on Thucydides <em>Hunter 1988</em>. My thesis here is that the clearly psychologizing colour of the notion of crowd in Tacitus, as well as the discrediting vision that is usually associated with it, is not incompatible with the use of a precise vocabulary, itself shaped by Tacitus’ subtle analysis of crowd behaviour on the sociological and political levels. I will thus engage in the work of disintegration recommended by E. Flaig who, nearly thirty years ago, showed the permanent gap, among ancient historians, between the topical discourse against subaltern groups and the reality of the narrative, which is often more “objective” (cf. <em>Flaig 2019</em>, first edition 1992).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">22</div>
+      <div><p>This study will focus on the surviving works of Tacitus, a Roman historian of the late 1st/early 2nd  century AD. His two most important historiographical works, the <em>Annals</em> and the <em>Histories</em>, provide a most valuable testimony for the understanding of the early Empire, from the death of Augustus in 14 AD until the accession to power of the Flavians following the civil war of AD 68-69, with substantial lacunae due to the transmission of texts. To these major works, three opuscules should be added, the <em>Life of Agricola</em>, which preserves a significant record of Domitian’s reign, as well as the <em>Germania</em> and the <em>Dialogue on Oratory</em>, which do not belong primarily to the historiographical genre, yet contain several characterizations of the crowds, respectively from an ethnographic and rhetorical perspective. A careful observer of the institutional and political transformations of the early Empire, Tacitus makes a very singular use of the vocabulary of the crowds compared to his predecessors and contemporaries, as I shall explain further on in this paper (see below mainly sections 3 and 4).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">23</div>
+      <div><p>I will provide an exhaustive analysis of the three main lexemes referring to the crowd in Tacitus (and, more broadly, in Latin), that is, in alphabetical order, <em>multitudo</em>, <em>turba</em> and <em>vulgus</em> (usually translated by “crowd”, “mass”, “throng”, etc.). It is, of course, possible to find in Tacitus other words to refer to crowds. However, they are much less common and the meaning of “crowd” is clearly secondary: this is the case, for example, of <em>vis</em>, whose primary meanings are “strength” and “violence”, but does refer to a collective mobilization in Tacitus, <em>Ann.</em>, 12.29.3. An overview of these lesser terms is given by <em>Engel 1972</em> pp. 700-705. Moreover, some crowd movements are evoked through specific constructions (impersonal passive, indefinite pronouns, etc.), but taking these cases into account would lead this paper away from the lexicological study which it aims at.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">24</div>
+      <div><p>The principles guiding this study can be summarized as follows: </p>
+<ul>
+<li>providing a comprehensive analysis of the Tacitean corpus;</li>
+<li>giving access to the structured data, which will allow data control and permit through text references to come back to the text;</li>
+<li>using data visualization and (secondarily) NLP tools;</li>
+<li>combining a quantitative and qualitative approach (<em>ie</em> close reading of the most important passages).</li>
+</ul>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">25</div>
+      <div><h3>Data structuring</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">26</div>
+      <div><p>All the occurrences of the three lexemes in Tacitus were integrated in a <code>CSV</code> file (using the semicolon as separator) and manually annotated by a single annotator following different criteria. These data are then queried and accessed using the <code>pandas</code> library; the visualization part is done through the <code>matplotlib</code> and <code>seaborn</code> libraries (see the <code>requirements.txt</code> file attached).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">27</div>
+      <div><h4>Exclusion of irrelevant cases</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">28</div>
+      <div><p>A first step was to exclude from the <code>CSV</code> file some occurrences of the three lexemes that do not refer to a crowd of individuals, mainly on two fronts: </p>
+<ul>
+<li>when a lexeme refers to an inanimate collection (<em>eg</em> the <em>multitudo legum</em>, &quot;multitude of laws&quot;, in Tac., <em>Ann.</em> , 3.25.2);</li>
+<li>
+when a lexeme is used in a meaning other than &quot;crowd&quot;: <ul>
+<li>meaning of &quot;trouble/disorder&quot; with <em>turba</em>, exclusively in the plural form in Tacitus (see Tac., <em>Hist.</em> 1.83.1, 2.72.3, 4.1.8, 4.70.8, <em>Ann.</em> 1.16.1 and 1.19.2, cf. <em>Gerber, Greef, John 1962</em> <em>s. u.</em>);</li>
+<li>meaning of &quot;large number&quot; with <em>multitudo</em>, especially the passages in which <em>multitudo</em> is used in an instrumental or causal structure (<em>eg</em> <em>multitudine</em> meaning “because of their high number” see Tac., <em>Hist.</em> , 1.8.1, 3.30.1, 4.50.7, 5.12.6, <em>Ann.</em> , 4.27.2, 4.55.3, 14.61.1).</li>
+</ul>
+</li>
+</ul>
+<p>On these two points, therefore, we follow the choice of <em>Yavetz 1969</em> p. 142 n. 1.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">29</div>
+      <div><h4>Latin text</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">30</div>
+      <div><p>The Latin text is that edited in the Loeb Classical Library, imported from the <a href="https://www.loebclassics.com"><em>Loeb Classical Library</em> website</a>: <em>Hutton, Ogilvie, Warmington, Winterbottom 2006</em>, <em>Moore 2006</em>, <em>Moore, Jackson 2007</em>, <em>Jackson 2007</em>, <em>Jackson 2006</em>. It is normally limited to the sentence containing the occurrence of the lexeme, but, for the sake of comprehension, especially if the occurrence is taken from an indirect speech, the preceding segment may be included. All semicolons have been transformed into colons, to avoid incompatibilities with the <code>CSV</code> format of the data (see above).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">31</div>
+      <div><h4>Translation</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">32</div>
+      <div><p>The English translation from the same Loeb edition.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">33</div>
+      <div><h4>Lemma</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">34</div>
+      <div><p>The Latin lemma (<em>multitudo</em>, <em>turba</em> or <em>vulgus</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">35</div>
+      <div><h4>Word</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">36</div>
+      <div><p>The inflected form (lexeme) of the lemma, as found in the passage.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">37</div>
+      <div><h4>Morphological analysis</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">38</div>
+      <div><p>The morphological analysis of the lemmas was carried out manually, following the <a href="http://www.lemlat3.eu">LEMLAT</a> standards. Accordingly, each lexeme has received <a href="http://www.lemlat3.eu/wp-content/uploads/2016/10/LEMLAT3.0-tagset_english.pdf">a code</a> corresponding to its morphological features. For example, <em>multitudinem</em> (accusative singular of <em>multitudo</em>, a noun from the third declension) was annotated with the code <code>NcC--afs--</code>. </p>
+<p>While annotating the corpus, we noticed that none of the three lexemes was used in the plural form with the meaning of “crowd”. On this point, Tacitus does not really differ from the surviving classical Latin authors, in whom the use of any of these terms in the plural form remains very marginal (<em>Autin, Bouzidi, Kraif, Sorba 2016</em> pp. 395-396).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">39</div>
+      <div><h4>Syntactic analysis</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">40</div>
+      <div><p>The syntactic analysis (function of the lexeme within the sentence) follows the tagset presented in the <a href="http://perseusdl.github.io/treebank_data/"><em>guidelines</em></a> of the Latin Dependency Treebank and the Index Thomisticus Treebank <em>Bamman, Passarotti, Crane, Raynaud 2007</em>. The tags used in our data are <code>SBJ</code>, <code>OBJ</code> and <code>ATR</code>. They characterize the syntactic relationship between the lexeme and the word on which it depends (“immediate head”).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">41</div>
+      <div><p><strong>Simplification of the syntactic annotation</strong>: to standardize and simplify data processing, we have not taken into account labels indicating coordination (<code>SBJ_CO</code> is thus replaced by <code>SBJ</code>) or apposition (<code>SBJ_AP</code> &gt; <code>SBJ</code>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">42</div>
+      <div><h4>Head</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">43</div>
+      <div><p>The term on which the lexeme directly depends, presented in its standardized form (lemma): nominative singular for the nouns, infinitive present for the verbs, etc.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">44</div>
+      <div><p><strong>Simplification of the syntactic annotation</strong>: when the immediate head is elided, the word normally receives a complex tag (<em>Bamman, Passarotti, Crane, Raynaud 2007</em> pp. 36-37). To ensure greater uniformity in the data, the implied form has been systematically restored (see an example with the frequently implied <em>esse</em> below, section 3.2.3.1).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">45</div>
+      <div><h4>Dependent</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">46</div>
+      <div><p>The term that depends directly on the lexeme (as lemma).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">47</div>
+      <div><p><strong>Multiple dependencies</strong>: when the lexeme depends on several terms, or when several terms depend on the lexeme, they are separated by a comma in the <code>CSV</code> file. These cases are then treated automatically through data processing.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">48</div>
+      <div><h4>Head and dependent semantics</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">49</div>
+      <div><p>For each head and each dependent, its main semantic feature has been manually noted, by a single annotator, in the <code>CSV</code> file. Semantic features are defined as the minimal semantic components of the &quot;meaning&quot; of a word given by the dictionary (on this notion, <em>Bierwisch 1971</em>, <em>Champagnol 1993</em>). Our method is, of course, a simplification, since, on the one hand, a single lexeme often contains several semantic features, and, on the other hand, assigning a semantic feature to a word is not always obvious. For instance, considering the term rumor (“rumour”), which often collocates with <em>vulgus</em>, we could choose as the main semantic feature “vocalization” as well as “opinion” (the latter was ultimately the one we went for). However, this approach shows stimulating results for discriminating between <em>multitudo</em>, <em>turba</em> and <em>vulgus</em> (see below, section 3.2.1).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">50</div>
+      <div><h4>Type of crowd</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">51</div>
+      <div><p>These morphosyntactic traits are followed by five more historical features, which are by nature subject to interpretation.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">52</div>
+      <div><p>First, the type of crowd represented by Tacitus, with four possibilities:</p>
+<ul>
+<li><code>civ</code>: civil crowd (<em>ie</em> crowd composed of civilians);</li>
+<li><code>milit</code>: military crowd (<em>ie</em> crowd composed of soldiers);</li>
+<li><code>mix</code>: crowd composed of civilians and soldiers;</li>
+<li><code>ind</code>: impossible to determine the type of crowd.</li>
+</ul>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">53</div>
+      <div><h4>Geographic framework</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">54</div>
+      <div><p>The geographical framework in which the crowd appears:</p>
+<ul>
+<li><code>rome</code>: Rome and Italy (not considered a province);</li>
+<li><code>prov</code>: the Roman provinces (including the Roman Britain);</li>
+<li><code>barb</code>: &quot;barbarian&quot; territories (to adopt Tacitus’ perspective) – this includes the case of foreign peoples rising up against the Romans within the provinces, for example the Britons during Boudica’s uprising in Tac., <em>Ann.</em>, 14.35.1;</li>
+<li><code>ind</code>: impossible to determine the geographical framework.</li>
+</ul>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">55</div>
+      <div><h4>Social composition</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">56</div>
+      <div><p>The social composition as described in the text does not, of course, offer the degree of detail and precision that we would wish for. Here again we have chosen to follow the perspective given by Tacitus by adopting the broad (but significant) categories below:</p>
+<ul>
+<li><code>eli</code>: the crowd is composed exclusively of members of the “elite”, understood as the two higher orders (senatorial or equestrian order);</li>
+<li><code>pop</code>: the crowd is composed exclusively of members of the “people”, understood as all free citizens not belonging to the two higher orders;</li>
+<li><code>n-civ</code>: the crowd is composed exclusively of slaves or foreigners;</li>
+<li><code>mix</code>: the crowd is composed of a mixture of at least two of the above categories;</li>
+<li><code>ind</code>: impossible to determine the social composition.</li>
+</ul>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">57</div>
+      <div><h4>Spatialization</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">58</div>
+      <div><p>The last two descriptors are intended to present varying degrees of intensity and are therefore represented in numerical form.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">59</div>
+      <div><p>Crowd action takes place in a spatiotemporal framework which Tacitus may define more or less sharply. The inscription of collective action within a (un)determined framework will be addressed here as &quot;spatialization&quot; of the crowd. Variations are indicated on a simple scale from <code>0</code> (very diffuse and imprecise spatiotemporal framework) to <code>1</code> (strong spatiotemporal inscription), with <code>0.25</code> increments. In order to determine the degree of spatialization of the crowd in every passage, one may rely on how frequently words expressing time or space appear in the passage or in the immediate context. Let us take but two extreme examples (Tac., <em>Ann.</em>, 1.27.2 and Tac., <em>Ann.</em>, 3.61.1):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">60</div>
+      <div><blockquote>
+<p><em>Iamque lapidis ictu cruentus et exitii certus adcursu <strong>multitudinis</strong> quae cum Druso advenerat protectus est.</em></p>
+</blockquote>
+<blockquote>
+<p>He was bleeding already from a cut with a missile and had made up his mind that the end was come, when he was saved by the advent of Drusus’ numerous <strong>escort</strong>.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">61</div>
+      <div><blockquote>
+<p><em>Primi omnium Ephesii adiere, memorantes non, ut <strong>vulgus</strong> crederet, Dianam atque Apollinem Delo genitos.</em></p>
+</blockquote>
+<blockquote>
+<p>The Ephesians were the first to appear. &quot;Apollo and Diana,&quot; they stated, &quot;were not, as <strong>commonly</strong> supposed, born at Delos.&quot;</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">62</div>
+      <div><p>In the first passage, the adverb of time <em>iam</em> (&quot;already&quot;) and the semantics of the noun <em>adcursus</em> (describing someone &quot;running over&quot; somewhere) give a strongly spatialized image of this crowd (hence the <code>1</code> tag). In the second passage, in contrast, the lack of any word specifying the framework within which the &quot;crowd believes&quot; (<em>vulgus crederet</em>) the myth of Apollo and Diana makes it a very loosely spatialized occurrence (hence the <code>0</code> tag).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">63</div>
+      <div><p>However, some cases are not as easily annotated. Take for instance the depiction of Rome's reaction to the death of Junia Tertulla (M. Brutus' sister and C. Cassius' wife, Tac., <em>Ann.</em>, 3.76.1):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">64</div>
+      <div><blockquote>
+<p><em>Testamentum eius multo <strong>apud vulgum</strong> rumore fuit, quia in magnis opibus cum ferme cunctos proceres cum honore nominavisset Caesarem omisit.</em></p>
+</blockquote>
+<blockquote>
+<p>Her will was busily discussed <strong>by the crowd</strong>: because in disposing of her great wealth she mentioned nearly every patrician of note in complimentary terms, but omitted the Caesar.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">65</div>
+      <div><p>Tacitus describes collective action (a rumour) occurring in a very specific political context, yet without any actual indication on where and how this crowd gathered and circulated the gossip. For such cases of crowds related to a specific historical framework (unlike the <em>vulgus</em> in Tac., <em>Ann.</em>, 3.61.1 above) but whose concrete manifestation is somehow blurred or imprecise (unlike the <em>multitudo</em> in Tac., <em>Ann.</em>, 1.27.2), we used the <code>0.5</code> tag.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">66</div>
+      <div><h4>Political agency</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">67</div>
+      <div><p>Political agency is also indicated on a scale ranging from from <code>0</code> (absence of agency) to <code>1</code> (strong agency), with <code>0.25</code> increments. Here again, annotation is a subjective matter. Political agency is defined as the ability for someone or a group of people to act as political actor(s). Crowd agency might take the form of political demands in the crowd, of political actions against the authorities, and more generally implies the maintenance in the crowd of political autonomy, distinct from the views of the authorities (on this topic, <em>Logghe 2017</em>). Mutiny narratives in Tacitus often display crowd manifesting strongly their agency, for example in this passage (Tac., <em>Ann.</em>, 1.39.3), which received the highest tag of our tagset (<code>1</code>):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">68</div>
+      <div><blockquote>
+<p><em>Vtque mos <strong>vulgo</strong> quamvis falsis reum subdere, Munatium Plancum consulatu functum, principem legationis, auctorem senatus consulti incusant.</em></p>
+</blockquote>
+<blockquote>
+<p>With the common propensity of <strong>crowds</strong> to find a victim, however false the charge, they accused Munatius Plancus, an ex-consul who was at the head of the deputation, of initiating the decree.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">69</div>
+      <div><p>In contrast, when the sedition is settled and the crowd respects anew the authority of the general staff, the sense of agency is much lower, as in this passage, at the end of the mutiny in Pannonia (Tac., 1.49.2):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">70</div>
+      <div><blockquote>
+<p><em>Neque legatus aut tribunus moderator adfuit: <strong>permissa vulgo licentia</strong> atque ultio et satietas.</em></p>
+</blockquote>
+<blockquote>
+<p>No general or tribune was there to restrain: <strong>licence was granted to the mob</strong>, and it might glut its vengeance to the full. Before long, Germanicus marched into the camp.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">71</div>
+      <div><p>The <em>vulgus</em> appears in this passage as object of the verb <em>permittere</em> (&quot;to permit&quot;), and its action seems to be motivated by the staff (therefore a low political autonomy for this crowd). Hence, it received the <code>0</code> tag.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">72</div>
+      <div><p>Other increments were used for more nuanced cases, in particular the <code>0.5</code> tag, which proves very useful when Tacitus describes crowds acting on a political level but with low political autonomy (<em>ie.</em> acting consensually with the ruling elite). See for instance this passage where the agenda of Germanicus and Agrippina matches the political response of the crowd, which gives their son the nickname &quot;Caligula&quot; (Tac., <em>Ann.</em>, 1.41.2):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">73</div>
+      <div><blockquote>
+<p><em>Iam infans in castris genitus, in contubernio legionum eductus, quem militari vocabulo Caligulam appellabant, quia plerumque <strong>ad concilianda vulgi studia</strong> eo tegmine pedum induebatur.</em></p>
+</blockquote>
+<blockquote>
+<p>Here was also her little son, born in the camp and bred the playmate of the legions: whom soldier-like they had dubbed &quot;Bootikins&quot;-Caligula-because, as <strong>an appeal to the fancy of the rank and file</strong>, he generally wore the footgear of that name.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">74</div>
+      <div><p>Tacitus' narrative unveils the strategy of Germanicus and Agrippina to obtain popular favour; yet nicknaming was <em>per se</em> a means of (informal) political participation for the lower ranks of the Roman society (here of the Roman army), as <a href="https://en.subalternosblog.com/post/nicknames-and-politics-in-republican-rome">recently demonstrated by Giovan do Nascimento</a> (with further references), and this political maneuvre relied on how willing to accept Caligula the crowd was. The <code>0.5</code> tag allows us to annotate edge cases such as this.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">75</div>
+      <div><h3>A look at the etymology</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">76</div>
+      <div><p>To discriminate between <em>vulgus</em>, <em>turba</em> and <em>multitudo</em>, the first approach can be an etymological one. The etymology leads to set for the first time in this paper a dividing line between the first term on the one hand, and the second and the third one on the other hand. <em>Turba</em> and <em>multitudo</em> are in fact distinguished from <em>vulgus</em> by their polysemy. <em>Turba</em>, probably a loanword from gr. ἡ τύρβη, originally means &quot;trouble&quot; (cf. <em>Ernout, Meillet 2001</em> <em>s. u.</em>); applied to crowds, it designates human gatherings as chaotic and disturbing phenomena (in the eyes of the aristocrats that the Roman authors mostly are). <em>Multitudo</em>, which, of course, derives from <em>multus</em> (“many”), generally refers to a large number of elements, not necessarily individuals. In contrast, <em>vulgus</em> is of obscure origin: as the term does not seem to have parallels in the Indo-European languages, some linguists think that it was first used in the rural domain, where it would have designated a herd of animals, like <em>pecus</em>, before being applied to the Roman plebs at the end of the 2nd century BC, at the time of the rural exodus of the <em>plebs rustica</em>. This theory, which is not new, as recalled by <em>Ernout, Meillet 2001</em> <em>s. u.</em>, has been supported by <em>Biliński 1964</em> and taken up by <em>Engel 1972</em> p. 292 n. 1. It seems therefore that the meaning of “crowd” is much more central in <em>vulgus</em> than in <em>turba</em> and <em>multitudo</em>, and that by its gregarious nature, <em>vulgus</em> would represent the crowd from the psychological point of view (a collection of people whose individuality has dissolved into the mass), which proves right when we take a further look at Tacitus’ writing (see below, section 4.1).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">77</div>
+      <div><h2>Distribution of lexemes</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">78</div>
+      <div><h3>Distribution of the three lexemes in Tacitus</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">79</div>
+      <div><p>A quick reading of the data collected allows us to compare the three lexemes according to a first numerical criterion. The specificity of <em>vulgus</em>, which represents two thirds of the total amount, is obvious: see in <a href="#figure-1">figure 1</a> a basic visualization of these data in the form of a histogram.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">82</div>
+      <div><h3>Distribution in subcorpora</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">83</div>
+      <div><p>Let us then observe (<a href="#figure-2">figure 2</a>) the distribution of the three lexemes within the Tacitean corpus, which we will divide into three subcorpora: the <em>Annals</em>, the <em>Histories</em> and the opuscules, composed of the <em>Life of Agricola</em>, the <em>Germania</em> and the <em>Dialogue of the Orators</em>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">86</div>
+      <div><p><em>Analysis</em>: We observe a roughly equal distribution for <em>vulgus</em> between the two major works of Tacitus, and two diametrically opposed distributions between <em>multitudo</em> and <em>turba</em>, the first lexeme being more present in the Annals, the second in the Histories. However, we must take into account that these three subcorpora have a very variable number of words: 88,905 words for the Annals, 51,495 words for the Histories and, in total, 21,562 words for the opuscules. It is therefore necessary to correlate the total number of occurrences of the lexemes to the number of words in each subcorpus in order to get a more accurate idea of their distribution within the works of Tacitus: this is the purpose of the heatmap (<a href="#figure-3">figure 3</a>) below.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">89</div>
+      <div><p><em>Analysis</em>: The graph reads as follows: the volume of occurrences of <em>vulgus</em> within the <em>Annals</em> represents 0.067% of the total volume of words in this work.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">90</div>
+      <div><p>We can use a chi-squared test to ascertain how statistically significant the distribution of each lemma within the Tacitean subcorpora is. To do so, we create a contingency table with the observed frequency of each lemma and of the other words of each subcorpus (&quot;non-occurrences&quot;, cf. <em>Poudat, Landragin 2017</em> p. 166) and we compare it to the expected frequencies. With the chi-squared test statistic, we obtain the corresponding p-value. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">92</div>
+      <div><p>It appears that the distribution of <em>vulgus</em> is the most statistically significant, with a very small p-value (<code>p&lt;0.0005</code>). The distribution of <em>turba</em> is also statistically significant (<code>p&lt;0.01</code>), but that of <em>multitudo</em> (<code>p&gt;0.1</code>) might no be statistically significant.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">93</div>
+      <div><p>Such analysis leads to the observation that <em>vulgus</em> is more chosen by Tacitus in the <em>Histories</em> than in the <em>Annals</em>, an observation already made by <em>Yavetz 1969</em> p. 147 and <em>Newbold 1976</em> pp. 85-86, for which there are at least two possible interpretations: either an evolution of Tacitus’ style between the <em>Histories</em> (written in the first decade of the 2nd c.) and the <em>Annals</em> (written in the second decade of the 2nd c., cf. <em>Birley 2000</em>, pp. 241-247; on stylistic evolutions, see <em>Syme 1958</em>, app. 45-47); or a difference in the historical and narrative material, as the surviving account of the <em>Histories</em> focuses on the civil war of 68-70 AD, while the <em>Annals</em> cover the over fifty years of internal peace of the Julio-Claudian dynasty (14-66 AD, the narrative of the years 66-68 being lost). <em>Turba</em> seems to experience a disaffection between the <em>Histories</em> and the <em>Annals</em> similar to that of <em>vulgus</em>, for which the same two explanations can be mobilized. Finally, we notice that the three lexemes are used in similar proportions in the three opuscules.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">94</div>
+      <div><h3>Which specificity for Tacitus?</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">95</div>
+      <div><p>The dominant use of <em>vulgus</em> within the Tacitean corpus must be confronted with the distribution of the three lexemes in the more general framework of the preserved classical Latin literature. To do so, it is possible to rely on the <a href="http://hyperbase.unice.fr/">Hyperbase web tool</a>, developed within the University of Nice’s research team <em>Bases, Corpus, Langages</em>, in its 2017 web version (on the use of this tool by classicists, see <em>Fantoli, Vandersmissen 2019</em>). This platform allows us to investigate the distribution of the three lexemes within the Latin textual bank of the Liège research team LASLA. Even if this corpus of roughly two million words does not cover the whole of Latinity (see <em>Longrée, Philippart de Foy, Purnelle 2010</em> pp. 433-435), it provides a sense of Tacitus’ originality, by comparing him to 21 classical authors, mainly his predecessors, from the 2nd century BC to the 2nd century AD, in prose as well as in poetry.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">96</div>
+      <div><p><em>Method</em>: the LASLA corpus has first been redrawn within Hyperbase Web to group the works by author; the authors have then been classified in chronological order, in order to bring out diachronic evolutions (which eventually did not prove conclusive). We then queried Hyperbase web on the distribution of the three lexemes within the corpus, choosing as “context” the sentence (in connection with our treatment of the Tacitean corpus, see above, section 1.3.2) and as “unit” the specificity score. The generated file (<code>XLS</code> re-exported in <code>CSV</code>), without the “Total” column, is displayed in the form of a heatmap (<a href="#figure-4">figure 4</a>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">99</div>
+      <div><p><em>Analysis</em>: We must obviously take into account the generic specificities of the authors listed. Regarding the poets, for instance, the metrical structure of the hexameter and the pentameter makes it impossible to use the word <em>multitudo</em>. With this remark in mind, the results shown in <a href="#figure-4">figure 4</a> speak for themselves. In most of the historians and biographers (Caesar, Cornelius Nepos, Livy, Sallust, Curtius), we notice sometimes very marked preference (in Caesar in particular) for the lexeme <em>multitudo</em>. In Suetonius, the specificity score is highest for the lexeme <em>turba</em>. In the case of Tacitus, particularly noteworthy is his preferential use of the lexeme <em>vulgus</em>, which isolates him not only within the sub-corpus of historiographers, but also on the scale of the entire LASLA text bank. There is thus a first quantitative specificity of <em>vulgus</em> within the Tacitean corpus and, more generally (even if the corpus used does not allow us to affirm this definitely), within the Latinity.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">100</div>
+      <div><h2>Discriminating between the three lexemes: a contrastive perspective</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">101</div>
+      <div><p>To discriminate between the three lexemes, we proceed below through three complementary criteria:</p>
+<ol>
+<li>the function of the lexeme in the sentence;</li>
+<li>the significant lexical associations of each lexeme (phraseology);</li>
+<li>the historical context in which the lexeme appears.</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">102</div>
+      <div><h3>Distribution of the lexemes according to their syntactic function</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">103</div>
+      <div><p>A first approach is that of lemma inflection (their case) and, as a corollary, of their syntactic function. We propose in the following figures a visualization of the data that we comment on below. <a href="#figure-5">figure 5</a> presents the distribution according to the morphological tag of the lexemes; <a href="#figure-6">figure 6</a> is composed of three distinct histograms giving, for each lexeme, the distribution according to the syntactic tag; <a href="#figure-7">figure 7</a> groups the three lexemes according to their distribution by syntactic function on a normalized histogram.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">107</div>
+      <div><p><em>Analysis</em>: there are several elements to look at here.</p>
+<ul>
+<li>
+<p>First of all, there are divergent variations between the morphological label and the syntactic label. For example, regarding <em>multitudo</em>, the accusative (<code>acc-sg</code>) is more frequent than the nominative (<code>n-sg</code>); however, when we look at the syntactic labels, the subject function (<code>SBJ</code>) is more frequent than the object function (<code>OBJ</code>). This is simply due to the fact that the subject function can be occupied in Latin by nominatives, accusatives in infinitive clauses (accusative and infinitive) and ablatives in participle clauses (ablative absolute).</p>
+</li>
+<li>
+<p>In a contrastive perspective, we note:</p>
+<ul>
+<li>that <em>vulgus</em> preferentially occupies the <code>SBJ</code> (subject) and <code>ATR</code> functions (attributive, <em>ie</em> apposition, possessive/objective/partitive constructions);</li>
+<li>that <em>multitudo</em> preferentially assumes the <code>SBJ</code> or <code>OBJ</code> functions (object, <em>ie</em> direct or indirect object as well as passive agents);</li>
+<li>that <em>turba</em> follows a distribution close to <em>multitudo</em>, with, however, a dominant <code>OBJ</code> function;</li>
+<li>that the <code>ADV</code> function (adverbial, <em>ie</em> generally the lexemes in oblique cases specifying the circumstances of the action, except for the passive agent) is not a relevant criterion to contrast the three lexemes.</li>
+</ul>
+</li>
+</ul>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">108</div>
+      <div><p>Now we want to be sure that this distribution is statistically significant, <em>ie.</em> that there is a relationship between the choice of a lemma and its syntactic function within the Tacitean corpus. We will use a chi-squared test to obtain the p-value.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">110</div>
+      <div><p>The very small p-value (<code>p&lt;0.001</code>) allows us to affirm that there is a clear and statistically significative opposition (cf. <a href="#figure-6">figure 6</a>) between the syntactic distribution of <em>vulgus</em> on the one hand, most often subject of a verb or possessive noun phrase, and <em>multitudo</em>/<em>turba</em> on the other hand, most often subject or object of a verb. These observations need to be clarified by studying the semantics of the terms with which the three lexemes are combined.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">111</div>
+      <div><h3>Distribution of the lexemes according to the phraseology</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">112</div>
+      <div><p>This first morphosyntactic approach can be completed by the comparison of the phraseological profile of the three lexemes in Tacitus, <em>ie</em> by studying the terms with which these lexemes are preferentially associated within the Tacitean corpus.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">113</div>
+      <div><p>A first contrastive phraseological approach of the three nouns had been tried in 2016 within the Phraseotext project by K. Bouzidi, O. Kraif, J. Sorba and myself <em>Autin, Bouzidi, Kraif, Sorba 2016</em>. The aim was then to bring out the combinatorial profile of these lexical units, that is to study the stereotypical semantic and syntactic associations of each of these terms, using the <a href="http://phraseotext.u-grenoble3.fr/lexicoscope/">Lexicoscope</a>, a tool that extracts the most representative collocates of a given pivotal term <em>Kraif, Diwersy 2014</em>. This study focused on a larger corpus than the present paper, since it included, alongside Tacitus, several late Republican and imperial prose writers; it was also mainly conceived as a exploratory approach, since the automatic, data-driven dependency parsing of our corpus (through a stochastic parser) involved a not negligible error rate. However, several interesting results had emerged in this preliminary study. Indeed, the collocates (<em>ie</em> the stereotypical co-occurrents) of <em>turba</em> and <em>multitudo</em> convey in this corpus mainly the semantic features /intensity/ (<em>ingens</em>, <em>magnus</em>, <em>tantus</em>) and /movement/ (<em>circumfundo</em>, <em>concito</em>, <em>effundo</em>, <em>convenio</em>, <em>traduco</em>), while <em>vulgus</em> is mainly associated with abstract terms and nouns of opinion and/or speech (<em>rumor</em>, <em>opinio</em>, <em>favor</em>, <em>sermo</em>). Combining colligation and collocation analyses (<em>Legallois 2012</em> pp. 45-50), we also observed in this paper that <em>multitudo</em> and <em>turba</em> were in about one case out of two complements of control verbs (<em>agere</em>, <em>circumdare</em>, <em>cogere</em>, etc.), while this type of association was much rarer for <em>vulgus</em> (one case out of five). It was thus possible to infer an opposition between, on the one hand, <em>multitudo</em> and <em>turba</em> – the crowd observed in its concrete, physical, spatial realization, and hence considered as a whole that can be controlled, manipulated, gathered or dispersed – and, on the other hand, <em>vulgus</em> – the crowd as a single entity, thinking with a single mind, speaking with a single voice, and whose opinion remains largely autonomous and can hardly be controlled. This first morphosyntactic approach can be completed by the comparison of the phraseological profile of the three lexemes in Tacitus, <em>ie</em> by studying the terms with which these lexemes are preferentially associated within the Tacitean corpus.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">114</div>
+      <div><p>The objective of this section of the present study is to compare these preliminary results with our data, collated through manual tagging within a smaller corpus, the works of Tacitus. As mentioned above, for each occurrence of the lexemes, the term on which it depends (head) and the term which depends on it (dependent) were extracted, following a common standard for the syntactic annotation of Latin treebanks (see above, sections 1.3.7-9). In this way, only the most syntactically significant collocations are taken into account.</p>
+<ol>
+<li>First, we observe the distribution of the lexemes according to the main semantic feature of their collocates (head or dependent).</li>
+<li>Then, we synthesize the numerical distribution of collocates (distinguishing between head and dependent) to determine the amount of different collocates of each lexeme in Tacitus, before detailing in tabular form the most represented collocates.</li>
+</ol>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">115</div>
+      <div><h4>Semantics of the collocates</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">116</div>
+      <div><p>Observation in the form of a heatmap of the main semantic feature of each lexeme’s collocates, whether head or dependent: raw data (with figures) in <a href="#figure-8a">figure 8a</a> and normalized data in <a href="#figure-8b">figure 8b</a>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">120</div>
+      <div><p>Given the very small p-value (<code>p&lt;0.0001</code>), we can say that there is a statistically significant relationship between the lemma and its head's main semantic feature in Tacitus.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">123</div>
+      <div><p><em>Analysis</em>: We observe in the normalized heatmap (<a href="#figure-8b">figure 8b</a>) that the semantics of collocations is an efficient criterion to discriminate between lexemes. <em>multitudo</em> collocates preferentially with lexemes having the semantic feature /quantity/ (an expected result considering the etymology of the term), but also /movement/. The collocates of <em>turba</em> bring out the features /movement/, but also /mixture/, /military/, and we note recurrent, but less frequent, associations with the /conflict/, /disorder/, /spatiality/ and /vocalization/ features. <em>Vulgus</em> collocates with lexical items associated with the semantic feature /opinion/, with a strong presence of /vocalization/ and terms describing a state of the crowd, like stative verbs (/stative/).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">124</div>
+      <div><h4>Comparison with the co–occurrences (Hyperbase Web)</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">125</div>
+      <div><p>A quick comparison can be made with the co–occurrence extraction through the Hyperbase web platform (LASLA database). Co–occurrence refers to the presence of two linguistic units in the same span of text (here, the chosen search window is the sentence), without any particular syntactic relationship (co–occurrents are therefore not always collocates, since the notion of collocation refers to a type of sequence of compositional meaning whose constituent parts are not attracted by chance).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">126</div>
+      <div><p>In <strong>table 1</strong> below, we present all the co–occurrents of the three lexemes extracted through Hyperbase (corpus of Tacitus’ works tagged by the LASLA), limiting ourselves to the most significant co–occurrents, <em>ie</em> whose specificity score is higher than 3.5 (on the hypergeometric probability calculation resulting in this specificity score, see <a href="http://ancilla.unice.fr/hyperbase/manuel.pdf">É. Brunet's Hyperbase manual</a> pp. 37-41).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">129</div>
+      <div><p><em>Analysis</em>: The different method used to generate this table proves less efficient when discriminating between the three main lexemes of the crowd. Aside from the numerous prepositions and conjunctions extracted by Hyperbase, which are not very telling, the semantics of each lexeme's most specific co-occurents do not appear as clearly as in our manual collation above, although one can notice the combination between <em>multitudo</em> and words indicating a spatialization or quantitative importance of the crowd (<em>conglobo</em>, “to gather”), <em>turba</em> and terms with the semantic features /mixture/ and /disorder/ (<em>immisceo</em>, “to blend in”, <em>inconditus</em>, “disordered”), and <em>vulgus</em> with verbs and nouns of opinion and vocalisation (<em>appello</em>, “to call”, <em>favor</em>, “favour”, <em>superstitio</em>, “superstition”).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">130</div>
+      <div><h4>Recurrence of collocates</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">131</div>
+      <div><h5>Heads</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">132</div>
+      <div><p>Let us first look at the recurrence of collocates to identify whether the lexemes of the crowd preferentially associate with a reduced or with a broad set of terms. <a href="#figure-9a">figure 9a</a> shows the distribution by lexeme of the number of occurrences of each head. <a href="#figure-9b">figure 9b</a> focuses on <em>vulgus</em>, whose distribution is different from that of <em>multitudo</em> and <em>turba</em>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">136</div>
+      <div><p><em>Analysis</em>: The results show a strong contrast between <em>vulgus</em> on the one hand and <em>multitudo</em>/<em>turba</em> on the other. All three lexemes are mostly associated with unique collocates. However, the density estimation shows that the number of unique collocates is much higher for <em>multitudo</em> than for <em>turba</em> and <em>vulgus</em>. More interestingly, <em>vulgus</em> is the only term to have collocates that appear more than twice, and even has a collocate that occurs 15 times in the Tacitean corpus. To investigate this point, <a href="#table-2">table 2</a> below shows the amount of occurrences of each head associated more than once with <em>multitudo</em>, <em>turba</em> and/or <em>vulgus</em>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">138</div>
+      <div><p>This table shows, in a complementary way to the graph of <a href="#figure-9a">figure 9a</a> and <a href="#figure-9b">figure 9b</a>, the singularity of <em>vulgus</em>, which has a higher number of recurrent head (defined as lemmas on which a lexeme depends at least twice) than <em>multitudo</em> and <em>turba</em> (11 occ. vs 4 occ. and 1 occ. respectively).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">139</div>
+      <div><p>The lexical profile of these recurrent collocates confirms our observation above. Indeed, for <em>multitudo</em> and <em>turba</em>, the semantics of the heads recorded are essentially oriented towards indications of spatial movement (with the exception of <em>consensus</em>, “unanimity” for <em>multitudo</em>). On the contrary, for <em>vulgus</em>, they are mostly nouns or verbs referring to an opinion (<em>credere</em>, “to believe”; <em>rumor</em>, “gossip”; <em>studium</em>, “inclination”; <em>favor</em>, “favour”), an attitude (<em>mos</em>, “habit”) or a vocalization (<em>adstrepere</em>, “to respond noisily”; <em>os</em>, “mouth”; <em>appellare</em>, “to speak to”).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">140</div>
+      <div><p>Four factors can be put forward to explain why the verb <em>esse</em> occurs so frequently (<strong>15</strong> occ.) : </p>
+<ul>
+<li>attributive structures in which <em>vulgus</em> is the complement of the copula <em>esse</em> (<em>eg</em>: <em>aliquid est vulgo</em>, “sth belongs to the crowd”);</li>
+<li>attributive structures in which <em>vulgus</em> is the subject of the copula <em>esse</em> and receives a complement (<em>eg</em>: <em>vulgus est aliquid</em>, “the crowd is sth”);</li>
+<li>structures in which <em>vulgus</em> becomes an adverbial of place (<em>eg</em>: <em>aliquid est per vulgum</em>, “sth is among the crowd”);</li>
+<li>elliptical structures, in which we have restored the implied verb <em>esse</em> (cf. above, section 1.3.8) and which belong to one of the three categories above.</li>
+</ul>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">141</div>
+      <div><p>A quick look at the Latin text of these 15 occurrences confirms this analysis:</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">143</div>
+      <div><h5>Dependents</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">144</div>
+      <div><p>The same work can be done for the dependents of one of the three lexemes studied. <a href="#figure-10">Figure 10</a> represents the recurrence of collocates depending on a lexeme of the crowd.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">147</div>
+      <div><p><em>Analysis</em>: The data are less contrasted here. We can see that <em>multitudo</em> is more frequently combined with the same terms, while the dependents of <em>turba</em> and <em>vulgus</em> are more often unique collocates. A look at the dependents associated more than once with our lexemes (<strong>table 3</strong>) will allow us to investigate their semantics:</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">149</div>
+      <div><p>We distinguish here between dependent collocates that serve to define the composition of the crowd, especially in a military context (<em>miles</em>, crowd of “soldiers”, <em>imbellis</em>, crowd of “non–combatants”, or <em>hostis</em>, crowd of “enemies”), collocates that characterize the crowd from a moral point of view (<em>credulus</em>, “credulous”; <em>imperitus</em>, “ignorant”; <em>insultare</em>, “to behave insolently”; <em>laetus</em>, “happy”) and collocates that present the physical or spatial characteristics of the crowd (<em>ingens</em>, “immense”; <em>tantus</em>, “of such size”; <em>inconditus</em>, “disordered”). While the first category is equally represented with the three lexemes – <em>imbellis</em> is even used for all three – the second is specific to <em>vulgus</em> and the third to <em>multitudo</em> and <em>turba</em>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">150</div>
+      <div><h3>Distribution of the lexemes according to the historical context</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">151</div>
+      <div><p>A final criterion to contrast the three lexemes, which is more open to interpretation, is the historical context in which the crowds appear. By historical context, we mean both the spatial framework as well as the behaviour of the crowd itself. Based on the set of tags described above (sections 1.3.11-15), we will question here successively: </p>
+<ul>
+<li>the type of crowd (civilians or soldiers), <a href="#figure-11">figure 11</a> ;</li>
+<li>the geographical framework (Rome and Italy, the provinces, the &quot;barbarian&quot; territory), <a href="#figure-12">figure 12</a> ;</li>
+<li>the social composition of the crowds (popular extraction, noble extraction, non–citizens and slaves), <a href="#figure-13">figure 13</a>;</li>
+<li>
+finally, two “ethological” criteria pertaining to the crowd behaviour, rated on a scale follows a basic intensity scale (from <code>0</code> to <code>1</code> with <code>0.25</code> increments):<ul>
+<li>their inscription in a precise spatial framework (&quot;spatialization&quot;), <a href="#figure-14">figure 14</a> ;</li>
+<li>the existence of a political component in their behaviour, and more specifically the dissent nature of the crowd behaviour (“political agency”), <a href="#figure-15">figure 15</a>.</li>
+</ul>
+</li>
+</ul>
+<p>We will be reporting p-value for each of these categories to ascertain the statistical significance of our results.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">152</div>
+      <div><h4>Type of crowd</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">155</div>
+      <div><p><em>Analysis</em>: With a quite high p-value (<code>p&gt;0.1</code>), these results might not be statistically significant. In any case, this first historical criterion does not offer a very efficient tool to discriminate between the different lexemes, and only shows a slight variation between <em>multitudo</em> (used in equal proportion for civil and military crowds) and <em>vulgus</em>/<em>turba</em>, which refer more frequently to a civilian or urban crowd. There are also several instances of <em>vulgus</em> where it is difficult to specify whether it refers to one or the other type of crowd, sometimes because of the general nature of the assertion (<em>eg</em> in phrases such as <em>vulgus putat/credit</em>, “the common people thinks/believes that…”), or when Tacitus describes a strand of public opinion which, in the context, could be assigned, in Rome, either way to civilians or praetorians (<em>eg</em> for the popularity of Piso in Tac., <em>Ann.</em>, 15.48.2). Here are the relevant passages:</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">157</div>
+      <div><h4>Geographical framework</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">160</div>
+      <div><p>This p-value allows us to say that there is probably a relationship between the lemma and the type of crowd depicted. Yet, as <code>p≤0.05</code>, the rejection of the null hypothesis is not very strong.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">161</div>
+      <div><p><em>Analysis</em>: The graph shows another specificity of <em>multitudo</em>, whose distribution among the three geographical frameworks considered is rather balanced, and which does not seem to be strongly associated to a specific context. On the contrary, <em>vulgus</em> becomes rarer the further away one gets from Rome and Italy.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">162</div>
+      <div><h4>Social composition</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">165</div>
+      <div><p>With<code>p&lt;0.0001</code>, we can affirm that there is a statistically significant relationship between the lemma and the social composition of the crowd.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">166</div>
+      <div><p><em>Analysis</em>: The criterion of the sociological composition of the crowd seems to be the most decisive so far to discriminate between the three lexemes. <em>multitudo</em> and even more <em>turba</em> are frequently used to refer to heterogeneous gatherings, where commoners and aristocrats mingle with one another indiscriminately, especially in crisis periods. <em>Vulgus</em> is never explicitly used to describe these phenomena and mostly refers to “popular” crowds, that is crowd of plebeians, in Rome (<em>Wellesley 1972</em> p. 177), or crowd of “common soldiers” (<em>gregarii milites</em>, Tac., <em>Hist.</em>, 1.36.3, 1.46.4, 3.31.2), distinguished from the prefects and the legates (Tac., <em>Hist.</em>, 2.70.5, 4.36–37, 4.57, <em>Ann.</em>, 1.49.2), from the tribunes and the centurions (Tac., <em>Hist.</em>, 1.36.3, 1.80.2, 2.5.4, 3.31.2, <em>Ann.</em>, 1.17–18, 2.55.5),  and even sometimes from the “junior officers” below centurion rank, the <em>principales</em>, soldiers on higher pay with special duties, and thus standing out from the pack of common soldiers (Tac., <em>Hist.</em>, 1.25.2, see a more thorough analysis of this point in <em>Autin 2019</em> pp. 98-99).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">167</div>
+      <div><p>To take the example of the crisis of the 15 January 69 AD, when Otho carried out a coup in Rome against Galba, the legitimate emperor, Tacitus mentions a first crowd movement caused by the (false) news of Otho’s death: a euphoric crowd formed in front of the imperial palace and forced the doors to congratulate Galba. Tacitus particularly insists on the social diversity of this crowd, composed by “not the people only and the ignorant mob […] but many of the knights and senators as well” (<em>non populus tantum et imperita plebs [...] sed equitum plerique ac senatorum</em>, Tac, <em>Hist.</em>, 1.35.1), and ends up calling it an <em>inruens turba</em> (an “inrushing crowd”): <em>turba</em> here undoubtedly refers to a (socially) mixed crowd, with citizens belonging to the highest orders and commoners. A few hours later, after Galba’s death and Otho’s victory, a crowd of the same social diversity forms in an undetermined place (the forum?) to deplore the dramatic turn of events. <em>Vulgus</em> appears in this second passage, not to designate this heterogeneous gathering of citizens (therefore in contrast to <em>turba</em>), but to refer to its popular component alone. It is thus superimposed on the <em>populus</em> et <em>plebs</em> of the former passage of Tac., <em>Hist.</em>, 1.35.1. See in Tac., <em>Hist.</em>, 1.50.1: “Then [the thought of the civil war] […] caused open grief not only to the senators and knights who had some share and interest in the state, but even to the common people (<em>vulgus</em>).” (<em>Tum [...] non senatus modo et eques, quis aliqua pars et cura rei publicae, sed <strong>vulgus</strong> quoque palam maerere</em>, Tac, <em>Hist.</em>, 1.50.1) The proximity of the two passages makes clear the sociological difference between <em>turba</em> and <em>vulgus</em> in Tacitus’ mind, and it is misleading to state that <em>vulgus</em> could refer to any form of “foule mêlée” in his works (<em>pace</em> <em>Engel 1972</em> pp. 29 &amp; 74 or <em>Newbold 1976</em> pp. 86-88).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">168</div>
+      <div><p>The graph of <a href="figure-13">fig. 13</a> shows the numerical importance of the occurrences for which it is impossible to specify further the social composition of the crowd. However, it is also significant that the lexemes chosen by Tacitus when he refers to crowds composed exclusively of noble citizens or non–citizens (labels <code>eli</code> and <code>n-civ</code>) are exclusively <em>multitudo</em> and <em>turba</em>, and that <em>vulgus</em> never appears in these sense. We may thus infer that neither <em>turba</em> nor <em>multitudo</em> were associated, for Tacitus, with a specific sociological profile, unlike <em>vulgus</em>, which was strictly associated to the sub-equestrian segments of the civic body (in Rome or elsewhere). Compare in contrast, a few chapters apart, the <em>turba populi</em> (“crowd of commoners”) of Tac., <em>Hist.</em>, 2.88.3 with the <em>turba nobilium</em> (“crowd of nobles”) of Tac., <em>Hist.</em>, 2.92.2. Conversely, expressions such as <em>vulgus populi</em> or <em>vulgus nobelium</em> never appear in Tacitus, and sound odd to anyone familiar with Tacitus’ writing.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">169</div>
+      <div><p>To go further, let us investigate the cases where <em>turba</em> and <em>multitudo</em> refer to crowds composed of the Roman elite or of non-citizens:</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">171</div>
+      <div><p>In most cases, the sociological characterization of the crowd is done with an objective genitive that specifies the social origin of its components, with the exception of Tac., <em>Hist.</em>, 1.33.2, where it is done with the adverbial phrase <em>in seruis</em> (“among slaves”). In contrast, <em>vulgus</em> is much more “intransitive” than <em>turba</em> and <em>multitudo</em>, and is much more used as possessive of a noun (<em>fauor vulgi</em>, “the favour of the crowd”; <em>studia vulgi</em>, “the inclination of the crowd”; <em>rumor vulgi</em>, “the rumour of the crowd”...) than it is itself determined by another term. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">172</div>
+      <div><p>The detailed analysis of lexical echoes is enlightening on the near-synonymy of <em>vulgus</em> and the “institutional” vocabulary referring to the common people (<em>populus</em>, “the common people”; <em>plebs</em>, “the plebs”). For stylistic reasons – to avoid repetition or to produce a form of copia – Tacitus is often led to use <em>vulgus</em>, <em>populus</em> and/or <em>plebs</em> as synonyms, which clearly shows that <em>vulgus</em> was the lexeme closest in his mind to the traditional terms referring to the Roman people (on these lexical connections, see <em>Yavetz 1969</em>, p. 148-149). Several passages go so far as to present the three lexemes <em>populus</em>, <em>plebs</em> and <em>vulgus</em> together (already before Tacitus, see Stac., <em>Theb.</em> , 1.168–170). The most revealing text is the report of Germanicus’ triumph in 17 AD. Tacitus slips into the narrative of this highly positive event a srong dysphoric foreshadowing of Germanicus’ imminent death (Tac., <em>Ann.</em>, 2.41.3):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">173</div>
+      <div><blockquote>
+<p><em>Sed suberat occulta formido, reputantibus haud prosperum in Druso patre eius <strong>fauorem uulgi</strong>, auunculum eiudem Marcellum fragrantibus <strong>plebis studiis</strong> intra iuuentam ereptum, breuis et infaustos <strong>populi Romani amores</strong>.</em></p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">174</div>
+      <div><blockquote>
+<p>Yet beneath lay an unspoken fear, as men reflected that to his father Drusus <strong>the favour of the multitude</strong> had not brought happiness—that Marcellus, his uncle, had been snatched in youth from <strong>the ardent affections of the populace</strong>—that <strong>the loves of the Roman nation</strong> were fleeting and unblest!</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">175</div>
+      <div><p><em>Analysis</em>: This very elaborate passage brings together three synonymous phrases (<em>favor vulgi</em>, “the favour of the multitude”; <em>plebis studia</em>, “the affections of the populace”; <em>populi Romani amores</em>, “the loves of the Roman people [rather than nation]”) and allows us to infer a double equivalence <em>favor</em>-<em>studia</em>-<em>amores</em> and <em>vulgus</em>-<em>plebs</em>-<em>populus</em>. The stylistic effect is only possible because the <em>vulgus</em> is, by definition, a popular crowd.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">176</div>
+      <div><p>Other forms of synonymy could be investigated here, for example the frequent use of the hendiadys (a figure of speech in which two words referring to the same reality are linked by a conjunction). The opuscules and the first book of the Histories contain numerous hendiadyses related to the social stratification of the common people of Rome. <em>populus et plebs</em> (“the people and the <em>plebs</em>”) for instance occurs in a small number of occurrences in the preserved Latin literature, mainly in Tacitus (cf. <em>Yavetz 1969</em> p. 149) and already in Cicero (cf. <em>Knopf 2018</em> pp. 31–33). <em>Vulgus et populus</em> (“the crowd and the people” = “the crowd of the people”) appears three times in Tacitus’ early works (Tac., <em>Dial.</em>, 7.3, <em>Agr.</em>, 43.1 and <em>Hist.</em>, 1.89.1). In these phrases, it is impossible to analyse <em>vulgus</em> and <em>populus</em> as referring to two distinct realities, since the group the historian is talking about is characterized before or after the passage by a simple <em>vulgus</em> (Tac., <em>Agr.</em>, 41.4) or by <em>plebs</em> (Tac., <em>Hist.</em>, 1.89.1). Without going further into this matter, which we propose to deal with <a href="https://www.msh-alpes.fr/actualites/populi-nomen-nommer-peuple-romain-en-latin-et-en-grec">elsewhere</a>, it seems that the hendiadys <em>vulgus et populus</em> allows Tacitus to provide two complementary perspectives on the same object, the common people of Rome (see further interpretation below, section 4.2).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">177</div>
+      <div><h4>Degrees of spatialization</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">180</div>
+      <div><p>Here again, the very small p-value (<code>p&lt;0.0001</code>) proves the statistical significance of the results.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">181</div>
+      <div><p><em>Analysis</em>: The study of the distribution according to the degree of spatialization of the crowd provides convincing results to discriminate between the three lexemes. Indeed, while this is not a decisive criterion for understanding the distribution of <em>vulgus</em> in the Tacitean corpus, <em>turba</em> and even more <em>multitudo</em> are strongly associated with clearly spatialized crowds, <em>ie</em> crowds whose inscription in a given place (and time) is an important definitional feature. This observation is consistent with the one made above on the semantics of the collocates of these two lexemes (see above, section 3.2.1).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">182</div>
+      <div><p>Besides, this spatial criterion is hardly satisfactory to account for the occurrences of <em>vulgus</em>. Very often in Tacitus, the <em>vulgus</em> is a crowd whose behaviour is inscribed in a very loose spatial or temporal framework. A revealing example is given by the crowd (<em>vulgus</em>) that longs for Agricola to take new military responsibilities after his retirement from public life (Tac., <em>Agr.</em>, 41.4). In his narrative, Tacitus summarizes events that occurred in Rome over the course of several years:</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">183</div>
+      <div><blockquote>
+<p><em>Ita cum damna damnis continuarentur atque omnis annus funeribus et cladibus insigniretur, <strong>poscebatur ore uulgi dux Agricola</strong>, comparantibus  cunctis uigorem, constantiam et expertum bellis animum cum inertia et formidine aliorum.</em></p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">184</div>
+      <div><blockquote>
+<p>Accordingly, when loss was added to loss, and every year was signalised with death and disaster, <strong>the voice of the people began to ask for Agricola’s generalship</strong>: everyone compared his firmness, energy, and experience with the lethargy and panic of the generals.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">185</div>
+      <div><p>Thus, in most of the passages where rumours or demands of this Roman <em>vulgus</em> are mentioned, the spatial inscription of the crowd is so to speak non–existent. The Tacitean <em>vulgus</em> often falls into one of the categories of the Stoic ontology, namely the <em>distantia corpora</em>, entities built up of distant, non-continuous elements, as opposed to <em>continua corpora</em> (entities made up of a single piece) and <em>composita corpora</em> (entities built up of heterogeneous, but continuous elements). Seneca thus contrasts the human body (<em>corpus continuum</em>), a ship (<em>corpus compositum</em>) and human groups such as the Senate, the army or the people (<em>corpus ex distantibus</em>) in a letter to Lucilius (Sen., <em>Epist.</em>, 102.6, see on the philosophical background here <em>Meijer 1988</em> pp. 63-69; many thanks to Fabien Pepino for drawing my attention to these notions). Admittedly, <em>vulgus</em> is also used by Tacitus to refer to the public of spectacles, assemblies (<em>contiones</em>), especially military ones, and other specific places, all of which have in common that they had become spaces of communication and interaction between the Roman plebs and the political (imperial) power, as we will see below (section 4.2). In these cases, however, Tacitus almost never puts the focus on the spatialization of the crowd, as the collocates of <em>vulgus</em> generally belong to the semantic field of opinion and speech (see above, section 3.2.1). Unlike <em>turba</em> and <em>multitudo</em>, the criterion of spatialization clearly appears as incidental to defining what <em>vulgus</em> is in the eyes of the historian.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">186</div>
+      <div><p>As is often the case, the passages combining several of the lexemes studied are most telling. For instance, during Vitellius’ desperate conscription at the end of the civil war of 69 AD, Tacitus distinguishes between the <em>vulgus</em>, synonymous with <em>populus</em>, to refer to the crowd proclaiming its support for the emperor in a unspecified place and time, and the <em>multitudo</em>, which rushes into the <em>comitia tribute</em> on the day of the conscription, where the multitude “overflew” the place (<em>superfluente multitudine</em>). The opposition between a strongly spatialized crowd (<em>multitudo</em>) and an undefined, almost “uncircumstanced” crowd (<em>vulgus</em>) speaks for itself (Tac., <em>Hist.</em>, 3.58):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">187</div>
+      <div><blockquote>
+<p><em>Ipse aeger animi studiis militum et <strong>clamoribus populi</strong> arma poscentis refovebatur, dum <strong>vulgus ignavum</strong> et nihil ultra verba ausurum falsa specie exercitum et legiones appellat. Hortantibus libertis (nam amicorum eius quanto quis clarior, minus fidus) vocari tribus iubet, dantis nomina sacramento adigit. <strong>Superfluente multitudine</strong> curam dilectus in consules partitur; servorum numerum et pondus argenti senatoribus indicit.</em></p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">188</div>
+      <div><blockquote>
+<p>He himself was sick at heart, but the enthusiasm of the soldiers and <strong>the shouts of the people</strong> demanding arms gave him fresh spirit, while he addressed <strong>the cowardly rabble</strong>, whose courage would not extend beyond words, under the unreal and pretentious names of an army and legions. On the advice of his freedmen (for the more distinguished his friends were, the less he trusted them), he ordered the people to assemble in tribes, and administered the oath to the members as they enrolled. <strong>Since the numbers were too great</strong>, he divided between the consuls the selection of the recruits. On the senators he imposed a contribution of slaves and cash.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">189</div>
+      <div><h4>Degrees of political agency</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">192</div>
+      <div><p>With <code>p&lt;0.0001</code>, we can ascertain that there is a statistically significative relationship between the choice of a lemma by Tacitus and the political action of the crowd in our corpus.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">193</div>
+      <div><p><em>Analysis</em>: This last criterion also proves to be of primary importance in a contrastive perspective. <em>vulgus</em> seems preferred as the represented crowd gains agency and steps up its political demands. Conversely, <em>turba</em> and <em>multitudo</em>, in similar proportions, are mostly used for quiet and non-politicized crowds. A few examples should allow us to see how these general observations are anchored in the more detailed analysis of Tacitus’ text.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">194</div>
+      <div><p>It is well known that ancient historiography does not focus on everyday practices, which ancient historians considers unworthy of serious attention. However, it should be stressed that in the two passages in which Tacitus refers to the everyday masses swarming in the streets of Rome, he uses <em>turba</em> (<em>Hist.</em>, 2.88.3) and <em>multitudo</em> (<em>Hist.</em>, 1.75.3). In this case, the crowd considered is a transient group of individuals whose common presence in the same place at the same time is only circumstantial. The same two lexemes appear to refer to “professional crowds”, <em>ie</em> groups of individuals constituted for the exercise of a corporate or professional activity and politically insignificant, <em>eg</em> the “crowd of devotees” (<em>turba sacricolarum</em>, <em>Hist.</em>, 3.74.1), a gathering constituted by priests of Isis who transport the objects of the Isiac cult from the Campus Martius to the other side of the Tiber. It is also noticeable that <em>multitudo</em> is mostly chosen to describe politically or institutionally important crowds, but passive (<em>eg</em> <em>Hist.</em>, 4.81.3) or lacking political autonomy (most notably the crowds following a patron, <em>eg</em> <em>Ann.</em>, 4.41.3, 13.14.1). To cite a representative example, when Germanicus goes to Artaxata in 18 AD to crown the pro-Roman prince Zeno-Artaxias king of Armenia, the historian emphasizes the new ruler’s favour with both the nobility (<em>proceres</em>) and the people (<em>plebs</em>). The coronation scene itself enlightens this rare concord. The people appear as <em>multitudo</em>, but are depicted as a most passive crowd (<em>Ann.</em>, 2.56.3):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">195</div>
+      <div><blockquote>
+<p><em>Igitur Germanicus in urbe Artaxata adprobantibus nobilibus, <strong>circumfusa multitudine</strong>, insigne regium capiti eius [ie Zenonis] imposuit.</em></p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">196</div>
+      <div><blockquote>
+<p>Accordingly, in the town of Artaxata, before the consenting nobles and <strong>a great concourse of the people</strong>, Germanicus placed on his head the emblem of royalty.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">197</div>
+      <div><p><em>Analysis</em>: The active and decisive support of the “consenting noblemen” (<em>adprobantibus nobilibus</em>) is followed by the passive and symbolic support of the “crowd around” (<em>circumfusa multitudine</em>), which has no say in the matter, but is presented from the perspective of spatiality and number; it assumes a figurative function, which is certainly important in the political ritual, but lacks any effective weight.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">198</div>
+      <div><p>In contrast, the <em>vulgus</em> is a crowd whose raison d’être is almost always political and, above all, which exists through political action. We have seen above that collocates of <em>vulgus</em> implies the existence of a common opinion (<em>studium</em>, <em>favor</em>, <em>credere</em>, <em>rumor</em>...), shared feelings (<em>ira</em>, <em>gaudium</em>, <em>maerere</em>...), and collective vocalization (<em>sermo</em>, <em>clamor</em>, <em>uox</em>, <em>adstrepere</em>, <em>appellare</em>, <em>iactare</em>...). The <em>vulgus</em> thus has something to say and to demand. From the rumours that circulate in the streets of Rome to the shouts let out during circus games and other entertainments, the <em>vulgus</em> is not satisfied with a walk-on part like the <em>multitudo</em> mentioned earlier but strives to take a genuinely participatory part in the political field: it subverts the political structures and takes advantage of any opportunity to assert its interests – in a word, it expresses collective agency.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">199</div>
+      <div><h3>Summary</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">200</div>
+      <div><h4>Discrimination of the three lexemes</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">201</div>
+      <div><p>In order to summarize the conclusions reached by this journey through Tacitus’ vocabulary of the crowds, a passage where all three lexemes appear can be quoted. In this text, Tacitus casts a light on Sejanus’ intrigues to corrupt Tiberius (Tac., <em>Ann.</em>, 4.41.1-3):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">202</div>
+      <div><blockquote>
+<p><em>Rursum Seianus non iam de matrimonio sed altius metuens tacita suspicionum, <strong>vulgi rumorem</strong>, ingruentem invidiam deprecatur. Ac ne adsiduos in domum coetus arcendo infringeret potentiam aut receptando facultatem criminantibus praeberet, huc flexit ut Tiberium ad vitam procul Roma amoenis locis degendam impelleret. Multa quippe providebat: sua in manu aditus litterarumque magna ex parte se arbitrum fore, cum per milites commearent; mox Caesarem vergente iam senecta secretoque loci mollitum munia imperii facilius tramissurum: et minui sibi invidiam adempta <strong>salutantum turba</strong> sublatisque inanibus veram potentiam augeri. Igitur paulatim negotia urbis, populi adcursus, <strong>multitudinem adfluentium</strong> increpat, extollens laudibus quietem et solitudinem quis abesse taedia et offensiones ac praecipua rerum maxime agitari.</em></p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">203</div>
+      <div><blockquote>
+<p>In rejoinder, Sejanus—now alarmed not for his marriage but on deeper grounds—urged him to disregard the still voice of suspicion, <strong>the babble of the multitude</strong>, the attacks of his maligners. At the same time, unwilling either to enfeeble his influence by prohibiting the throngs which besieged his doors or to give a handle to his detractors by receiving them, he turned to the idea of inducing Tiberius to spend his days in some pleasant retreat at a distance from Rome. The advantages, he foresaw, were numerous. Interviews would lie in his own bestowal; letters he could largely supervise, as they were transmitted by soldiers: before long, the Caesar, who was already in the decline of life and would be rendered laxer by seclusion, would be readier to transfer the functions of sovereignty; while his own unpopularity would diminish with the abolition of <strong>his great levées</strong>, and the realities of his power be increased by the removal of its vanities. Little by little, therefore, he began to denounce the drudgeries of the capital, its jostling crowds, <strong>the endless stream of suitors</strong>, and to give his eulogies to quiet and solitude, where tedium and bickering were unknown and a man’s chief attention could be centred on affairs of first importance.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">204</div>
+      <div><p>Tacitus begins by stating that the praetorian prefect is alarmed by &quot;the rumour of the crowd&quot; (<em>vulgi rumor</em>): <em>vulgus</em> thus designates a very large group, with few details on its concrete manifestation, a group able to make heard its opinion, which exerts a real constraining power over Sejanus. <em>turba</em> and <em>multitudo</em> refer to narrower segments of the Roman population and characterize gatherings within a well determined context. The <em>turba</em> refers to the crowd that turned up for the official morning visit to the prince (<em>salutatio</em>) – thus presumably mostly composed of noble citizens (see <em>Winterling 1999</em> pp. 122-125 and <em>Hurlet 2001</em> pp. 178-180 on this topic) –, while the <em>multitudo</em> refers to the random crowds that formed around the emperor when he travelled through the city (see <em>Woodman 2018</em> p. 228 on Tac., <em>Ann.</em>, 4.41.3 with references to Tac., <em>Ann.</em>, 2.34.3). Admittedly, both the imperial <em>salutatio</em> and the emperor’s walkabout in the city have a political relevance, but more on a symbolic than on a really effective level, and above all they encapsulate top-down rather than bottom-up political practices. We should also note the syntactic variation between <em>vulgus</em>, which performs a determinative function and specifies the word “rumour” in the form of a possessive genitive (<em>rumor vulgi</em>), and, in contrast, <em>turba</em> and <em>multitudo</em>, which are themselves specified through a determinative, in both cases a nominalized participle (<em>turba salutantum</em>, <em>multitudo adfluentium</em>). The determination of <em>turba</em> and <em>multitudo</em> through a nominalized participle in the form of a possessive genitive is recurrent in Tacitus (<em>Agr.</em>, 40.4, <em>Ann.</em>, 3.1.3, 6.16.3, 13.14.1), and can be read as a way to specify the referent of these so to speak  “floating signifier”, while associating them with precise circumstances. In fact, once the <em>salutatio</em> or the encounter with Tiberius in the streets of Rome is over, the crowd, whether <em>turba</em> or <em>multitudo</em>, is likely to break up, whereas the <em>vulgus</em> that circulates rumours overlaps (at least in Tacitus’ mind) with the urban <em>plebs</em> as a whole and does not seem solely linked to this particular occasion – the best evidence being that the same <em>vulgus</em> reappears a few paragraphs later (Tac., <em>Ann.</em>, 4.64.1).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">205</div>
+      <div><h4>The semantic perimeter of <em>vulgus</em>, a Tacitean innovation? A comparison with Suetonius and Ammianus</h4>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">206</div>
+      <div><p>Can we determine Tacitus’ originality in this particular use of <em>vulgus</em>? Although it is difficult to draw definitive conclusions without a comprehensive reading and analysis of parallel corpora, some selected comparisons with Tacitus’ predecessors, contemporaries and successors suggest that the historian made a quite original use of this lexeme, which one may link to his political analysis of the first principate.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">207</div>
+      <div><p>First of all, it should be noted that the very particular meaning Tacitus gives to <em>vulgus</em> (defined as a popular, politically active crowd, stating its opinion) is not unparalleled in the surviving Latin literature, but that the systematization of this definition is to our knowledge unprecedented. Indeed, from Sallust to Seneca, many authors give to <em>vulgus</em> the meaning of “mingled crowd” where the social orders and traditional distinctions are confused (Sall., <em>Cat.</em>, 20, or Sen., <em>Vit. Beat.</em>, 2.2 with the commentary of <em>Yavetz 1969</em> p. 150 n. 4), alongside those who give <em>vulgus</em> a clear “popular” colour (see for example the above-mentioned case of the hendiadys <em>populus and vulgus</em> in Cic., <em>Mur.</em>, 38, Cic., <em>Verr.</em>, 2.1.1, Lucius Pomponius Bononiensis <em>apud</em> Non. 3.750, and later Sen., <em>Phaedr.</em>, 488). In some earlier poets and prose writers, a distinction is made between the <em>turba</em> as a mixed crowd of all classes and the <em>vulgus</em> as the infra-equestrian part of it, as P. Arena has shown in relation to Ovid, Seneca or Statius <em>Arena 2007</em>. However, this definition of the <em>vulgus</em> is more fluctuating, for instance in a passage of Manilius in which the <em>vulgus</em> and the <em>sine nomine turba</em> (“nameless crowd”) designate the non-citizen fringes of the city, placed below the <em>populus</em> itself (Man. 5.733).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">208</div>
+      <div><h5>Suetonius</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">209</div>
+      <div><p>In Suetonius, a contemporary of Tacitus who deals with the same historical material in a different genre (the biography), the most used lexeme is also <em>vulgus</em> (32 occ.), which, as in Tacitus, constitutes a singularity in relation to the previous literary production. However, the term does not have quite the same semantic extension as in Tacitus. We do find a number of passages in which the Suetonian <em>vulgus</em> designates the crowd as a new political actor of the imperial regime, as a type of manifestation of the urban <em>plebs</em> and as a participant in the dialogue with the prince (Suet., <em>Aug.</em> 45, <em>Claud.</em>, 21, <em>Ner.</em>, 21; link to rumours: <em>Iul.</em>, 30, <em>Tib.</em>, 7, <em>Ner.</em>, 6 and 53, <em>Oht.</em>, 12; link to opinion: <em>Iul.</em>, 88, <em>Ner.</em>, 4, 36 and 53, <em>Vesp.</em>, 14). Notwithstanding these occurrences, <em>vulgus</em> often refers to a socially indeterminate group and is often alluded to as the circles that circulate licentious verses or witty comments about the emperors (<em>Iul.</em>, 20, 80, <em>Tib.</em>, 21, <em>Ner.</em>, 42, <em>Vesp.</em>, 16). One thus often finds as collocates of this <em>vulgus</em> verbs referring to phonetic or lexical variants of certain nouns (<em>dicere</em>, <em>vocare</em>: <em>Aug.</em>, 35, 70, 87, <em>Tib.</em>, 38, 43, <em>Galb.</em>, 14, <em>Vesp.</em>, 4), while the verbal phrase <em>in vulgus</em>/<em>vulgo edere</em>/<em>exire</em> (which can be translated as “to divulge”) is found several times. In these cases, <em>vulgus</em> lacks the strong social colour it had in Tacitus. Furthermore, the parallel between the <em>vulgus urbanum</em> (“urban crowd”) and the <em>vulgus militum</em> (“military crowd”) is totally absent in Suetonius (in contrast to Tacitus), who never applies the noun to the military world, when he does not distinguish the civic and the military spheres most firmly (<em>eg</em> <em>Ner.</em>, 31).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">210</div>
+      <div><p><em>Turba</em> is used to nearly the same extent to <em>vulgus</em> (28 occ. in the sense of &quot;crowd&quot;), which makes a real difference with Tacitus. The term does not seem to have a strong social profile, since it refers sometimes to the Roman <em>plebs</em>, who attends the games or is entitled to the grain distributions (games : <em>Iul.</em>, 29, <em>Aug.</em>, 40, <em>Cal.</em>, 30, <em>Claud.</em>, 12, 27; frumentary context: <em>Claud.</em>, 18; around the curia: <em>Cal.</em>, 14; see also <em>Cal.</em>, 4 and <em>Galb.</em>, 18), sometimes to socially more diverse groups: senators, barbarians, slaves and soldiers (nobles: <em>Aug.</em>, 35, <em>Claud.</em>, 10, <em>Galb.</em>, 17, <em>Vit.</em>, 7; outside Rome / barbarians: <em>Aug.</em>, 98, <em>Ner.</em>, 30; slaves : <em>Claud.</em>, 18 and 22; soldiers: <em>Aug.</em>, 14, <em>Ner.</em> 2; in contrast, see two occurrences of <em>turba</em> paganorum, “crowd of civilians”: <em>Aug.</em>, 27 and <em>Galb.</em>, 19). The absence of a socially situated conceptualisation of the Suetonian <em>turba</em> is evident in the passages where <em>turba</em> refers to a mingled crowd, a <em>turba omnis generis</em> (“crowd of all ranks”, <em>Cal.</em>, 42) and, more generally, can be seen with the omnipresence of collocates in the genitive plural form, specifying to which kind of crowd the biographer refers to (<em>turba paganorum</em>, <em>creditorum</em>, <em>salutantum</em>, <em>familarum</em>, <em>operariorum</em>, etc.). These expressions underline the indeterminacy of this <em>turba</em>, which generally presents, as in Tacitus, a spatialized image of the crowd, and collocates with verbs of motion like <em>circumstare</em>, <em>dimouere</em>, <em>summovere</em>, etc.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">211</div>
+      <div><p>In spite of a smaller number of occurrences (12), <em>multitudo</em> also relates to various crowd phenomena: in addition to being used in more than a third of the cases for inanimate collections (<em>Iul.</em>, 68, <em>Aug.</em>, 29, <em>Ner.</em>, 31 and 46, <em>Tit.</em>, 4), <em>multitudo</em> refers as much to crowds without any claim of their own or without any homogeneous social profile as to the Roman plebs putting forward political demands (<em>Iul.</em>, 16, <em>Aug.</em>, 46, <em>Tib.</em>, 72, <em>Claud.</em>, 10).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">212</div>
+      <div><h5>Ammianus</h5>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">213</div>
+      <div><p>In Ammianus (a fourth century AD historian writing a continuation of Tacitus’ history), the distribution of lexemes is strikingly different. With 100 occurrences in which it actually designates human crowds, against 26 occurrences of inanimate collections, <em>multitudo</em> seems to be the term favoured by the historian to evoke crowd phenomena. The sheer volume of occurrences prevents any detailed study here, but we can highlight the diversity of crowd phenomena evoked by this noun: both urban and military crowds, Romans as well as barbarians, nobles as well as commoners. The high frequency of modifiers in the form of an explicative genitive (<em>multitudo calonum</em>, <em>pelicum</em>, <em>servorum</em>...) as well as expressions like <em>promiscua multitudo</em> (“mixed crowds”, “crowds without distinction”, Amm. 14.3.3, 19.6.1, 23.2.4) attest to this observation. The insistence on the physical dimension of the gathering is frequent, for instance through collocates such as <em>cogere</em> (“bring together”) or <em>circumsaepire</em> (“enclose”), and more generally verbs with prefixes <em>cum-</em> and <em>circum-</em> (Amm. 14.3.3, 16.10.4, 16.12.29, 18.2.8, 18.6.22, etc.).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">214</div>
+      <div><p><em>Turba</em> is mostly used in the plural form in its original sense of “trouble”, in noun phrases like _concitor <em>turbarum</em> (“troublemaker”, Amm. 14.7.15, 15.1.2, 15.7.5, 17.9.5, 19.4.6, etc.). The meaning of “crowd” is present in only 6 occ.; in theses cases, <em>turba</em> may refer to the lower end of the social scale, like the <em>turba imae sortis et paupertinae</em> of Amm. 14.6.25 (“crowd of lowest condition and greatest poverty”), but this social meaning occurs quite infrequently (compare Amm. 19.11.11, 21.10.1, 22.9.16, 23.6.83). With such a small number of relevant passages, it is difficult to reach general conclusions about Ammianus’ use of <em>turba</em>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">215</div>
+      <div><p>The occurrences of <em>vulgus</em> are also rather scarce in Ammianus (14 occ.). As in Suetonius, the term is likely to refer to large (and vague) segments of the population, especially when associated with verbs (<em>appellare</em>, <em>pronuntiare</em>) indicating popular variants of a word or pronunciation differences (Amm. 17.8.2, 22.4.9, 23.1.5; also 29.2.6). Apart from these cases, it is true that <em>vulgus</em> seems to have retained a clear social colour and characterizes collective actions taken together by the urban plebs (in Rome or in the major cities of the 4th century Roman Empire like Antioch or Milan) or by the legions (<em>vulgus</em> referring to the <em>plebs frumentaria</em> in Amm. 14.6.1; <em>vulgus</em> as the infantry in Amm. 16.12.49). As in Tacitus, <em>vulgus</em> is sometimes used to refer to particular sectors of public opinion (Amm. 23.6.4, 25.4.18). It is also worth noting that <em>vulgus</em> often appears in contexts of sedition, especially in urban settings (a clear link between <em>seditio</em> and <em>vulgus</em> is made in Amm. 14.6.1). In these cases, <em>vulgus</em> may be used alongside <em>plebs</em> and <em>multitudo</em>. In Amm. 14.7.5-6, a wheat riot begins within the plebs (<em>plebs</em>) of Antioch: the rioters are referred to as <em>multitudo</em> when they confine themselves to rumble, and as <em>vulgus</em> when the revolt breaks out. However, unlike in Tacitus, the <em>vulgus</em> usually appears as the social conflict is over, when some authority has calmed the crowd by appealing to their pity. The main actor in such events is usually the <em>plebs</em>, sometimes referred to as <em>multitudo</em> when they start rioting, then as <em>vulgus</em> when they settle down. This lexical sequence can be read, for example, in the narrative of the 355 AD seditions in Rome, suppressed by the urban prefect Flavius Leontius (Amm. 15.7). The choice of <em>vulgus</em> can be explained in these cases by its strong psychological dimension in general, and by the stereotypical affectivity of the masses in particular (see also Amm. 19.10.1-3, 30.8.9 and 31.5.7).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">216</div>
+      <div><p>Thus, Suetonius appears relatively close to Tacitus, especially in his use of <em>vulgus</em>, whereas in Ammianus, as in general in Latin literature, this term is very much in the minority compared to <em>multitudo</em> and <em>turba</em>. The differences between Tacitus and Suetonius can be explained by the latter’s less rigorous choice of lexemes to describe crowd action, or (perhaps more convincingly) by the biographical genre, in which the focus is put on urban life (hence the scarcity of military crowds). In these three authors, <em>vulgus</em> is clearly identified with the infra-equestrian classes of Roman society, and is associated with the expression of collective opinion.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">217</div>
+      <div><h2>Interpreting the results from a historical perspective: the Tacitean <em>vulgus</em>, a new imperial phenomenon?</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">218</div>
+      <div><p>Tacitus’ use of the three lexemes must be read in association with the diversity of crowd phenomena that occurred in the first century AD Rome. In this historical context, the historian specializes <em>vulgus</em> to refer to a type of crowd closely linked to the Roman plebs, defined by a collective opinion, capable of vocalizing it and, more generally, of stating its political demands – in short, a crowd that thinks and speaks. We have also seen above that Tacitus made a quantitatively important use of <em>vulgus</em>, superior to the previous literary production. In the final part of this paper, we propose to investigate this Tacitean originality from a more historical perspective. Two possible, not mutually exclusive interpretations might be advanced: the psychological nature of Tacitus’ writing and the evolution of the political relations within the Roman society of the 1st century AD.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">219</div>
+      <div><h3><em>Vulgus</em> and the psychological reading of collective action</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">220</div>
+      <div><p>Because of its potential origin in the rural language, and at the very least because of the nominal suffix -us and the neutral gender, <em>vulgus</em> carries strong psychological connotations, allowing for broad generalizations about the gregarious nature of the crowd. The term must thus be apprehended within Tacitus’ broader tendency towards socio-psychological interpretation of the historical events, which is particularly clear if we look at the regular references in his works to the mos vulgi, the “habits” or even the psychological “laws of the crowd” (<em>Engel 1972</em> p. 707; <em>Aubrion 1985</em> pp. 226-237; see <em>Autin 2019</em> pp. 81-87 for a comprehensive survey). This set of rules allows the historian to explain crowd behaviour by invariants of psychic nature: crowds, whatever they are, are always unable to control themselves, fickle, prone to believe in the worst possible stories, gullible, etc. As such, the term is applied to diverse social groups – the Roman plebs, the legions, the common people of the <em>municipia</em> and the “barbarian” tribal populations –, all of which are subsumed under the general denomination of <em>vulgus</em>. Tacitus thus conflates in the same category the <em>vulgus urbanum</em> (“urban crowd” in Rome, the <em>Vrbs</em> <em>par excellence</em>, Tac, <em>Hist.</em>, 3.80.1), the <em>vulgus militum</em> (“military crowd”, Tac., <em>Ann.</em>, 3.13.2, <em>Hist.</em>, 2.5.4 and 2.70.5), the <em>vulgus municipale</em> (“municipal crowd”, “crowd of the town”, Tac., <em>Hist.</em>, 2.21, in Piacenza) and the <em>vulgus oppidanorum</em> (“provincial crowd”, with the same meaning of “crowd of the town”, Tac., <em>Ann.</em> 15.33.3, here in Naples). It is obvious that these groups have different social composition, privileges, powers and obligations. However, in Tacitus’ mind (and in the mind of any Roman aristocrat, one may add), each one of them forms an entity with similar characteristics (they are composed of non-noble freemen), whose behaviour, in a given situation, is unlikely to vary. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">221</div>
+      <div><p>Some occurrences of <em>vulgus</em> used concurrently with <em>populus</em> and <em>plebs</em> show this difference between the political (<em>populus</em>, <em>plebs</em>) and the psychological vocabulary (<em>vulgus</em>). In a digression about Rome’s republican past, for example, Tacitus alludes to the ancient powers of the <em>plebs</em> (<em>plebs</em>): the chosen term can be explained by the reference to the secessions of the <em>plebs</em> in the early days of the Republic. In the very next phrase, when referring to the “character” (natura) of this group, Tacitus uses <em>vulgus</em>, a term more suited to his psychological approach (<em>Ann.</em> 4.33.2):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">222</div>
+      <div><blockquote>
+<p><em>Igitur ut olim <strong>plebe ualida</strong>, uel cum patres pollerent, noscenda <strong>uulgi natura</strong> et quibus modis temperanter haberetur, senatusque et optimatium ingenia qui maxime perdidicerant, callidi temporum et sapientes credebantur, sic conuerso statu […].</em></p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">223</div>
+      <div><blockquote>
+<p>Accordingly, as in the period of alternate <strong>plebeian dominance</strong> and patrician ascendancy it was imperative, in one case, to study <strong>the character of the masses</strong> and the methods of controlling them: while, in the other, those who had acquired the most exact knowledge of the temper of the senate and the aristocracy were accounted shrewd in their generation and wise; so today, when the situation has been transformed,[...]</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">224</div>
+      <div><p>Similar distinction might be observed elsewhere: see <em>Ann.</em> 14.14.2 or the hendiadys _vulgus quoque imperitum et tunicatus hic <em>populus</em> (to translate it literally: “the ignorant crowd and our people clothed with the tunic”, <em>Dial.</em>, 7.3). In all of these cases, <em>vulgus</em> and <em>populus</em>/<em>plebs</em> refer to the same group, seen from two different (and complimentary) perspectives, one psychological, and one political or institutionnal.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">225</div>
+      <div><h3><em>Vulgus</em> and the political transformations of the first principate</h3>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">226</div>
+      <div><p>Nevertheless, it would be wrong to limit ourselves to this first analysis, since the <em>populus</em> and the <em>plebs</em> are often involved in Tacitus in psychologizing generalizations, and the distribution is sometimes the opposite of what one would expect (<em>eg</em> in Tacitus, Ann, 2.82.3, well noted in <em>Yavetz 1969</em> pp. 146 <em>sqq</em>). The reason why Tacitus has systematized the use of the notion of <em>vulgus</em> is undoubtedly also because it belongs fully to the political picture he draws on the early imperial Rome. We may start here by quoting a most revealing text. At the beginning of Otho’s reign in the first months of 69 AD, the people “obtained” (<em>impetrare</em>) the death of Tigellinus, Nero’s former praetorian prefect and favourite, protected under Galba by the powerful Titius Vinius. As he describes the collective mobilization that led to his downfall, Tacitus uses successively <em>populus</em> and <em>vulgus</em> (Tac., <em>Hist.</em>, 1.72.3):</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">227</div>
+      <div><blockquote>
+<p><em>Eo infensior <strong>populus</strong>, addita ad uetus Tigellini odium recenti Titi Vinii inuidia, concurrere ex tota urbe in Palatium ac fora et, ubi <strong>plurima uulgi licentia</strong>, in circum ac theatra effusi seditiosis uocibus strepere, donec Tigellinus accepto apud Sinuessanas aquas supremae necessitatis nuntio inter stupra concubinarum et oscula et deformis moras sectis novacula faucibus infamem vitam foedavit etiam exitu sero et inhonesto.</em></p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">228</div>
+      <div><blockquote>
+<p>These facts made <strong>the people</strong> more hostile towards him, and their old hatred was increased by their recent dislike for Titus Vinius. They rushed from every part of the city to the Palatine and the fora, and, pouring into the circus and theatres <strong>where the common people (<em>vulgus</em>) have the greatest licence</strong>, they broke out into seditious cries, until finally Tigellinus, at the baths of Sinuessa, receiving the message that the hour of his supreme necessity had come, amid the embraces and kisses of his mistresses, shamefully delaying his end, finally cut his throat with a razor, still further defiling a notorious life by a tardy and ignominious death.</p>
+</blockquote>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">229</div>
+      <div><p>At first glance, <em>vulgus</em> appears alongside Tacitus’ generalisation about the psychological disorder of the crowd, the <em>vulgi licentia</em> (“the licence of the crowd”), which he fiercely condemns. But the strong gnomic connotations of the passage invite us to look beyond the aristocratic disapproval of the collective action to analyse the narrative content. Indeed, as the historian notes here, in the 1st century AD Rome, the people (<em>populus</em>) expressed their demands in three places: the palace (<em>Palatium</em>), the imperial forums (<em>fora</em>), and the spectacles (circus and theatres, <em>circum ac theatre</em>), where they could be regarded as a crowd (<em>vulgus</em>). Behind the specific instance of Tigellinus’ downfall, the phraseology of the passage reveals to what extent the new forms of interaction between the plebs and the prince, especially at the games, had become a common practice regarding political relationships under the Empire. Indeed, as is well known, the places for popular gathering progressively shifted during the early Empire from the old republican spaces (especially the Forum) to the Palatine and to the monumental buildings where spectacles and games were held (see <em>Veyne 1976</em>, <em>Benoist 1999</em>, <em>Aldrete 1999</em> or <em>Gros 2005</em>, among other references). But this text also seems to echo a famous passage of Cicero’s <em>Pro Sestio</em> (Cic., <em>Sest.</em>, 106, commented by <em>Nicolet 1976</em> p. 482 or <em>Flaig 2003</em> pp. 237–239), a comparison which to our knowledge has so far gone unnoticed. In the latter, Cicero also presents three places where the <em>populus Romanus</em> expresses “their opinion and their will” (<em>iudicium ac uoluntas</em>): the meetings (<em>contiones</em>), the assemblies (<em>comitia</em>) and the games (<em>ludi et gladiatorum consessus</em>). If we compare Cicero’s judgement on the political situation at the end of the Republic with Tacitus’ analysis for the early imperial period, we notice that the historian only retains the spectacles from Cicero’s list, adding to them two other spaces of political gathering, the Palatine and the imperial forums.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">230</div>
+      <div><p>Furthermore, it is worth noting that Tacitus, as expected, openly demonstrates utter contempt for the type of communication displayed by the crowd in games by referring to it as a form of <em>licentia</em> (“licence”). This <em>licentia</em> appears as a deterioration of Cicero’s reference to the <em>iudicium ac uoluntas</em> (“opinion and will”) of the people. Moreover, the political vocabulary has also deteriorated, as Cicero’s <em>populus Romanus</em> is first replaced in Tacitus by the simple <em>populus</em> and finally by <em>vulgus</em>. Yet, here again, the vocabulary is, in itself, ideological. Through this lexical evolution (<em>populus Romanus</em> in Cicero becoming <em>populus</em> and then <em>vulgus</em> in Tacitus), Tacitus points to the transformation of the political practices of the Roman <em>plebs</em>: they now make their feelings known outside the old institutional structures that were the assemblies (<em>contiones</em> and <em>comitia</em>). In so doing, the political authorities (now embodied by the emperor) found a new actor to dialogue with. It was no longer the old <em>populus Romanus</em>, who belonged to the expressions that the principate had “emptied of their meaning” and let “fall into disuse”, the <em>vacua</em> and <em>oblitterata nomina</em> (Tac., <em>Hist.</em> , 1.30.6 and 1.55.4), but of a new political entity, to which Tacitus gives the name of <em>vulgus</em>: a crowd holding and expressing an opinion, making demand in non-institutional spaces (through clamours at the games and rumours in the streets), and often obtaining satisfaction in this process. If we look back to Tac., <em>Hist.</em>, 1.72.3, the <em>seditiosae voces</em> (“seditious cries”) of the crowd did compel Otho to condemn Tigellinus. In sum, the <em>vulgus</em> is a political actor whose public expression is achieved essentially through what Claude Nicolet called the “parallel languages” of politics (<em>“langages parallèles” de la politique</em>), thus designating the spaces situated “outside the traditional domain defined by public law” (especially the assemblies, see <em>Nicolet 1976</em> p. 456-505). Our comprehensive study of <em>vulgus</em> leads us to consider that Tacitus had perfectly perceived the transformation of political practices undergone at the turn of the millennium; in spite of the conspicuous display of contempt, he was fully aware of the centrality of these informal forms of politics in the first century AD, which scholars of Roman history have recently investigated with greater attention (see <em>Montlahuc 2020</em> relying on inspiring studies in Greek history like <em>Azoulay 2014</em>).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">231</div>
+      <div><h2>Conclusions</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">232</div>
+      <div><p>Taking into account the three main lexemes of crowd, their lexical and syntactic environment as well as the historical phenomena they refer to, we can highlight the originality – and therefore, the interest – of the term <em>vulgus</em>. This specificity can be seen, first of all, in relation to <em>multitudo</em> and <em>turba</em>, two terms that are very close to each other. <em>vulgus</em> refers to highly conscious, active rather than passive or reactive gatherings. In Tacitus, it seems to co-refer with the notions of <em>populus</em> and <em>plebs</em> (themselves largely coreferential in the late Republican and early imperial prose, see <em>Hellegouarc'h 1963</em> pp. 506-518 and <em>Yavetz 1969</em> pp. 148-149), and thus to present a different facet from the same social group, the urban <em>plebs</em> (hence the hendiadys <em>vulgus ac populus</em> seen above). The most likely interpretation of this linguistic phenomenon is to link the <em>vulgus</em> to the new forms of gathering and political expression of the urban plebs that bypassed the old, sclerotic republican institutions, like voting, which had become mere “rituals” of assent <em>Hollard 2010</em>.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">233</div>
+      <div><p>Note, however, that Tacitus’ writing is resistant to definitive categorizations. For instance, rumours were one of the essential elements of the new dialogue between plebs and emperor (on this subject, see most recently <em>Courrier 2017</em>, <em>Autin 2019</em> pp. 217-486 and <em>Autin 2020</em>). As one of these non-institutional ways the urban masses had to express their opinion, it is logical to find most often in Tacitus <em>rumor vulgi</em> (“rumour of the crowd”, Tac., <em>Ann.</em>, 4.29.2, 4.41.1, 15.73.1, <em>Hist.</em> 3.58.8, 4.11.6; similar formulas in Tac., <em>Ann.</em>, 3.76.1, 15.48.2 and <em>Hist.</em>, 2.26.5) and never <em>rumor turbae</em> or <em>rumor multitudinis</em>; however, we also read once <em>rumor plebis</em> (Tac., <em>Hist.</em>, 2.91.2) and once <em>rumor populi</em> (Tac., <em>Ann.</em>, 14.29.2). We must therefore accept some variations in this system and leave to Tacitus his fair share of creative liberty when choosing between the different designations of the same urban masses. Nevertheless, this does not mean that <em>vulgus</em> has (at least in Tacitus) a simple “derogatory significance”, as is often accepted since <em>Yavetz 1969</em> (p. 141 for the quotation), and we hope to have conveyed in this paper “a method [...] whereby each and every term [or at least, some of them] may be defined according to legal or sociological [and, one may add, political] principles&quot;, to take a stance opposite to that of the great historian of the Roman plebs (<em>Yavetz 1969</em> p. 142).</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">234</div>
+      <div><h2>Acknowledgment</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">235</div>
+      <div><p>Many thanks to the anonymous reviewers, whose suggestions helped clarify the paper and improve its readability in English.</p>
+</div>
+    </div>
+  
+  </article>
+  <h2 >Bibliography</h2>
+  
+    <div class="paragraph mb5">
+    Aldrete, G. S.. <i>Gestures and acclamations in ancient rome</i>. John Hopkins University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Arena, P.. “"turba quae in foro litigat, spectat in theatris" (sen. cons. ad marc. 11, 2) : osservazioni sull'utilizzo del sostantivo "turba" in seneca, tacito e svetonio”. <i>Forme di aggregazione nel mondo romano</i>, edited by Elio Lo Cascio and Giovanna Merola, Edipuglia, pp. 13–30.
+    </div>
+  
+    <div class="paragraph mb5">
+    Ash, R.. <i>Ordering anarchy: armies and leaders in tacitus' histories</i>. Duckworth.
+    </div>
+  
+    <div class="paragraph mb5">
+    Aubrion, É.. <i>Rhétorique et histoire chez tacite</i>. Université de Metz, Centre de recherche Littérature et spiritualité.
+    </div>
+  
+    <div class="paragraph mb5">
+    Autin, L., et al.. “Sine nomine uulgus : étude des profils combinatoires des noms de la foule à partir d'un corpus arboré latin”. <i>Statistical analysis of textual data. proceedings of 13th international conference on statistical analysis of textual data. 7-10 june 2016 - nice</i>, edited by Damon Mayaffre et al., vol. 1, CNRS - Université Nice Sophia Antipolis, pp. 389–400.
+    </div>
+  
+    <div class="paragraph mb5">
+    Autin, L.. <i>Voix de la foule chez tacite : perspectives littéraires et historiques sur la communication collective au début de l'empire</i>. Université Grenoble Alpes ; Universität Osnabrück.
+    </div>
+  
+    <div class="paragraph mb5">
+    Autin, L.. “Rumeur Et Crise Aux Ier Et Iie Siècles Apr. J.-C. : Sur La Valeur Historique D’un Motif Littéraire”. <i>Cahiers Du Centre Gustave-glotz</i>, vol. 30.
+    </div>
+  
+    <div class="paragraph mb5">
+    Azoulay, V.. “Repenser le politique en grèce ancienne”. <i>Annales. histoire, sciences sociales</i>, vol. 69, no. 3, pp. 605–26, http://www.cairn.info/revue-annales-2014-3-page-605.htm.
+    </div>
+  
+    <div class="paragraph mb5">
+    Baier, T.. “Die darstellung der masse in der römischen literatur”. <i>Aevum : rassegna di scienze storiche, linguistiche e filologiche</i>, vol. 84, no. (1)1, pp. 161–76.
+    </div>
+  
+    <div class="paragraph mb5">
+    Bamman, D., et al.. “Guidelines for the Syntactic Annotation of Latin Treebanks”. <i>Tufts University Digital Library</i>.
+    </div>
+  
+    <div class="paragraph mb5">
+    Benoist, S.. <i>La fête à rome au premier siècle de l'empire : recherches sur l'univers festif sous les règnes d'auguste et des julio-claudiens</i>. Latomus.
+    </div>
+  
+    <div class="paragraph mb5">
+    Bierwisch, M.. “On Classifying Semantic Features”. <i>Semantics. An Interdisciplinary Reader in Philosophy, Linguistics and Psychology</i>, edited by Danny D. Steinberg and Leon A. Jakobovits, Cambridge University Press, pp. 410–35.
+    </div>
+  
+    <div class="paragraph mb5">
+    Biliński, B.. “Intorno Alla Semasiologia Del Termine "vulgus"”. <i>Synteleia : Vincenzo Arangio-ruiz</i>, edited by Antonio Guarino and Luigi Labruna, vol. 2, Jovene, pp. 722–30.
+    </div>
+  
+    <div class="paragraph mb5">
+    Birley, A. R.. “The Life and Death of Cornelius Tacitus”. <i>Historia: Zeitschrift Für Alte Geschichte</i>, vol. 49, no. 2, pp. 230–47, https://www.jstor.org/stable/4436577. JSTOR.
+    </div>
+  
+    <div class="paragraph mb5">
+    Champagnol, R.. “Théories des traits sémantiques”. <i>Signification du langage</i>, edited by Raymond Champagnol, Presses Universitaires de France, pp. 157–68, https://www-cairn-info.acces.bibliotheque-diderot.fr/signification-du-langage--9782130448839-page-157.htm.
+    </div>
+  
+    <div class="paragraph mb5">
+    Clavert, F.. “Vers de nouveaux modes de lecture des sources”. <i>Le temps des humanités digitales</i>, edited by Olivier Le Deuff, FYP EDITIONS.
+    </div>
+  
+    <div class="paragraph mb5">
+    Courrier, C.and J. C. M. de . Oliveira, editors. <i>Ancient History from Below: Subaltern Experiences and Actions in Context</i>. Edited by Cyril Courrier and Julio Cesar Magalhães de Oliveira, Routledge Taylor & Francis Ltd.
+    </div>
+  
+    <div class="paragraph mb5">
+    Courrier, C.. <i>La plèbe de rome et sa culture (fin du iie siècle av. J.-C. - fin du ier siècle ap. J.-C.)</i>. École française de Rome.
+    </div>
+  
+    <div class="paragraph mb5">
+    Courrier, C.. “Plebeian culture in the city of rome, from the late republic to the early empire”. <i>Popular culture in the ancient world</i>, edited by Lucy Grig, Cambridge University Press, pp. 107–28.
+    </div>
+  
+    <div class="paragraph mb5">
+    Courrier, C.. “The Roman Plebs and Rumour: Social Interactions and Political Communication in the Early Principate”. <i>Political Communication in the Roman World</i>, edited by Cristina Rosillo-López, Brill, pp. 139–64.
+    </div>
+  
+    <div class="paragraph mb5">
+    Engel, J.-M.. <i>Tacite et l'étude du comportement collectif</i>. Service de reproduction des thèses de l'université de Lille III.
+    </div>
+  
+    <div class="paragraph mb5">
+    Ernout, A.and A. Meillet. <i>Dictionnaire étymologique de la langue latine: histoire des mots</i>. Edited by Jacques André, Klincksieck.
+    </div>
+  
+    <div class="paragraph mb5">
+    Fantoli, M.and M. Vandersmissen. “Partitionnements multiples de corpus : une lecture polyangulaire ? l’exemple des bases latines du LASLA”. <i>Corpus</i>, no. 19, https://doi.org/10.4000/corpus.4505.
+    </div>
+  
+    <div class="paragraph mb5">
+    Flaig, E.. <i>Den kaiser herausfordern: die usurpation im römischen reich</i>. Campus Verlag.
+    </div>
+  
+    <div class="paragraph mb5">
+    Flaig, E.. <i>Den Kaiser Herausfordern: Die Usurpation Im Römischen Reich</i>. 2nd ed., Campus.
+    </div>
+  
+    <div class="paragraph mb5">
+    Flaig, E.. <i>Ritualisierte politik: zeichen, gesten und herrschaft im alten rom</i>. Vandenhoeck und Ruprecht.
+    </div>
+  
+    <div class="paragraph mb5">
+    Fraschetti, A.. <i>Rome et le prince</i>. Translated by Vincent Jolivet, Belin.
+    </div>
+  
+    <div class="paragraph mb5">
+    Gerber, A., et al.. <i>Lexicon taciteum</i>. Georg Olma.
+    </div>
+  
+    <div class="paragraph mb5">
+    Gilbert, R.. <i>Die beziehungen zwischen princeps und stadtrömischer plebs im frühen principat</i>. Brockmeyer.
+    </div>
+  
+    <div class="paragraph mb5">
+    Gros, P.. “Le rôle du peuple de rome dans la définition, l'organisation et le déplacement des lieux de la convergence sous l'empire”. <i>Popolo e potere nel mondo antico</i>, edited by Gianpaolo Urso, ETS, pp. 191–214.
+    </div>
+  
+    <div class="paragraph mb5">
+    Hellegouarc'h, J.. <i>Le vocabulaire latin des relations et des partis politiques sous la république</i>. Les Belles Lettres.
+    </div>
+  
+    <div class="paragraph mb5">
+    Hollard, V.. <i>Le rituel du vote : les assemblées romaines du peuple</i>. CNRS.
+    </div>
+  
+    <div class="paragraph mb5">
+    Hunter, V.. “Thucydides and the Sociology of the Crowd”. <i>The Classical Journal</i>, vol. 84, no. 1, pp. 17–30, http://www.jstor.org/stable/3297552.
+    </div>
+  
+    <div class="paragraph mb5">
+    Hurlet, F.. “Le Centre Du Pouvoir : Rome Et La Cour Impériale Aux Deux Premiers Siècles De Notre Ère”. <i>Rome, Les Césars Et La Ville : Aux Deux Premiers Siècles De Notre Ère</i>, edited by Nicole Belayche, Presses universitaires de Rennes, pp. 159–83, http://books.openedition.org/pur/19276.
+    </div>
+  
+    <div class="paragraph mb5">
+    Hutton, M., et al., editors. <i>Tacitus. 1: Agricola. Germania. Dialogue on Oratory</i>. Edited by Maurice Hutton et al., Harvard University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Jackson, J., editor. <i>Tacitus. 4: the annals, books IV - VI, XI - XI</i>. Edited by John Jackson, Harvard University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Jackson, J., editor. <i>Tacitus. 5: the annals, books XIII - XVI</i>. Edited by John Jackson, Harvard University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Karpyuk, S.. “Crowd in Archaic and Classical Greece”. <i>Hyperboreus</i>, vol. 6, no. 1, pp. 79–102.
+    </div>
+  
+    <div class="paragraph mb5">
+    Knopf, F.. <i>Die partizipationsmotive der plebs urbana im spätrepublikanischen rom</i>. LIT.
+    </div>
+  
+    <div class="paragraph mb5">
+    Kraif, O.and S. Diwersy. “Explorating Combinatorial Profiles Using Lexicograms on a Parsed Corpus: A Case Study in the Lexical Field of Emotions”. <i>Les Émotions Dans Le Discours = Emotions in Discourse</i>, edited by Peter Blumenthal et al., Peter Lang, pp. 381–94.
+    </div>
+  
+    <div class="paragraph mb5">
+    Kröss, K.. <i>Die Politische Rolle Der Stadtrömischen Plebs in Der Kaiserzeit</i>. Brill.
+    </div>
+  
+    <div class="paragraph mb5">
+    Laignoux, R.. “Conflits de légitimité et rassemblements de foule durant la période triumvirale”. <i>Hypothèses</i>, vol. 14, no. 1, pp. 51–63, http://www.cairn.info/resume.php?ID_ARTICLE=HYP_101_0051.
+    </div>
+  
+    <div class="paragraph mb5">
+    Laser, G.. <i>Populo Et Scaenae Serviendum Est: Die Bedeutung Der Städtischen Masse in Der Späten Römischen Republik</i>. Wissenschaftlicher Verlag Trier.
+    </div>
+  
+    <div class="paragraph mb5">
+    Legallois, D.. “La colligation : autre nom de la collocation grammaticale ou autre logique de la relation mutuelle entre syntaxe et sémantique ?”. <i>Corpus</i>, no. 11, https://doi.org/10.4000/corpus.2202.
+    </div>
+  
+    <div class="paragraph mb5">
+    Logghe, L.. “Plebeian Agency in the Later Roman Republic”. <i>Mass and Elite in the Greek and Roman Worlds: From Sparta to Late Antiquity</i>, edited by Richard J. Evans, Routledge, Taylor & Francis Group, pp. 63–81.
+    </div>
+  
+    <div class="paragraph mb5">
+    Longrée, D., et al.. “Structures phrastiques et analyse automatique des données morphosyntaxiques : le projet latsynt”. <i>JADT 2010 - statistical analysis of textual data. proceedings of 10th international conference JADT - june 6-11th 2010 - sapienza university of rome</i>, edited by Sergio Bolasco et al., vol. 1, LED-Edizioni universitarie di Lettere, Economia, Diritto, pp. 433–41.
+    </div>
+  
+    <div class="paragraph mb5">
+    Magalhães de Oliveira, J. C.. <i>Potestas populi : participation populaire et action collective dans les villes de l'afrique romaine tardive (vers 300-430 apr. J.-C.)</i>. Brepols.
+    </div>
+  
+    <div class="paragraph mb5">
+    Magalhães de Oliveira, J. C.. “Late Antiquity: The Age of Crowds?”. <i>Past & Present</i>, vol. 249, no. 1, pp. 3–2, https://doi.org/10.1093/pastj/gtz063.
+    </div>
+  
+    <div class="paragraph mb5">
+    Meijer, P. A.. “Stoicism in Plotinus' "enneads" VI 9,1”. <i>Quaderni Urbinati Di Cultura Classica</i>, vol. 30, no. 3, pp. 61–76, https://doi.org/10.2307/20546965.
+    </div>
+  
+    <div class="paragraph mb5">
+    Millar, F.. <i>The Crowd in Rome in the Late Republic</i>. University of Michigan Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Montlahuc, P.. “Claude Nicolet Et Les « Langages Parallèles » Du Citoyen : (ré)introduire Le Politique À Rome”. <i>Cahiers Du Centre Gustave-glotz</i>, vol. 31.
+    </div>
+  
+    <div class="paragraph mb5">
+    Moore, C. H.and J. Jackson, editors. <i>Tacitus. 3: the histories, books IV - V. the annals, books I - III</i>. Edited by Clifford Herschel Moore and John Jackson, Harvard University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Moore, C. H., editor. <i>Tacitus. 2: the histories, books I - III</i>. Edited by Clifford Herschel Moore, Harvard University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Mouchová, B.. “Die Ausdrücke "populus", "plebs" Und "uulgus" Bei Sueton”. <i>Acta Universitatis Carolinae. Graecolatina Pragensia</i>, vol. 13, pp. 87–101.
+    </div>
+  
+    <div class="paragraph mb5">
+    Newbold, R. F.. “The vulgus in tacitus”. <i>Rheinisches museum für philologie</i>, vol. 119, pp. 85–92.
+    </div>
+  
+    <div class="paragraph mb5">
+    Nicolet, C.. <i>Le métier de citoyen dans la rome républicaine</i>. Gallimard.
+    </div>
+  
+    <div class="paragraph mb5">
+    Poudat, C.and F. Landragin. <i>Explorer un corpus textuel: méthodes, pratiques, outils</i>. De Boeck supérieur.
+    </div>
+  
+    <div class="paragraph mb5">
+    Reicher, S.. “The Psychology of Crowd Dynamics”. <i>Blackwell Handbook of Social Psychology: Group Processes</i>, edited by Michael A. Hogg and R. Scott Tindale, Blackwell, pp. 182–208, https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470998458.ch8.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rosillo-López, C.. <i>Public Opinion and Politics in the Late Roman Republic</i>. Cambridge University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Syme, R.. <i>Tacitus</i>. Clarendon Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Thiec, Y. J.and J.-R. Tréanton. “La foule comme objet de "science"”. <i>Revue française de sociologie</i>, vol. 24, no. 1, http://search.proquest.com.acces.bibliotheque-diderot.fr/pio/docview/1303249800/citation/191B17A9EA2E42F0PQ/1.
+    </div>
+  
+    <div class="paragraph mb5">
+    Toner, J. P.. <i>Popular Culture in Ancient Rome</i>. Polity.
+    </div>
+  
+    <div class="paragraph mb5">
+    Veyne, P.. <i>Le pain et le cirque : sociologie historique d'un pluralisme politique</i>. Éditions du Seuil.
+    </div>
+  
+    <div class="paragraph mb5">
+    Virlouvet, C.. <i>Famines Et Émeutes À Rome Des Origines De La République À La Mort De Néron</i>. De Boccard.
+    </div>
+  
+    <div class="paragraph mb5">
+    Wellesley, K., editor. <i>Cornelius tacitus. the histories. book III</i>. Edited by Kenneth Wellesley, Sydney University Press.
+    </div>
+  
+    <div class="paragraph mb5">
+    Winterling, A.. <i>Aula Caesaris: Studien Zur Institutionalisierung Des Römischen Kaiserhofes in Der Zeit Von Augustus Bis Commodus (31 V. Chr.-192 N. Chr.)</i>. Rudolf Oldenbourg.
+    </div>
+  
+    <div class="paragraph mb5">
+    Woodman, A. J., editor. <i>The annals of tacitus: book 4</i>. Edited by Anthony John Woodman, Cambridge University Press, https://doi.org/10.1017/9781108303682.
+    </div>
+  
+    <div class="paragraph mb5">
+    Yavetz, Z.. <i>La plèbe et le prince : foule et vie politique sous le haut-empire romain</i>. Translated by Maud Sissung, La Découverte.
+    </div>
+  
+    <div class="paragraph mb5">
+    Yavetz, Z.. <i>Plebs and Princeps</i>. Clarendon Press.
+    </div>
+  
+</section>
+
+
+    </body>
+</html>

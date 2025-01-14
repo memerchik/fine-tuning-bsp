@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="https://journalofdigitalhistory.org/favicon.ico">
+        <title>ReOrienting Digital History: New frontiers in Chinese Studies - Journal of Digital History</title>
+        
+<meta property="og:title" content="ReOrienting Digital History: New frontiers in Chinese Studies" />
+<meta property="og:description" content="This article serves as the introduction to the special issue on Chinese digital history in the Journal of Digital History (JDH). After presenting the papers gathered in this special issue, it scrutinizes the significance of area studies and advocates a paradigm shift towards computational methodologies in both Chinese studies and the broader humanities disciplines." />
+<meta property="og:site_name" content="Journal of Digital History" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://raw.githubusercontent.com/jdh-observer/NpQvUTkRCF5T/main/socialmediacover.png" />
+<meta property="og:url" content="https://journalofdigitalhistory.org/en/article/NpQvUTkRCF5T" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Journal_DigHist" />
+<meta name="twitter:title" content="ReOrienting Digital History: New frontiers in Chinese Studies" />
+<meta name="twitter:description" content="This article serves as the introduction to the special issue on Chinese digital history in the Journal of Digital History (JDH). After presenting the papers gathered in this special issue, it scrutinizes the significance of area studies and advocates a paradigm shift towards computational methodologies in both Chinese studies and the broader humanities disciplines." />
+<meta name="twitter:image" content="https://raw.githubusercontent.com/jdh-observer/NpQvUTkRCF5T/main/socialmediacover.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Fira+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css">
+<style>
+  body{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 10pt;
+    line-height: 1.5em;
+  }
+  .code, code, pre{
+    font-family: 'Fira Code', monospace;
+  }
+  .abstract p:first-child:first-letter {
+    font-family: 'Fira Code', monospace;
+    font-weight: bold;
+  }
+  a{
+    color: black;
+  }
+  .collaborators a{
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .contributors a > img {
+    /* ordic badge */
+    width: 4mm;
+    height: 4mm;
+  }
+  .desktop a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  p{
+    margin: 0;
+  }
+  .paragraph_num {
+    position: absolute;
+    left: 40px;
+    color: gray;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+@page {
+    size: A4;
+    margin: 1cm;
+  }
+  .position-relative{
+    position: relative;
+  }
+
+
+  @media print {
+
+    blockquote{
+      border-left: 1pt black solid;
+      padding-left: 5mm;
+      margin-left: 5mm;
+      margin-right: 5mm;
+    }
+
+    .title{
+      max-width: 75%;
+    }
+    .abstract{
+      font-size: 12pt;
+      line-height: 18pt;
+    }
+    .keywords{
+      font-size: 12pt;
+    }
+    .abstract p:first-child:first-letter {
+      float: left;
+      height: 36pt;
+      font-size: 36pt;
+      line-height: 36pt;
+      margin-right: 1mm;
+      font-family: 'Fira Code', monospace;
+      font-weight: bold;
+    }
+    .collaborators{
+      max-width: 50%;
+    }
+    .page-break {page-break-after: always;}
+    .dual-column{
+      column-count: 2;
+      -webkit-column-count: 2;
+      -moz-column-count: 2;
+    }
+    h1{
+      font-size: 25pt;
+      line-height: 1.5em;
+    }
+    h2{
+      margin: 15mm 0 5mm;
+    }
+    h3{
+      margin: 10mm 0 5mm;
+    }
+    .mb5{
+      margin-bottom: 5mm;
+    }
+    .mb10{
+      margin-bottom: 10mm;
+    }
+    .mb15{
+      margin-bottom: 15mm;
+    }
+    .mb20{
+      margin-bottom: 20mm;
+    }
+    .mt5{
+      margin-top: 5mm;
+    }
+    .mt10{
+      margin-top: 10mm;
+    }
+    .mr10{
+      margin-right: 10mm;
+    }
+    .mt20{
+      margin-top: 20mm;
+    }
+    .mt25{
+      margin-top: 25mm;
+    }
+    .contributors{
+      display: flex;
+      max-width: 75%;
+    }
+    .contributor h3{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+   .flex-container {
+    display: flex;
+   }
+  .flex-child {
+      flex: 1;
+      border: 2px solid #5e2bff;
+      text-align:center;
+
+  }
+
+  .flex-child:first-child {
+      margin-right: 20px;
+  }
+  .read a{
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.625%;
+    text-align: center;
+    color: white;
+  }
+  .read a:link, a:visited, a:focus {
+    background: #5e2bff;
+  }
+  .email a{
+    border-radius: 8px;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 0.625%;
+    text-align: center;
+    color: black;
+    border: 2px solid #5e2bff;
+
+  }
+  .email a:link, a:visited, a:focus {
+  }
+
+  
+  }
+  }
+</style>
+
+    </head>
+    <body>
+      
+
+<section class="sheet padding-20mm">
+  <article class="position-relative">
+    <div style="position: absolute; left:0mm; top:-20mm; display: flex">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" width="50">
+        <rect x="70" y="50" width="10" height="10" rx="5"/>
+        <path fill="black" d="M130,40H120V20H100V10H70V30H60V20H30V50H10V90H60V80H90V90h50V40ZM40,80H20V60H30V70H40V30H50V80ZM80,70H60V40H80V20H90V70Zm50-10V80H120V60H110V80H100V30h10V50h20Z"/>
+      </svg>
+      <div style="font-weight: bold; font-size:9pt; line-height:11pt; margin-left: 2mm; margin-top:.5mm">Journal of <br>Digital History</div>
+    </div>
+    <!-- img src="data:image/png;base64,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" style="width:20mm; position: absolute; right:0; top:-20mm" -->
+
+    <div class="title mt25 mb10">
+    
+      <h1>ReOrienting Digital History: New frontiers in Chinese Studies</h1>
+
+    
+    </div>
+    <div class="contributors mb5">
+      
+        <div class="contributor mr10">
+          <h3>Cécile ARMAND <a href="https://orcid.org/0000-0002-9107-6443"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" alt="orcid" /></a></h3>
+<p>Ecole Normale Supérieure de Lyon, Lyon, France</p>
+
+        </div>
+      
+    </div>
+    
+    <div>
+      <p class="desktop" style="font-size:8pt; line-height:12pt">
+        <a href="https://doi.org/10.1515/JDH-2024?locatt=label:JDHFULL">https://doi.org/10.1515/JDH-2024?locatt=label:JDHFULL</a>
+      </p>
+      <p class="desktop" style="font-size:8pt; line-height:12pt">
+        
+        Published online the 21st October 2024
+        
+      </p>
+    </div>
+    <p>
+      <div class="flex-container">
+        <div class="flex-child">
+          <br>
+          Experience the full interactive<br>multi-layered reading experience
+          <div class="read">
+            <a href="https://journalofdigitalhistory.org/en/article/NpQvUTkRCF5T">&nbsp;-> Read here&nbsp;</a>
+          </div>
+          <br>
+        </div>
+        <div class="flex-child">
+          <br>
+          Send yourself a reminder<br>to read this article later
+          <div class="email">
+            <a  href="mailto:?subject=Read%20on%20JDH%20%22ReOrienting Digital History: New frontiers in Chinese Studies%22&body=Hello!%0D%0AHere%20is%20your%20reminder%20as%20requested%0D%0A%0D%0ALink%3A%20https://journalofdigitalhistory.org/en/article/NpQvUTkRCF5T">&nbsp;-> Send E-Mail&nbsp;</a>
+            <br>
+          </div>
+        </div>
+      </div>
+    </p>
+    <div class="keywords mb5 mt5">
+          <b>Keywords: </b>China, Digital humanities, Computational turn, Area studies
+      </div>
+    <div class="abstract dual-column mb5">
+      
+        <p>This article serves as the introduction to the special issue on Chinese digital history in the <em>Journal of Digital History</em> (JDH). After presenting the papers gathered in this special issue, it scrutinizes the significance of area studies and advocates a paradigm shift towards computational methodologies in both Chinese studies and the broader humanities disciplines.</p>
+
+      
+    </div>
+    <div class="disclaimer">
+    
+    </div>
+  </article>
+</section>
+<section class="sheet padding-20mm">
+  <article>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">1</div>
+      <div><p><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/"><img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="cc-by-nc-nd" /></a>
+©&lt;Cécile ARMAND&gt;. Published by De Gruyter in cooperation with the University of Luxembourg Centre for Contemporary and Digital History. This is an Open Access article distributed under the terms of the <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution License CC-BY-NC-ND</a></p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num"></div>
+      <div></div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">3</div>
+      <div><h2>Introduction</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">4</div>
+      <div><p>This journal special issue is the outcome of the <a href="https://summi.enpchina.eu/members/">“New Foundations in Chinese Digital History” Conference</a> held in June 2022 under the auspices of the “Elites, Networks, and Power in modern China” <a href="https://www.enpchina.eu/">(ENP-China)</a> project in Aix-en-Provence.  Drawing connections between papers gathered in a special issue is often a challenge. Indeed, each article constitutes a unique research driven by specific interests and involving specific expertise. In this particular issue, the breath of topics, historical periods, sources, and methods covered by the papers makes the editor’s task particularly difficult. What do they actually have in common, besides sharing the same origin and having something to do with Chinese history and digital methods? How do their approaches differ from the digital scholarship produced outside the field of Chinese studies? The question is not an artificial one. It is a unique opportunity to explore the meanings and implications of digital history within and beyond the China field.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">5</div>
+      <div><p>The five papers that will progressively be published and constitute this special issue illustrate the multifarious ways digital methods can be applied in the field of Chinese studies. Paul Vierthaler takes the famous late Ming novel <em>Jinpingmei</em> (Plum in the Golden Vase) as a test case for developing a generalizable approach for automatic detection of intertextuality and disambiguation of sources in Chinese literary history. He is not only able to map the uneven distribution of intertextuality across the novel, but also to computationally assess the influence of earlier works like <em>Shuihu Zhuan</em> and the likely influence of <em>Jinpingmei</em> on contemporary works such as <em>Cinüe</em>. Subsequently, Elisabeth Kaske and Florian Kessler utilise Monte Carlo simulation and network analysis to reveal the “hidden rules” of the Qing mandarinate based on a popular game of the time, shedding light on both the construction of the Qing social reality, as well as the game designers’ perceptions of it. Their findings highlight the significance of hereditary privileges, which challenges the commonly held view of a meritocratic system, and that of office purchases, which introduced an element of strategy but do not diminish the importance of hereditary privileges and examination degrees. Taking the Chinese newspaper <em>Shenbao</em> as his core source, Christian Henriot combines natural language processing, network analysis, and topic modelling to determine who was newsworthy in the early Chinese press, and in which context eminent and less eminent people appeared in the Shanghai newspaper. He found that a small segment of literati emerged amidst a sea of nobodies, which mirrors the concerns and expectations of <em>Shenbao</em>’s intended readers and reveals the process of news making in the early phase of Chinese journalism. Cécile Armand also employs topic modelling - a statistical method aimed at identifying latent themes in text corpora based on the most frequent word co-occurrences - to map the development of a transnational public sphere in China during the Republican period. She demonstrates that despite growing tensions during the interwar years, major newspapers, both Chinese and foreign, and multinational organisations like the Rotary Club consistently emphasised non-violent modes of action, through meetings, entertainment venues, lectures, and philanthropy, in sharp contrast with the war of resistance advocated by nationalist organisations and political publications during the same period. Finally, Marylin Levine and Heidi Yu Huang utilise a combination of quantitative analysis, hierarchical clustering, network analysis, and “mini-biographical portraits” to explore a group of Chinese students in Europe. Their “enriched prosopography” approach illuminates individual and group dynamics and helps to understand why, in the context of growing politicization after 1927, some became revolutionaries, while others chose to prioritise their academic careers and became political intellectuals.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">6</div>
+      <div><p>Despite their diversity, all articles share three key characteristics: first, a taste for experimentation and a remarkable ingenuity in devising solutions to overcome the common set of challenges they face; second, a critical attitude towards the use of digital tools and methods; and third, a strong interdisciplinary engagement. These three common traits derive from the challenges of working with computational tools and historical data. One of the main difficulties is the large volume of data and the wide scale of observation, which cannot be handled through the “traditional” methods of close reading and micro-analysis. To address this challenge, the authors imagine various reduction methods such as classification and filtering (Vierthaler, Armand), hierarchical clustering (Levine and Huang), pruning techniques (Henriot, Levine), and contextualised case studies. For example, Vierthaler analyses the specific textual connections between <em>Jinpingmei</em> and of its most influential sources (<em>Shuihu Zhuan</em>). Kaske and Kessler examine more specifically the figure of the prefect, while Henriot and Levine focuses on particular ego-networks and clusters. The authors continuously shift their lenses to navigate from individuals to groups (Henriot, Levine and Huang), from words to documents and corpora (Vierthaler, Henriot, Armand). To overcome the issue of article separation in massive press corpora, Armand applies topic modelling to selected segments of texts using concordance. Another challenge is the complexity of historical data, which cannot always be easily bent to computational tools. For example, Kaske and Kessler use simulation and probabilities to handle the complex system of bureaucratic appointments. To tackle the variety of social life as reported in contemporary newspapers, Henriot combines the network analysis of actors with the topic modelling of article contents. Missing information is another big issue. For example, the uncertain date of publication of <em>Jinpingmei</em>, incomplete game rules, truncated names in <em>Shenbao</em>, and gaps in archival documentation raise significant challenges. One of the strategies to fill the holes consists in formulating rational hypotheses informed by the authors’ intimate knowledge of the context and previous scholarship.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">7</div>
+      <div><p>The recognition of these challenges shapes the authors’ modesty and drives their commendable efforts to make historical research more transparent. Their contribution to “digital hermeneutics” (<em>Fickers, Tatarinov 2022</em>) encompasses its two key dimensions, namely source and tool criticism. The authors critically confront different source materials and algorithmic models to unveil their potential biases. For example, Vierthaler experiments with different models for text classification and develops proofs of concept to test their robustness before applying them to unknown cases. His philosophy is to “use the simplest methods possible that provide reliable results”. For this particular study, he chose to rely on the well-established “bag-of-words” representation of text (n-gram), instead of the trendy, yet less stable transformer-based models. Henriot and Armand compare different topic models, while Kaske and Kessler contrast different versions of the game and consider various possible scenarios for reaching the highest position with the highest return. This critical and experimental state of mind also helps the authors to anticipate the risk that the selected methods may “fail” or may not provide the expected level of accuracy, which is remarkably explained in Vierthaler’s paper. While he acknowledges the limitations of his “bag-of-word” approach, he is also able to draw important lessons from them. Trying to understand why and where the model fails leads to new discoveries about the original texts and to identifying the mentions of persons’ names as a major source of noise.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">8</div>
+      <div><p>This “thinkering” attitude - a neologism coined from the ingenuous merging of “thinking” and “tinkering”, which describes “the action of playful experimentation with technological and digital tools for the interpretation and presentation of history” (<em>Fickers 2017</em>) - demands strong interdisciplinary training or collaboration, particularly with computer sciences. In both cases, the authors manifest a deep commitment with the alter disciplines, which goes far beyond the passive reliance on “engineer servants”, as it is often the case among self-claimed digital humanists.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">9</div>
+      <div><p>Despite their computational twist and turns, the authors never lose sight of their scholarly questions and never depart from their disciplinary grounding. On the contrary, the strength of their analyses lies in their genuine engagement with the existing scholarship and their intimate knowledge of the intellectual debates in their respective fields. This knowledge not only helps them to formulate sound research hypotheses; it also provides a basis to strengthen, nuance, or revise previous findings, and to open new avenues for future investigation. For example, Vierthaler is able to make new hypotheses regarding the likely author and date of publication of <em>Jinpingmei</em>. Kaske and Kessler demonstrate the understudied importance of the prefect position as a springboard toward high officialdom. Henriot convincingly argues that a computational approach to the historical press challenges the previous, binary conceptualisation of newspapers as either texts or sources, while Armand provides insights into the circulation of information and journalistic practices among Chinese and foreign periodicals. Her corpus-based approach also contributes to substantiate the elusive notion of the “public sphere” and to precisely map its discursive practices. Levine and Huang’s findings from network analysis highlights Cai Yuanpei’s ambivalent relationship with the French model of education and suggests that Wang Jingwei may have been a key bridging figure between Japan and Vichy France during WWII.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">10</div>
+      <div><p>The <em>Journal of Digital History</em> (JDH) offers an ideal venue for reshaping the ways of writing Chinese history in the digital age. The authors skilfully appropriate the unique, multi-layered structure of the journal to deploy their experimental process and their critical perspective at the hermeneutic level, while using the narrative layer to expose their scholarly interpretations and engage with previous literature. The data and code are publicly accessible on Github, which significantly increases transparency and makes a huge step toward the ideal of making experiments reproducible and results more easily verifiable.  Ultimately, the three common threads that knit the articles together significantly expand the boundaries of Chinese studies and reshape the very notion of the “digital”. </p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">11</div>
+      <div><h2>Unlocking Area Studies</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">12</div>
+      <div><p>What makes Chinese studies different from other fields in which digital methods have been applied? To what extent is it relevant to single out <em>Chinese</em> digital history? For sure, some of its features require specific training and expertise: the Chinese language, or more accurately, <em>languages</em> in the plural, given its multiple writing styles and accelerating changes since the late nineteenth century, (<em>Blouin, Huang, Henriot, Armand 2024</em>); the primary source materials available to China historians, although the digitisation of original sources and their conversion into data tend to smoothen material differences; and expert knowledge of the Chinese historical context. But after all, most of these requirements apply to other domains outside the China field as well. The distance between Chinese and non-Chinese digital history, ultimately, is no greater than the distance among the papers in this issue. It essentially depends on the data historians utilise and the research questions they address, which in turn, determines the tools and the methods they adopt. To some extent, the “digital” is bringing Chinese studies closer to other fields of research which also make use of digital data and methods. The greatest promise of the digital age is perhaps to relieve “area studies” from the scholarly isolation they have been enduring for decades (<em>Frank 1988</em>). The digital may appear as an opportunity to reconnect the so-called area studies with more “central” areas of scholarship through a common language - the language of data - and a shared set of tools and methodologies.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">13</div>
+      <div><p>For now, however, Chinese studies and digital humanities (DH) alike are still the subjects of specific publications or special journal issues in Europe (see for instance, the special issue <a href="https://historicalnetworkresearch.org/journal-of-historical-network-research-vol-5-no-1-2021-beyond-guanxi-chinese-historical-networks/">“Beyond Guanxi”</a> (<em>Rudolph, Chen 2021</em>) in the <em>Journal of Historical Network Research</em>, or the more recent <a href="https://link.springer.com/journal/42803/volumes-and-issues/4-1">special issue on East Asian Studies</a> in the <em>International Journal of Digital Humanities</em>) (<em>Horváth, De Weerdt 2023</em>). This <em>JDH</em> special issue aims to join this wider effort to bridge the “old Europe” with the growing DH community in Asia. During the last two decades, the field of digital humanities has experienced a formidable expansion in the Chinese-speaking world (<em>Tsui 2020</em>). DH conferences, research centres, and training programs have multiplied in China, Taiwan, and Hong Kong. While Anglo-Saxon countries have been at the forefront of digital humanities over the last forty years, these new China-born initiatives will be setting the tone in the next decade. They are already paving the way towards what may become the future of digital humanities – the new <em>computational</em> paradigm driven by artificial intelligence.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">14</div>
+      <div><h2>Beyond the Digital: The Computational Turn</h2>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">15</div>
+      <div><p>At first sight, the computational turn may sound like a return to the origins of Digital Humanities, which grew out of the forgotten “humanities computing” in the early 1960s (<em>Schreibman, Siemens, Unsworth 2004</em>). However, the computational turn marks the beginning of a radically new era in humanities research. With the rapidly expanding field of artificial intelligence, deep learning, and large language models, humanities researchers can now envision “qualitative” research and deep reading at a wider scale, instead of merely counting words or mapping large trends. The new computational paradigm not only makes irrelevant most of the criticism raised against “cliometrics” and macro-analysis, but it radically challenges the binary framework that has emerged with the digital humanities, exemplified by the series of oppositions between quantitative/qualitative, macro/micro, close/distant reading. Levine and Huang’s “integrative approach”, which proposes to understand macro-historical changes through the lenses of individual choices and actions, is an excellent illustration of the potential of this multi-dimensional perspective.</p>
+</div>
+    </div>
+  
+    <div class="paragraph mb5">
+      <div class="paragraph_num">16</div>
+      <div><p>The five articles in this special issue are all contributing a leap forward in this direction. Their authors share what might be called a “computational way of thinking”, which encompasses three key dimensions: the capacity to translate historical questions into machine-actionable tasks; the aptitude to interpret computational outputs from a humanistic and critical perspective; and the ability to weave their discoveries with previous findings into a consistent, compelling narrative that speaks to a wide community of readers beyond their specific field of expertise. These are the three vital skills that scholars will have to acquire in the near future if they want to maintain their relevance in the age of algorithms and artificial intelligence.</p>
+</div>
+    </div>
+  
+  </article>
+  <h2 >Bibliography</h2>
+  
+    <div class="paragraph mb5">
+    Blouin, B., et al.. <i>Unlocking Transitional Chinese: Word Segmentation in Modern Historical Texts</i>.
+    </div>
+  
+    <div class="paragraph mb5">
+    Blouin, B., et al.. “Unlocking Transitional Chinese: Word Segmentation in Modern Historical Texts”. <i>Journal of Data Mining & Digital Humanities</i>.
+    </div>
+  
+    <div class="paragraph mb5">
+    Fickers, A.and J. Tatarinov, editors. “Digital History and Hermeneutics: Between Theory and Practice”. <i>Digital History and Hermeneutics</i>, edited by Andreas Fickers and Juliane Tatarinov, De Gruyter, https://www.degruyter.com/document/doi/10.1515/9783110723991/html?lang=en.
+    </div>
+  
+    <div class="paragraph mb5">
+    Fickers, A.. “Digital History: On the Heuristic Potential of Thinkering”. <i>Dhnord 2017 : (dé)construire L'histoire Numérique</i>, Maison Européenne des Sciences de l'Homme et de la Société (MESHS), https://hal.science/hal-03351680.
+    </div>
+  
+    <div class="paragraph mb5">
+    Frank, A. G.. <i>Reorient: global economy in the asian age</i>. Vistaar Publications.
+    </div>
+  
+    <div class="paragraph mb5">
+    Horváth, A.and H. De Weerdt. “Special Issue on Digital Humanities and East Asian Studies”. <i>International Journal of Digital Humanities</i>, vol. 4, no. 1, pp. 1–4, https://doi.org/10.1007/s42803-022-00064-5.
+    </div>
+  
+    <div class="paragraph mb5">
+    Rudolph, H.and S. Chen. “Beyond Guanxi: Chinese Historical Networks”. <i>Journal of Historical Network Research</i>, vol. 5, no. 1, https://doi.org/10.25517/jhnr.v5i1.131.
+    </div>
+  
+    <div class="paragraph mb5">
+    Schreibman, S., et al.. <i>A Companion to Digital Humanities</i>. Blackwell Pub., https://companions.digitalhumanities.org/DH/?chapter=content/9781405103213_intro.html.
+    </div>
+  
+    <div class="paragraph mb5">
+    Tsui, L. H.. “Charting the Emergence of the Digital Humanities in China”. <i>Chinese Culture in the 21st Century and Its Global Dimensions</i>, p. 203, https://www.academia.edu/43600483/Charting_the_Emergence_of_the_Digital_Humanities_in_China.
+    </div>
+  
+</section>
+
+
+    </body>
+</html>

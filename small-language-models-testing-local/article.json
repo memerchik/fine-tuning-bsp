@@ -1,0 +1,3873 @@
+{
+    "abstract": {
+        "id": 60,
+        "pid": "69Xry3ztPAk5",
+        "title": "Shaping the Transnational Public Sphere in Republican China: Discourses and Practices of the Rotary Club in the Shanghai Press (1919-1949)",
+        "abstract": "This paper analyzes the formation of a transnational public sphere in China through the joint empirical study of two key institutions – a transnational organization (the Rotary Club) and the Shanghai periodical press, which has been recognized as the first mass medium for disseminating information in modern China. Methodologically, we rely on structural topic modeling (STM) to harness large corpora of digitized newspapers from a bilingual (Chinese/English) and dynamic perspective. We show that STM has the potential to encompass both the discursive and social aspects of the public sphere and to bridge the gap between previous theoretical and empirical studies. Thanks to STM, we are able to precisely classify and quantify the four main domains of the public sphere (meeting, self-organization, forum, community service) and to model their local and global dimensions. Furthermore, we reveal significant convergences between languages and a growing awareness of global issues during the troubled decades of the Republic (1919-1949). Methodologically, the contribution of this paper is threefold. First, we offer a simple yet efficient solution, based on concordance, to the problem of article segmentation in digitized newspapers. Second, this paper constitutes a rare instance of cross-lingual comparison involving a low-resource language, namely, the Chinese language during its transitional stage between classical and modern Chinese. Third, we demonstrate the value of using a multi-model approach to navigate between different levels of granularity, especially when dealing with corpora of different sizes and structures.  \r\n\r\nThe narrative layer will cover the presentation of the historical context, literature review and scholarly debates related to the public sphere in China and beyond, as well as the analyses and interpretations of topic modeling outputs. The hermeneutic layer will address methodological issues regarding the construction of bilingual corpora, the preparation of text data, and the training of the topic models. The data layer will include the various versions of the newspaper datasets used in the paper (original and modified texts) and the relevant visualizations and statistical outputs of topic modeling used to substantiate our final interpretations.",
+        "callpaper": 3,
+        "submitted_date": "2022-10-18T16:26:40+02:00",
+        "validation_date": "2022-10-19T09:55:43+02:00",
+        "contact_orcid": "https://orcid.org/0000-0002-9107-6443",
+        "contact_affiliation": "Aix-Marseille University",
+        "contact_email": "cecile.armand@gmail.com",
+        "contact_lastname": "ARMAND",
+        "contact_firstname": "Cécile",
+        "status": "PUBLISHED",
+        "consented": true,
+        "authors": [
+            94
+        ],
+        "datasets": [
+            35,
+            36,
+            37
+        ]
+    },
+    "repository_url": "https://github.com/jdh-observer/69Xry3ztPAk5",
+    "status": "PUBLISHED",
+    "publication_date": "2024-10-21T12:43:04+02:00",
+    "repository_type": "GITHUB",
+    "copyright_type": "CC_BY_NC_ND",
+    "notebook_url": "JTJGcHJveHktZ2l0aHVidXNlcmNvbnRlbnQlMkZqZGgtb2JzZXJ2ZXIlMkY2OVhyeTN6dFBBazUlMkZtYWluJTJGc2tpbS1hcnRpY2xlLmlweW5i",
+    "notebook_commit_hash": "",
+    "notebook_path": "skim-article.ipynb",
+    "binder_url": "https://mybinder.org/v2/gh/jdh-observer/69Xry3ztPAk5/HEAD?filepath=article.ipynb",
+    "doi": "10.1515/JDH.2023.0017",
+    "dataverse_url": null,
+    "data": {
+        "title": [
+            "# Shaping the Transnational Public Sphere in Republican China: Discourses and Practices of the Rotary Club in the Shanghai Press (1919-1949)"
+        ],
+        "abstract": [
+            "This article focuses on the Rotary Club as a case study and employs the periodical press as its primary source to reinvigorate past discussions regarding the public sphere and transnationalism in Republican China (1912-1949). Utilizing newly accessible digitized newspapers in both Chinese and English, and incorporating various computational methods such as topic modeling, Named Entity Recognition (NER), Geographic Information System (GIS), and network analysis, the author investigates how the Rotary Club, functioning as a transnational elite organization, strategically utilized the periodical press to promote its activities and present itself as a public-spirited entity committed to social welfare and international peace. This mixed-method approach reveals a public facade of unity and social harmony, which sharply contrasts with the narrative of language politics and internal tensions found in archival records. From a bilingual perspective, the English press emphasized the political dimensions of the public, expressed through terms like public opinion and manifested through official speeches or academic lectures. On the other hand, the Chinese press took a more pragmatic stance, concentrating on fundraising campaigns and educational reforms, and expressing concerns about the public welfare (*gongyi* 公益) of the general population (*gongzhong* 公眾). While both presses focused on the Pacific area, English periodicals paid more attention to foreign communities in China, their homelands, and colonial empires. In contrast, the Chinese press highlighted figures of Chinese border-crossers and overseas Chinese communities in southeast Asia and America. These differences are indicative of distinct reader interests and the access of newspaper editors to different sources of information. Journalistic content and practices converged during the 1930s but diverged again during the war and post-war periods. Methodologically, this paper contributes a robust methodology for utilizing digitized newspapers in historical research, viewing computational methods not as a replacement but as an aid for more efficient close reading and hermeneutics. Ultimately, the author advocates for increased collaboration with computer scientists to enhance data quality upstreams, allowing researchers to focus more effectively on the crucial tasks of analysis and interpretation."
+        ],
+        "keywords": [
+            "elites, geographical information system (GIS), historical newspapers, modern China, named entity recognition (NER), network analysis, Sino-American relations, topic modeling"
+        ],
+        "contributor": [
+            "### Cécile  Armand [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-9107-6443)\n Ecole Normale Supérieure de Lyon"
+        ],
+        "socialmediacover": "https://raw.githubusercontent.com/jdh-observer/69Xry3ztPAk5/main/socialmediacover.png"
+    },
+    "citation": {
+        "URL": "https://doi.org/10.1515/JDH-2023-0017?locatt=label:JDHFULL",
+        "type": "article-journal",
+        "issue": 3,
+        "title": "Shaping the Transnational Public Sphere in Republican China: Discourses and Practices of the Rotary Club in the Shanghai Press (1919-1949)",
+        "author": [
+            {
+                "given": "Cécile",
+                "family": "ARMAND"
+            }
+        ],
+        "issued": {
+            "year": "2024"
+        },
+        "volume": 3,
+        "container-title": "Journal of Digital History",
+        "container-title-short": "JDH"
+    },
+    "kernel_language": "R",
+    "tags": [
+        {
+            "id": 94,
+            "data": {
+                "language": ""
+            },
+            "name": "topic modeling",
+            "category": "narrative"
+        },
+        {
+            "id": 87,
+            "data": {
+                "language": "R"
+            },
+            "name": "quanteda",
+            "category": "tool"
+        },
+        {
+            "id": 90,
+            "data": {
+                "language": "R"
+            },
+            "name": "ggplot2",
+            "category": "tool"
+        },
+        {
+            "id": 60,
+            "data": {
+                "language": ""
+            },
+            "name": "historical newspapers",
+            "category": "narrative"
+        },
+        {
+            "id": 145,
+            "data": {
+                "language": ""
+            },
+            "name": "new",
+            "category": "keyword"
+        },
+        {
+            "id": 154,
+            "data": {
+                "language": "R"
+            },
+            "name": "tidyverse",
+            "category": "tool"
+        },
+        {
+            "id": 186,
+            "data": {
+                "language": "R"
+            },
+            "name": "tidytext",
+            "category": "tool"
+        },
+        {
+            "id": 187,
+            "data": {
+                "language": "R"
+            },
+            "name": "devtools",
+            "category": "tool"
+        },
+        {
+            "id": 188,
+            "data": {
+                "language": "R"
+            },
+            "name": "enpchina/histtext-r-client",
+            "category": "tool"
+        },
+        {
+            "id": 189,
+            "data": {
+                "language": "R"
+            },
+            "name": "widyr",
+            "category": "tool"
+        },
+        {
+            "id": 190,
+            "data": {
+                "language": "R"
+            },
+            "name": "sf",
+            "category": "tool"
+        },
+        {
+            "id": 191,
+            "data": {
+                "language": ""
+            },
+            "name": "elites",
+            "category": "narrative"
+        },
+        {
+            "id": 192,
+            "data": {
+                "language": ""
+            },
+            "name": "geographical information system (gis)",
+            "category": "narrative"
+        },
+        {
+            "id": 193,
+            "data": {
+                "language": ""
+            },
+            "name": "modern china",
+            "category": "narrative"
+        },
+        {
+            "id": 194,
+            "data": {
+                "language": ""
+            },
+            "name": "named entity recognition (ner)",
+            "category": "narrative"
+        },
+        {
+            "id": 195,
+            "data": {
+                "language": ""
+            },
+            "name": "network analysis",
+            "category": "narrative"
+        },
+        {
+            "id": 196,
+            "data": {
+                "language": ""
+            },
+            "name": "sino-american relations",
+            "category": "narrative"
+        }
+    ],
+    "issue": {
+        "id": 5,
+        "pid": "jdh005",
+        "name": "DH China",
+        "description": "This special issue, stemming from the \"New Foundations in Chinese Digital History\" Conference, presents a challenge to editors due to the diverse topics, historical periods, sources, and methods covered, prompting an exploration of commonalities and differences in approaches compared to digital scholarship beyond Chinese studies, offering a unique opportunity to delve into the meanings and implications of digital history within and beyond the field of China studies.",
+        "creation_date": "2024-10-21T14:37:05+02:00",
+        "publication_date": "2024-10-21T14:37:06+02:00",
+        "cover_date": "2024-10-21T14:37:09+02:00",
+        "status": "PUBLISHED",
+        "data": {},
+        "volume": 3,
+        "issue": 3,
+        "is_open_ended": true
+    },
+    "authors": [],
+    "fingerprint": {
+        "cells": [
+            {
+                "tags": [
+                    "title"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 140,
+                "firstWords": "Shaping the Transnational Public Sphere in Republican China: Discourses",
+                "isMetadata": true,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "contributor"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 163,
+                "firstWords": "Cécile Armand",
+                "isMetadata": true,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "copyright"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 426,
+                "firstWords": "",
+                "isMetadata": true,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "disclaimer"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 330,
+                "firstWords": "This research has received funding from the European Research Council",
+                "isMetadata": true,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "keywords"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 173,
+                "firstWords": "elites, geographical information system (GIS), historical newspapers, modern China, named",
+                "isMetadata": true,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "abstract"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2381,
+                "firstWords": "This article focuses on the Rotary Club as a case",
+                "isMetadata": true,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 15,
+                "firstWords": "Introduction",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 988,
+                "firstWords": "\n*The Chinese people had developed, the speaker quoted Dr.",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 831,
+                "firstWords": "In his address delivered at the Rotary Inter-City meeting held",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 8,
+                "isHeading": false,
+                "countChars": 2095,
+                "firstWords": "The question surrounding the emergence of a public sphere in",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 5,
+                "isHeading": false,
+                "countChars": 1765,
+                "firstWords": "Since the 2000s, the increased accessibility of newspaper collections has",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 3,
+                "isHeading": false,
+                "countChars": 1003,
+                "firstWords": "Methodologically, scholars investigating both the public sphere and the transnational",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 3,
+                "isHeading": false,
+                "countChars": 1117,
+                "firstWords": "This paper advances the ongoing debate by undertaking a joint",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 898,
+                "firstWords": "The Rotary Club aligns seamlessly with these criteria. On one",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 2,
+                "isHeading": false,
+                "countChars": 1390,
+                "firstWords": "The second institution within the public sphere scrutinized in this",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 2114,
+                "firstWords": "Fortunately, a considerable portion of the Shanghai press has been",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1138,
+                "firstWords": "Within this framework, this paper pursues three primary objectives. Firstly,",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 926,
+                "firstWords": "Secondly, by using the Rotary Club as a case study",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 546,
+                "firstWords": "I propose to utilize this case study as a proof",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 792,
+                "firstWords": "This article is structured into four sections. The first section",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 612,
+                "firstWords": "*Note: Due to the computational complexity of the various methods",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 81,
+                "firstWords": "Part I. Modeling the Public Sphere: Topic Modeling of",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 957,
+                "firstWords": "Topic modeling is a statistical method used to uncover hidden",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 13,
+                "isHeading": false,
+                "countChars": 1209,
+                "firstWords": "Historians have increasingly adopted topic modeling for various purposes, including",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 3,
+                "isHeading": false,
+                "countChars": 1179,
+                "firstWords": "While historians have increasingly relied on topic modeling to navigate",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-1",
+                    "hermeneutics",
+                    "anchor-figure-1",
+                    "aspect-ratio-1482-724",
+                    "h-724px",
+                    "w-1482px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 96,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig1a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1007,
+                "firstWords": "Focusing on the Rotary Club as a case study, this",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 24,
+                "firstWords": "Data and methodology",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 431,
+                "firstWords": "The workflow follows three main steps: First, I created the",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "anchor-step-1-corpus-building"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 28,
+                "firstWords": "Step 1: Corpus building",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 2,
+                "isHeading": false,
+                "countChars": 1983,
+                "firstWords": "In the first step, I created two separate corpora, one",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1139,
+                "firstWords": "Since I am investigating a very specific organization with few",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1045,
+                "firstWords": "Following this method, the query returned 467 documents spanning from",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 784,
+                "firstWords": "The two sets of plots below show the uneven distribution",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-2",
+                    "hermeneutics",
+                    "anchor-figure-2",
+                    "aspect-ratio-2311-1729",
+                    "h-1729px",
+                    "w-2311px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 60,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig2a-d.png\")",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 32,
+                "firstWords": "Step 2: Text pre-processing",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1944,
+                "firstWords": "To tackle the issue of article separation, in the sense",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-3",
+                    "hermeneutics",
+                    "anchor-figure-3",
+                    "aspect-ratio-1270-703",
+                    "h-703px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 57,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig3.png\")",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1712,
+                "firstWords": "Next, I prepared the text data to make it processable",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 27,
+                "firstWords": "Step 3: Model building",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1225,
+                "firstWords": "Various topic modeling algorithms have been implemented so far. For",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 3,
+                "isHeading": false,
+                "countChars": 1303,
+                "firstWords": "Choosing the right number of topics k remains a highly",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 496,
+                "firstWords": "The results of topic modeling are usually presented in the",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-4",
+                    "hermeneutics",
+                    "anchor-figure-4",
+                    "aspect-ratio-1270-947",
+                    "h-947px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 134,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig4a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-5",
+                    "hermeneutics",
+                    "anchor-figure-5",
+                    "aspect-ratio-1270-952",
+                    "h-952px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 134,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig5a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 540,
+                "firstWords": "Based on the list of words, I labelled the topics",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-6",
+                    "hermeneutics",
+                    "anchor-figure-6",
+                    "aspect-ratio-2084-1274",
+                    "h-1274px",
+                    "w-2084px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 134,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig6a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-7",
+                    "hermeneutics",
+                    "anchor-figure-7",
+                    "aspect-ratio-1996-1216",
+                    "h-1216px",
+                    "w-1996px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 134,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig7a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 380,
+                "firstWords": "Tables 1 to 6 in the (Appendix) provide a summary",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 45,
+                "firstWords": "The modus operandi of the public sphere",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 260,
+                "firstWords": "In the next step, I grouped the labelled topics into",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-8",
+                    "hermeneutics",
+                    "anchor-figure-8",
+                    "aspect-ratio-1637-914",
+                    "h-914px",
+                    "w-1637px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 57,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig8.png\")",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 682,
+                "firstWords": "Meeting, socializing, entertaining (blue). This category refers to the weekly",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 552,
+                "firstWords": "Sponsorship and community service (grey) refers to various philanthropic projects",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 691,
+                "firstWords": "Organization (yellow) includes topics dealing with elections of local and",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 749,
+                "firstWords": "Forum (orange) refers to lectures given during tiffin-meetings and speeches",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1156,
+                "firstWords": "Other (pale blue). The remaining topics are classified as ambiguous",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1469,
+                "firstWords": "As these examples suggest, invalid topics tend to become more",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-9",
+                    "hermeneutics",
+                    "anchor-figure-9",
+                    "aspect-ratio-1270-1006",
+                    "h-1006px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 96,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig9a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 474,
+                "firstWords": "Meeting-related topics prevail in both corpora (40 to 60%), meaning",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1294,
+                "firstWords": "Community service was the second most important activity of the",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 2,
+                "isHeading": false,
+                "countChars": 1035,
+                "firstWords": "The greater prevalence of organizational topics in the Shenbao (25%",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1597,
+                "firstWords": "Finally, the presence of forum-related topics (5 to 20%) in",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 941,
+                "firstWords": "The “forum” category nonetheless presents significant differences between the two",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 48,
+                "firstWords": "Negotiating between the local and the global",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1084,
+                "firstWords": "To investigate the transnational nature of the public sphere, I",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1313,
+                "firstWords": "How did the transnational dimension of the Rotary Club perspire",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 354,
+                "firstWords": "The distinction between local and non-local topics, however, is not",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-10",
+                    "hermeneutics",
+                    "anchor-figure-10",
+                    "aspect-ratio-1270-684",
+                    "h-684px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 98,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig10a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 965,
+                "firstWords": "Topics 1 and 3 in the Chinese corpus provide examples",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-11",
+                    "hermeneutics",
+                    "anchor-figure-11",
+                    "aspect-ratio-1126-1380",
+                    "h-1380px",
+                    "w-1126px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig11.png\")",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 860,
+                "firstWords": "In the English corpus, mixed topics include topics 1, 5,",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-12",
+                    "hermeneutics",
+                    "anchor-figure-12",
+                    "aspect-ratio-1270-1022",
+                    "h-1022px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig12.png\")",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "narrative",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1068,
+                "firstWords": "The fact that topics are often mixtures of local/non-local words",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 31,
+                "firstWords": "The public sphere over time",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 612,
+                "firstWords": "How did the public sphere evolve over time? Did the",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 632,
+                "firstWords": "*Note: In the following, the notions of topic evolution and",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1380,
+                "firstWords": "In the two corpora, local meetings tended to decline over",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-13",
+                    "anchor-figure-13",
+                    "aspect-ratio-1714-1368",
+                    "h-1368px",
+                    "w-1714px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 98,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig13a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 607,
+                "firstWords": "The remaining topics seem less stable. Topics 1, 6, 8,",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1584,
+                "firstWords": "In the English corpus, temporally unstable topics include topics 1,",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 66,
+                "firstWords": "Part II. Populating the Public Sphere: Configurations of Actors",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1007,
+                "firstWords": "This section builds upon the outcomes of the preceding topic",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 313,
+                "firstWords": "The following hermeneutics layers outline the five-step methodology employed for",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 15,
+                "firstWords": "Methodology",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 29,
+                "firstWords": "Step 1: Filtering topics",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1212,
+                "firstWords": "To conduct a more in-depth exploration of the contents and",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-14",
+                    "anchor-figure-14",
+                    "aspect-ratio-1270-845",
+                    "h-845px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 98,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig14a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 32,
+                "firstWords": "Step 2: Refining text units",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1288,
+                "firstWords": "To comprehensively analyse the debates and actors present in the",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 38,
+                "firstWords": "Step 3: Time-based topic modeling",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "narrative"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 694,
+                "firstWords": "To explore the evolution of topics over time, I divided",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 827,
+                "firstWords": "This division resulted in six sub-corpora, three for each language",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-12",
+                    "anchor-table-12"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 276,
+                "firstWords": "",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 30,
+                "firstWords": "Step 4: Retrieving actors",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 529,
+                "firstWords": "To reconstruct the configurations of actors that shaped the public",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 3,
+                "isHeading": false,
+                "countChars": 1030,
+                "firstWords": "I specifically utilized models developed by Baptiste Blouin, a computer",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 30,
+                "firstWords": "Step 5: Building Networks",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1476,
+                "firstWords": "In the subsequent step, Cytoscape (a popular network analysis software)",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1410,
+                "firstWords": "Furthermore, network metrics were utilized to identify the most central",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 325,
+                "firstWords": "The results are described and interpreted in the following narrative",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 72,
+                "firstWords": "Building International Peace through Youth and Education (1919-1929)",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 11,
+                "firstWords": "Topics",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1927,
+                "firstWords": "The Chinese and English press shared a number of similar",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 868,
+                "firstWords": "Both corpora shared a similar concern for international peace and",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1263,
+                "firstWords": "Interestingly, youth was perceived as a key factor in the",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1521,
+                "firstWords": "Another difference lies in the forms that transnationalism took in",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2620,
+                "firstWords": "The English press was particularly concerned with labor issues during",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1569,
+                "firstWords": "Similarly, topics related to water conservancy and public health, with",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-13",
+                    "anchor-table-13"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 4186,
+                "firstWords": "| Language | Topic | Label | Description | Proportion",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 12,
+                "firstWords": "Persons",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1066,
+                "firstWords": "From the list of individuals identified through named entity recognition",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-15",
+                    "anchor-figure-15",
+                    "aspect-ratio-1316-1292",
+                    "h-1292px",
+                    "w-1316px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 65,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig15_labels.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1079,
+                "firstWords": "In terms of degree centrality, the most central actors were",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 842,
+                "firstWords": "Other prominent Rotarians who appeared in the two corpora include",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 781,
+                "firstWords": "Conversely, Shenbao featured Chinese members of the local business community",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 630,
+                "firstWords": "More generally, the Chinese press granted greater agency to Chinese",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-14",
+                    "anchor-table-14"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 934,
+                "firstWords": "| Name | Pinyin | Degree | Betweenness |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-15",
+                    "anchor-table-15"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 971,
+                "firstWords": "| Name | Degree | Betweenness |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 18,
+                "firstWords": "Organizations",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 2,
+                "isHeading": false,
+                "countChars": 1072,
+                "firstWords": "Reflecting the topical emphasis on youth and education during this",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 957,
+                "firstWords": "Universities, particularly American-run or American-inspired universities, also featured prominently in",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 738,
+                "firstWords": "While alumni associations appeared in both presses, Shenbao more often",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 706,
+                "firstWords": "The Shanghai Municipal Council (SMC) played a central role in",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 2,
+                "isHeading": false,
+                "countChars": 774,
+                "firstWords": "Reflecting its emphasis on internationalism and international relations, as noted",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1194,
+                "firstWords": "In contrast to Shenbao, which focused on local, non-state organizations,",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-16",
+                    "anchor-table-16"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2723,
+                "firstWords": "| Name | Pinyin | Transliteration | Degree | Betweenness",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-17",
+                    "anchor-table-17"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1574,
+                "firstWords": "| Name | Degree | Betweenness |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 92,
+                "firstWords": "Handling Economic Crises, Social Unrest, and Mounting International Tensions",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 11,
+                "firstWords": "Topics",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 854,
+                "firstWords": "The second period is characterized by a greater convergence between",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1433,
+                "firstWords": "Following the 1929 crisis and the global depression which reached",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1580,
+                "firstWords": "Education and youth were losing ground, whereas social affairs, particularly",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-18",
+                    "anchor-table-18"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 5606,
+                "firstWords": "| Language | Topic | Label | Description | Proportion",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 12,
+                "firstWords": "Persons",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2235,
+                "firstWords": "The prominent actors are consistent with the topical concerns of",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1367,
+                "firstWords": "Notorious foreigners were prominent in the English press. They principally",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-19",
+                    "anchor-table-19"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1308,
+                "firstWords": "| Name | Pinyin | Degree | Betweenness |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-20",
+                    "anchor-table-20"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1648,
+                "firstWords": "| Name | Degree | Betweenness | Name | Degree",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 18,
+                "firstWords": "Organizations",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1072,
+                "firstWords": "The 1930 decade was marked by the growing visibility of",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1290,
+                "firstWords": "While the English press focused on government institutions, the Shenbao",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1178,
+                "firstWords": "The League of Nations remained central in the foreign press",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1033,
+                "firstWords": "At the local level, the Shanghai Municipal Council (SMC) was",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1571,
+                "firstWords": "Like during the previous period, non-state institutions were more prominent",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-21",
+                    "anchor-table-21"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2457,
+                "firstWords": "| Name | Pinyin | Transliteration | Degree | Betweenness",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-22",
+                    "anchor-table-22"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2195,
+                "firstWords": "| Name | Degree | Betweenness | Name | Degree",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 60,
+                "firstWords": "Wartime Survival and Post-war Reconstruction (1938-1949)",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 11,
+                "firstWords": "Topics",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1435,
+                "firstWords": "The two presses diverged again during the war and the",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1217,
+                "firstWords": "In the English-language press, topics focused on political economy revolved",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1537,
+                "firstWords": "By contrast, the Chinese press was more concerned with entertaining",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-23",
+                    "anchor-table-23"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 4171,
+                "firstWords": "| Language | Topic | Label | Description | Proportion",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 485,
+                "firstWords": "These topical differences translated in differences in the network of",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 12,
+                "firstWords": "Persons",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 1670,
+                "firstWords": "Rotary leaders were more prominent in the foreign press than",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2560,
+                "firstWords": "The non-Rotarians mentioned in the two presses also differed. The",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-24",
+                    "anchor-table-24"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 585,
+                "firstWords": "| Name | Pinyin | Degree | Betweenness |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-25",
+                    "anchor-table-25"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1413,
+                "firstWords": "| Name | Degree | Betweenness | Name | Degree",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 18,
+                "firstWords": "Organizations",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1478,
+                "firstWords": "Reflecting its focus on war relief and social welfare, the",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1565,
+                "firstWords": "Due to its topical emphasis on macro-level geopolitics, the foreign",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-26",
+                    "anchor-table-26"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1695,
+                "firstWords": "| Name | Pinyin | Transliteration | Degree | Betweenness",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-27",
+                    "anchor-table-27"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2412,
+                "firstWords": "| Name | Degree | Betweenness | Name | Degree",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 72,
+                "firstWords": "Part III. Mapping the Public Sphere: Rotary Geographic Imagination(s)",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1604,
+                "firstWords": "This section seeks to empirically delineate the transnational contours of",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "figure-16",
+                    "aspect-ratio-1270-934",
+                    "h-934px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 98,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig16a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-17",
+                    "aspect-ratio-1270-937",
+                    "h-937px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 98,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig17a.png\")\n",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 44,
+                "firstWords": "Pacific and Colonial Focuses (1919-1929)",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1398,
+                "firstWords": "During the post-WWI phase, the two corpora are centered on",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1430,
+                "firstWords": "In addition to Shanghai, which dominated as the centre of",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-28",
+                    "anchor-table-28"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 753,
+                "firstWords": "| Location | Count | Location | Count |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-29",
+                    "anchor-table-29"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1805,
+                "firstWords": "| Location | Count | Location | Count | Location",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 34,
+                "firstWords": "Expanding Horizons (1930-1937)",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1069,
+                "firstWords": "The second period is characterized by a broadening of geographic",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1491,
+                "firstWords": "Although geographical boundaries expanded in the two corpora, the English",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-30",
+                    "anchor-table-30"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2242,
+                "firstWords": "| Location | Count | Location | Count |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-31",
+                    "anchor-table-31"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2145,
+                "firstWords": "| Location | Count | Location | Count |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 35,
+                "firstWords": "Covering War Fronts (1938-1949)",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1213,
+                "firstWords": "The third period witnessed a clear shift towards Western China",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 835,
+                "firstWords": "By contrast, the geographical landscape in the English press was",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-32",
+                    "anchor-table-32"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1412,
+                "firstWords": "| Location | Count | Location | Count |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-33",
+                    "anchor-table-33"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1529,
+                "firstWords": "| Location | Count | Location | Count | Location",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 3,
+                "isHeading": false,
+                "countChars": 822,
+                "firstWords": "In conclusion, this comparative, bilingual analysis of locations and geopolitical",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 809,
+                "firstWords": "As observed for actors, the geographic imaginations of the two",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 929,
+                "firstWords": "Within the Chinese territory, the English press covered a wider",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 81,
+                "firstWords": "Part IV. Articulating the Public Sphere: Key Terms and",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 714,
+                "firstWords": "This final section constitutes an empirical investigation of the concepts",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 15,
+                "firstWords": "Methodology",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2428,
+                "firstWords": "This conceptual analysis involves several pre-processing steps, including tokenization (word",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 29,
+                "firstWords": "Mapping the Transnational",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 75,
+                "firstWords": "The Chinese Press: Multinational Encounters and Transpacific Exchanges",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 133,
+                "firstWords": "Table 34 lists the most frequent 國 guo-based terms in",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-34",
+                    "anchor-table-34"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2423,
+                "firstWords": "| Chinese | Pinyin | Translation | Count | Chinese",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 890,
+                "firstWords": "Shenbao delineates five main conceptions of the transnational, illustrated as",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-18",
+                    "anchor-figure-18",
+                    "aspect-ratio-1270-840",
+                    "h-840px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig18.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 889,
+                "firstWords": "The guoji constellation incorporates special programs sponsored by the Rotary",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1509,
+                "firstWords": "The second-largest cluster, directly linked to the preceding one, encompasses",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1224,
+                "firstWords": "The term &quot;China&quot; (Zhongguo) serves to connect Rotary International with",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 428,
+                "firstWords": "This semantic analysis confirms that all terms presuppose a national",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1329,
+                "firstWords": "Furthermore, the contours of the transnational evolved over time, and",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-19",
+                    "anchor-figure-19",
+                    "aspect-ratio-1270-716",
+                    "h-716px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig19.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1779,
+                "firstWords": "During the 1930s, the decade witnessed a blend of multinational",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 97,
+                "firstWords": "The Foreign Press: Preserving International Peace and the Cosmopolitan",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 463,
+                "firstWords": "In the English-language press, the range of terms for expressing",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-35",
+                    "anchor-table-35"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1144,
+                "firstWords": "| Bigram | Count | Bigram | Count |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 723,
+                "firstWords": "To gain a deeper understanding of the transnational aspects of",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1809,
+                "firstWords": "To further examine how the different terms relate to each",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-20",
+                    "anchor-figure-20",
+                    "aspect-ratio-1270-751",
+                    "h-751px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig20.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1691,
+                "firstWords": "Based on pairwise count, the most frequent collocates of &quot;international&quot;",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-21",
+                    "anchor-figure-21",
+                    "aspect-ratio-1270-1218",
+                    "h-1218px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig21.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1582,
+                "firstWords": "Like in Shenbao, the transnational dimension of the foreign press",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-22",
+                    "anchor-figure-22",
+                    "aspect-ratio-1270-677",
+                    "h-677px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig22.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 256,
+                "firstWords": "In the subsequent section, I apply the same methodology to",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 22,
+                "firstWords": "Shaping the Public",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 91,
+                "firstWords": "The Chinese Press: Promoting Social Welfare, Advertising Public-Spirited Organizations",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 139,
+                "firstWords": "The following table lists the most frequent terms based on",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-36",
+                    "anchor-table-36"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1259,
+                "firstWords": "| Term | Translation | Count | Term | Translation",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1887,
+                "firstWords": "Contrary to the guo-based collocates, the collocates of terms associated",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-23",
+                    "anchor-figure-23",
+                    "aspect-ratio-1257-1270",
+                    "h-1270px",
+                    "w-1257px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig23.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1606,
+                "firstWords": "Public welfare primarily involves the promotion of public health and",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2318,
+                "firstWords": "The second, smaller cluster is centered on gonggong 公共 (concessions)",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1287,
+                "firstWords": "Other terms are less prominent and form separate clusters. Intriguingly,",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-24",
+                    "anchor-figure-24",
+                    "aspect-ratio-1916-1034",
+                    "h-1034px",
+                    "w-1916px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig24.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 76,
+                "firstWords": "The Foreign Press: Nurturing Public Opinion, Developing Urban Amenities",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 166,
+                "firstWords": "As previously indicated, the semantic portrayal of the term &quot;public&quot;",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "table-37",
+                    "anchor-table-37"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1559,
+                "firstWords": "| Bigram | Count | Bigram | Count | Bigram",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 375,
+                "firstWords": "The subsequent graph, illustrating the most prevalent collocates linked to",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-25",
+                    "anchor-figure-25",
+                    "aspect-ratio-1270-807",
+                    "h-807px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig25.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 754,
+                "firstWords": "The predominant cluster centers around the term &quot;public opinion,&quot; establishing",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1234,
+                "firstWords": "While the physical attendance of Rotary meetings may be limited",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 908,
+                "firstWords": "The second, smaller cluster centred on “public utilities” overlaps with",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1402,
+                "firstWords": "The third, more fragmented cluster encompasses more general terms (public",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1341,
+                "firstWords": "The term &quot;public affairs&quot; serves to bridge the political and",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1219,
+                "firstWords": "In contrast to Shenbao, where no clear semantic shifts occurred",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "figure-26",
+                    "anchor-figure-26",
+                    "aspect-ratio-1270-767",
+                    "h-767px",
+                    "w-1270px"
+                ],
+                "type": "code",
+                "isTable": false,
+                "isFigure": true,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 58,
+                "firstWords": "library(\"IRdisplay\")\n display_png(file=\"./media/Fig26.png\")",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1192,
+                "firstWords": "To summarize, the Rotary Club served as a bridge between",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 13,
+                "firstWords": "Conclusion",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2250,
+                "firstWords": "Due to its transnational nature, focus on public welfare, and",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2541,
+                "firstWords": "While the contemporary newspapers did not explicitly use the terms",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 2183,
+                "firstWords": "Semantic analysis reveals that English-language periodicals emphasized verbal expressions of",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 2,
+                "isHeading": false,
+                "countChars": 2224,
+                "firstWords": "In the 1930s, the Chinese and foreign presses found common",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1641,
+                "firstWords": "Behind the public facade of unity and social harmony that",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1255,
+                "firstWords": "This paper has developed a methodology that integrates topic modeling",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 1,
+                "isHeading": false,
+                "countChars": 2907,
+                "firstWords": "The challenges associated with working with digitized newspapers should not",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 11,
+                "firstWords": "Appendix",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics",
+                    "anchor-appendix"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 218,
+                "firstWords": "In the following tables, SB stands for Shenbao, PQ =",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 345,
+                "firstWords": "Tables 1 to 6 provide a summary of the topics",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 27,
+                "firstWords": "Summary of topic models",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "table-1",
+                    "hermeneutics",
+                    "anchor-table-1"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1236,
+                "firstWords": "",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-2",
+                    "hermeneutics",
+                    "anchor-table-2"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1595,
+                "firstWords": "| TopicCode | TopicLabel | TopWords | Proportion | Proportion%",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-3",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2034,
+                "firstWords": "| TopicCode | TopicLabel | TopWords | Proportion | Proportion%",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-4",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2736,
+                "firstWords": "| TopicCode | TopicLabel | TopWords | Proportion | Proportion%",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-5",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 3993,
+                "firstWords": "| TopicCode | TopicLabel | TopWords | Proportion | Proportion%",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-6",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 5236,
+                "firstWords": "| TopicCode | TopicLabel | TopWords | Proportion | Proportion%",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 25,
+                "firstWords": "Cross-model alignment",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 56,
+                "firstWords": "Tables 7 and 8 display the topics aligned across models.",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-7",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 2646,
+                "firstWords": "| 5TopicCode | 5TopicLabel | 10TopicCode | 10TopicLabel | 20TopicCode",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-8",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 3079,
+                "firstWords": "| 5TopicCode | 5TopicLabel | 10TopicCode | 10TopicLabel | 20TopicCode",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [],
+                "type": "markdown",
+                "isTable": false,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": true,
+                "countChars": 28,
+                "firstWords": "Cross-language alignment",
+                "isMetadata": false,
+                "isHermeneutic": false
+            },
+            {
+                "tags": [
+                    "table-9",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1304,
+                "firstWords": "| CHINESE PRESS (SHENBAO) | | ENGLISH PRESS (PROQUEST) |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-10",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 1739,
+                "firstWords": "| CHINESE PRESS (SHENBAO) | | ENGLISH PRESS (PROQUEST) |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            },
+            {
+                "tags": [
+                    "table-11",
+                    "hermeneutics"
+                ],
+                "type": "markdown",
+                "isTable": true,
+                "isFigure": false,
+                "countRefs": 0,
+                "isHeading": false,
+                "countChars": 3713,
+                "firstWords": "| CHINESE PRESS (SHENBAO) | | ENGLISH PRESS (PROQUEST) |",
+                "isMetadata": false,
+                "isHermeneutic": true
+            }
+        ],
+        "stats": {
+            "countRefs": 78,
+            "countCells": 263,
+            "countChars": 258218,
+            "extentRefs": [
+                0,
+                13
+            ],
+            "extentChars": [
+                11,
+                5606
+            ],
+            "countHeadings": 47,
+            "countCodeCells": 26,
+            "countContributors": 1,
+            "countHermeneuticCells": 115
+        }
+    }
+}

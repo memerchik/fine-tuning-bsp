@@ -1,7 +1,7 @@
 import requests
 
 API_URL = "https://api-inference.huggingface.co/models/sshleifer/distilbart-cnn-12-6"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": "Bearer *token_here*"}
 
 MAX_SEGMENT_LENGTH=1000
 
