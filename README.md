@@ -44,15 +44,15 @@ This directory contains datasets used for fine-tuning models remotely. It includ
 ### Setting Up the Environment
 Install the required dependencies listed in `requirements.txt`:
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### Local Summarization
 To summarize large articles:
-1. Place the article in `article.json`.
+1. Place the article in the `text_for_summary` variable inside of the `summarizing-in-parts.py`.
 2. Run the `summarizing-in-parts.py` script:
    ```bash
-   python small-language-models-testing-local/summarizing-in-parts.py
+   python3 small-language-models-testing-local/summarizing-in-parts.py
    ```
 3. For simpler tasks, use `summarizing-text.py`.
 
